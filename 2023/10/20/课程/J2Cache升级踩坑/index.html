@@ -40,7 +40,119 @@
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
-<meta name="generator" content="Hexo 7.0.0"></head>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -236,45 +348,48 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="1-运行项目"><a href="#1-运行项目" class="headerlink" title="1. 运行项目"></a>1. 运行项目</h1><p>使用命令<code>git clone https://gitee.com/ld/J2Cache</code>将项目克隆下来，具体安装运行方法参见<code>README.md</code>文档。</p>
+                    <h1 id="1-运行项目"><a class="markdownIt-Anchor" href="#1-运行项目"></a> 1. 运行项目</h1>
+<p>使用命令<code>git clone https://gitee.com/ld/J2Cache</code>将项目克隆下来，具体安装运行方法参见<code>README.md</code>文档。</p>
 <span id="more"></span>
-
-<h1 id="2-部分升级"><a href="#2-部分升级" class="headerlink" title="2. 部分升级"></a>2. 部分升级</h1><h2 id="2-1-Java升级"><a href="#2-1-Java升级" class="headerlink" title="2.1 Java升级"></a>2.1 Java升级</h2><p>项目默认使用的<code>jdk1.8</code>，将项目升级为<code>jdk17</code>。修改<code>jdk</code>版本后，使用<code>maven</code>打包项目会报错<code>程序包javax.annotation不存在</code>。需要在根目录的<code>pom.xml</code>添加依赖引入<code>javax.annotation</code>。</p>
+<h1 id="2-部分升级"><a class="markdownIt-Anchor" href="#2-部分升级"></a> 2. 部分升级</h1>
+<h2 id="21-java升级"><a class="markdownIt-Anchor" href="#21-java升级"></a> 2.1 Java升级</h2>
+<p>项目默认使用的<code>jdk1.8</code>，将项目升级为<code>jdk17</code>。修改<code>jdk</code>版本后，使用<code>maven</code>打包项目会报错<code>程序包javax.annotation不存在</code>。需要在根目录的<code>pom.xml</code>添加依赖引入<code>javax.annotation</code>。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.annotation<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jsr250-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>继续进行下一步，执行命令<code>runtest.bat</code>，会报错<code> Unable to make field private final byte[] java.lang.String.value accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @4ed07f8c</code>。通常在<code>jdk9</code>及以上会遇到该问题。</p>
 <p>通过<code>mvn</code>命令解决该问题暂时没有找到方法。</p>
 <p>可以通过在IDEA中直接运行<code>main</code>方法，添加<code>vm</code>参数，解决该问题。需要添加的<code>vm</code>参数为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--add-opens java.base/java.lang=ALL-UNNAMED</span><br><span class="line">--add-opens java.base/java.math=ALL-UNNAMED</span><br><span class="line">--add-opens java.base/java.util=ALL-UNNAMED</span><br><span class="line">--add-opens java.base/java.util.concurrent=ALL-UNNAMED</span><br><span class="line">--add-opens java.base/java.net=ALL-UNNAMED</span><br><span class="line">--add-opens java.base/java.text=ALL-UNNAMED</span><br></pre></td></tr></table></figure>
-
 <p>由于<code>main</code>方法中，获取的是<code>System.Console</code>，而在IDEA中直接运行，获取不到该对象，需要修改读入输入的对象，将其修改为<code>Scanner</code>对象进行读入。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231020005634603.png"  alt="image-20231020005634603"></p>
-<h2 id="2-2-Redis升级"><a href="#2-2-Redis升级" class="headerlink" title="2.2 Redis升级"></a>2.2 Redis升级</h2><p>将Redis升级5.0版本后。</p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231020005634603.png"  class="" title="image-20231020005634603">
+<h2 id="22-redis升级"><a class="markdownIt-Anchor" href="#22-redis升级"></a> 2.2 Redis升级</h2>
+<p>将Redis升级5.0版本后。</p>
 <p><code>BinaryJedisCommands</code>类报错，原因是删除了该类，使用<code>JedisBinaryCommands</code>类替代。</p>
-<p>在<code>RedisClient.java</code>类中，<img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026233806203.png"  alt="image-20231026233806203"></p>
+<p>在<code>RedisClient.java</code>类中，<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026233806203.png"  class="" title="image-20231026233806203"></p>
 <p>重写注解报错，父类没有该方法，删除即可。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026233901697.png"  alt="image-20231026233901697"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026233901697.png"  class="" title="image-20231026233901697">
 <p>包装类报错，原因是新版本使用基本类型代替了包装类。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026234209748.png"  alt="image-20231026234209748"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026234209748.png"  class="" title="image-20231026234209748">
 <p>新版本中将返回值由Set类型改为了List。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026235018700.png"  alt="image-20231026235018700"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231026235018700.png"  class="" title="image-20231026235018700">
 <p>新版本中移除了类<code>ShardedJedisPool</code>，引入<code>JedisSharding</code>替换。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027001434995.png"  alt="image-20231027001434995"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027001434995.png"  class="" title="image-20231027001434995">
 <p>参数设置错误，只需要一个<code>HostAndPort</code>的列表即可。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027003322892.png"  alt="image-20231027003322892"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027003322892.png"  class="" title="image-20231027003322892">
 <p>最后一个参数<code>poolConfig</code>原来参数类型为<code>JedisPoolConfig</code>，新版本构造函数的类型修改为<code>GenericObjectPoolConfig&lt;Connection&gt;</code>。</p>
 <p>在<code>RedisUtils</code>工具类中，将<code>newPoolConfig</code>方法参数修改为<code>GenericObjectPoolConfig&lt;Jedis&gt;</code>。同时添加方法<code>transferPoolConfig</code>，将<code>GenericObjectPoolConfig&lt;Jedis&gt;</code>转换为<code>GenericObjectPoolConfig&lt;Connection&gt;</code>。</p>
 <p>在类<code>RedisPubSubClusterPolicy</code>类中，找不到<code>Pool</code>类，将这个类的包修改为<code>import redis.clients.jedis.util.Pool;</code></p>
-<p>在<code>RedisGenericCache</code>类中，<img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027104800572.png"  alt="image-20231027104800572"></p>
+<p>在<code>RedisGenericCache</code>类中，<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027104800572.png"  class="" title="image-20231027104800572"></p>
 <p>将报错类更改为以上类。</p>
 <p><code>RedisPubSubClusterPolicy</code>类中，父类方法指定为final，不能被重写了。</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027111354697.png"  alt="image-20231027111354697"></p>
-<h2 id="2-3-Rocketmq升级"><a href="#2-3-Rocketmq升级" class="headerlink" title="2.3 Rocketmq升级"></a>2.3 Rocketmq升级</h2><p>升级到5.1.4后报错</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231101195051463.png"  alt="image-20231101195051463"></p>
-<h2 id="2-4-FastJson升级"><a href="#2-4-FastJson升级" class="headerlink" title="2.4 FastJson升级"></a>2.4 FastJson升级</h2><p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231102000004933.png"  alt="image-20231102000004933"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231027111354697.png"  class="" title="image-20231027111354697">
+<h2 id="23-rocketmq升级"><a class="markdownIt-Anchor" href="#23-rocketmq升级"></a> 2.3 Rocketmq升级</h2>
+<p>升级到5.1.4后报错</p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231101195051463.png"  class="" title="image-20231101195051463">
+<h2 id="24-fastjson升级"><a class="markdownIt-Anchor" href="#24-fastjson升级"></a> 2.4 FastJson升级</h2>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231102000004933.png"  class="" title="image-20231102000004933">
 <p>升级到2.0.41，其中groupId和artifactId也进行了更改。</p>
 <p><code>FastjsonSerializer</code>类里</p>
-<p><img   src="/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231102000044485.png"  alt="image-20231102000044485"></p>
+<img   src="/2023/10/20/%E8%AF%BE%E7%A8%8B/J2Cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/image-20231102000044485.png"  class="" title="image-20231102000044485">
 <p>需要修改为<code>com.alibaba.fastjson2</code>，同时引入新类。</p>
 
                 </div>
@@ -327,11 +442,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/10/10/hexo/hexo%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/"
-                                   title="Hexo图片插件配合Typora实现本地图片显示"
+                                   href="/2023/10/10/hexo/hexo%E9%85%8D%E7%BD%AE/"
+                                   title="Hexo配置"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Hexo图片插件配合Typora实现本地图片显示</span>
+                                        <span class="post-nav-title-item text-ellipsis">Hexo配置</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -359,7 +474,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-text">1. 运行项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%83%A8%E5%88%86%E5%8D%87%E7%BA%A7"><span class="nav-text">2. 部分升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Java%E5%8D%87%E7%BA%A7"><span class="nav-text">2.1 Java升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Redis%E5%8D%87%E7%BA%A7"><span class="nav-text">2.2 Redis升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Rocketmq%E5%8D%87%E7%BA%A7"><span class="nav-text">2.3 Rocketmq升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-FastJson%E5%8D%87%E7%BA%A7"><span class="nav-text">2.4 FastJson升级</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 1. 运行项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%83%A8%E5%88%86%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2. 部分升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#21-java%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.1 Java升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-redis%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.2 Redis升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-rocketmq%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.3 Rocketmq升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-fastjson%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.4 FastJson升级</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -528,7 +643,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-text">1. 运行项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%83%A8%E5%88%86%E5%8D%87%E7%BA%A7"><span class="nav-text">2. 部分升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Java%E5%8D%87%E7%BA%A7"><span class="nav-text">2.1 Java升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Redis%E5%8D%87%E7%BA%A7"><span class="nav-text">2.2 Redis升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Rocketmq%E5%8D%87%E7%BA%A7"><span class="nav-text">2.3 Rocketmq升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-FastJson%E5%8D%87%E7%BA%A7"><span class="nav-text">2.4 FastJson升级</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-text"> 1. 运行项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%83%A8%E5%88%86%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2. 部分升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#21-java%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.1 Java升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-redis%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.2 Redis升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-rocketmq%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.3 Rocketmq升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-fastjson%E5%8D%87%E7%BA%A7"><span class="nav-text"> 2.4 FastJson升级</span></a></li></ol></li></ol>
     </div>
 </div>
 

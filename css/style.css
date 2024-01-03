@@ -2300,6 +2300,23 @@ figure.highlight .shrink-line:hover::before {
   z-index: 1009;
   width: 100%;
 }
+.progress-bar-container .scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1007;
+  width: 0;
+  height: var(--header-scroll-progress-bar-height);
+  background: var(--primary-color);
+  visibility: hidden;
+  transition-delay: 0s, 0s, 0s, 0s, 0s;
+  transition-timing-function: ease, ease, ease, ease, linear;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.1s;
+  transition-property: color, background, box-shadow, border-color, width;
+}
+.progress-bar-container .scroll-progress-bar.hide {
+  display: none !important;
+}
 .header-wrapper {
   display: flex;
   align-items: center;
@@ -3746,6 +3763,7 @@ figure.highlight .shrink-line:hover::before {
   color: var(--text-color-3);
   text-align: justify;
   word-wrap: break-word;
+  border-bottom: 2px dashed var(--border-color);
 }
 @media (max-width: 800px) {
   .post-page-container .post-content-container .post-content-bottom .post-content {

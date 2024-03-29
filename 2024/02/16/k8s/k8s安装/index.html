@@ -9,7 +9,7 @@
     
     <title>
         
-            docker配置学习 |
+            k8s部署安装 |
         
         yatbfm&#39;s blog
     </title>
@@ -287,7 +287,7 @@ mjx-container[display="true"] + br {
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        docker配置学习
+                        k8s部署安装
                     </div>
                 
 
@@ -309,28 +309,50 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2023-10-23 21:39</span>
+                <span class="datetime">2024-02-16 20:48</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Jan 22 2024 21:11:54 GMT+0800">2024-01-22 21:11</span>
+                <span class="datetime" data-updated="Tue Mar 19 2024 23:46:06 GMT+0800">2024-03-19 23:46</span>
             </span>
         
 
         
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/k8s/">k8s</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
 
+        
+            <span class="post-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/k8s/">k8s</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%B9%E5%99%A8/">容器</a></li>
+                        
+                    
+                </ul>
+            </span>
         
 
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>712 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>652 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
             </span>
         
         
@@ -351,63 +373,47 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h2 id="安装docker">安装docker</h2>
-<ol type="1">
-<li>更新软件库确保可以访问最新版。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>卸载旧版本</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io</span><br></pre></td></tr></table></figure>
+                    <p>此过程参考<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/lzb348110175/article/details/133807069">博客<i class="fas fa-external-link-alt"></i></a>。</p>
+<p>只记录和博客中有出入的地方。</p>
 <span id="more"></span>
-<ol start="3" type="1">
-<li>安装软件库中的docker</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker.io</span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>设置自启动</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其他安装方法的可以参考官方文档<a class="link" target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu | Docker Docs<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-<h2 id="拉取redis镜像并运行">拉取Redis镜像并运行</h2>
-<p>以拉取<code>redis</code>镜像为例。</p>
+<h3 id="section">5.1.2</h3>
+<img src="/2024/02/16/k8s/k8s%E5%AE%89%E8%A3%85/image-20240218173545271.png" class="" title="image-20240218173545271">
+<p>博客nginx中该配置，参数<code>$remote_addr</code>，如果直接复制到终端中可能会出现配置文件中<code>$remote_addr</code>位置为空，终端会认为<code>$remote_addr</code>是一个变量，而实际上是这是一个字符串输入到文件中。</p>
+<h3 id="方式一">9.1 方式一</h3>
+<p>配置完成后等待<code>pod</code>执行，如果一直出现<code>imagebackoffpull</code>等问题，可以使用命令<code>kubectl describe pod &lt;pod name&gt; -n kube-system</code>查看具体报错，通常原因是拉取镜像失败。</p>
+<p>可以手动拉取镜像，此时要注意，使用的<code>containerd</code>容器运行时，<code>k8s</code>默认会把镜像拉取到<code>k8s.io</code>命名空间中，因此手动拉取时也需要拉取到这个命名空间中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctr -n k8s.io image pull &lt;image_name&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="section-1">11.1.1</h3>
+<p>按照配置博客配置后如果出现<code>metrics server无法访问</code>等错误，可以尝试在配置文件中添加参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostNetwork: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<style>.elycebsrpjhy{zoom:50%;}</style>
+<img src="/2024/02/16/k8s/k8s%E5%AE%89%E8%A3%85/image-20240218174403769.png" class="elycebsrpjhy" alt="image-20240218174403769">
+<h1 id="本地调试scheduler">本地调试scheduler</h1>
 <ol type="1">
-<li>拉取</li>
+<li><p>将远程环境中用户目录的<code>.kube</code>目录拷贝到本地<code>windows</code>用户目录下。</p>
+<p>该目录下配置<code>clusters.cluster.server</code>配置是本机18443端口<code>127.0.0.1:18443</code></p></li>
+<li><p>将本地启动端口18443，与远程主机<code>192.168.217.100</code>连接登录然后将端口转发到<code>127.0.0.1:8443</code>，相当于在远程主机本地访问集群ip和端口。</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 18443:127.0.0.1:8443 -N -f root@192.168.217.100</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ssh -L localport:remotehost:remotehostport sshserver</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line">localport　　　　　　 本机开启的端口号</span><br><span class="line">remotehost　　　　　　最终连接机器的IP地址</span><br><span class="line">remotehostport      最终连接机器的端口号</span><br><span class="line">sshserver　　　　　　 转发机器的IP地址</span><br><span class="line"></span><br><span class="line">选项：</span><br><span class="line">-f 后台启用</span><br><span class="line">-N 不打开远程shell，处于等待状态（不加-N则直接登录进去）</span><br><span class="line">-g 启用网关功能</span><br></pre></td></tr></table></figure></p></li>
 </ol>
-<p>使用命令<code>sudo docker pull redis:6.2</code>拉取<code>tag</code>为<code>6.2</code>的<code>redis</code>镜像。</p>
-<p>不指定<code>tag</code>则默认为<code>latest</code>，若要查看所有<code>tag</code>可以使用命令<code>sudo docker search redis</code>查看。或者在<a class="link" target="_blank" rel="noopener" href="https://hub.docker.com/">Docker Hub Container Image Library | App Containerization<i class="fas fa-external-link-alt"></i></a>中查找。</p>
-<ol start="2" type="1">
-<li>准备<code>redis.conf</code></li>
-</ol>
-<p>在redis官网<a class="link" target="_blank" rel="noopener" href="https://redis.io/docs/management/config/">Redis configuration | Redis<i class="fas fa-external-link-alt"></i></a>找到对应版本的默认配置。创建<code>redis.conf</code>文件。</p>
-<p>并修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将<span class="built_in">bind</span> 127.0.0.1 注释</span><br><span class="line">将protected-mode <span class="built_in">yes</span>修改为 protected-mode no</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>运行</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -v /home/username/software/redis:/usr/local/etc/redis -p 36379:6379 --name myredis redis:6.2 redis-server /usr/local/etc/redis/redis.conf</span><br></pre></td></tr></table></figure>
-<p>其中<code>/home/username/software/redis</code>目录下有<code>redis.conf</code>文件。</p>
-<p>这段命令中<code>-d</code>是后台运行容器。</p>
-<p><code>-v /home/username/software/redis:/usr/local/etc/redis</code>是将<code>/home/username/software/redis</code>目录挂载到<code>/usr/local/etc/redis</code>目录下，因为<code>redis</code>容器运行时不会生成<code>redis.conf</code>配置文件，以默认配置运行，需要运行时手动挂在自定义配置。</p>
-<p><code>-p 36379:6379</code>是端口映射，将宿主机<code>36379</code>段口映射到容器的<code>6379</code>端口。</p>
-<p><code>--name myredis</code>指定容器名字为<code>myredis</code>。</p>
-<p><code>redis:6.2</code>为运行的镜像名字:tag。</p>
-<p><code>redis-server /usr/local/etc/redis/redis.conf</code>为运行容器后执行的命令，此命令是让<code>redis</code>服务器以<code>/usr/local/etc/redis/redis.conf</code>配置文件运行。</p>
-<h2 id="拉取mysql并运行">拉取mysql并运行</h2>
-<p>拉取<code>mysql:8.2</code>镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:8.2</span><br></pre></td></tr></table></figure>
-<p>运行镜像，同redis一样，需要指定挂载目录，将自己的配置文件放在本地目录，挂载到容器中相应的目录中。</p>
-<p>其中挂载到哪个目录可以通过<a class="link" target="_blank" rel="noopener" href="https://hub.docker.com/_/mysql/">官方文档<i class="fas fa-external-link-alt"></i></a>查看。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">--name mymysql1 \</span><br><span class="line">-p 33306:3306 \</span><br><span class="line">-v /home/clab/software/mysql/conf:/etc/my.cnf.d \</span><br><span class="line">-v /home/clab/software/mysql/data:/var/lib/mysql \</span><br><span class="line">-v /home/clab/software/mysql/log:/var/log/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=password \</span><br><span class="line">mysql:8.2</span><br></pre></td></tr></table></figure>
-<p>如果启动后就退出，使用命令<code>docker logs mymysql1</code>查看日志。</p>
-<p>出现</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR] Could not open file <span class="string">'/var/log/mysql/error.log'</span> <span class="keyword">for</span> error logging: Permission denied</span><br></pre></td></tr></table></figure>
-<p>这种权限报错，原因是启动容器中的<code>mysql</code>用户和宿主机不同，导致权限问题。此时可以使用命令<code>cat /etc/group</code>查看宿主机的<code>user_id</code></p>
-<p>获取后在执行命令时添加参数<code>--user user_id</code>即可。如果仍出现问题，将宿主机<code>data</code>和<code>log</code>文件夹删除再新建（可能之前的运行会导致这两个文件夹用户权限发生变化）。</p>
-<p>参考链接：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/jiangyunfan16/article/details/127240763">分析docker启动MySQL挂载目录提示权限不足Permission denied原因_docker挂载目录权限问题_jiangyunfan16的博客-CSDN博客<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="安装kube-prometheus">安装kube-prometheus</h1>
+<p>https://cloud.tencent.com/developer/article/2216613</p>
+<p>https://cloud-atlas.readthedocs.io/zh-cn/latest/kubernetes/monitor/prometheus/helm3_prometheus_grafana.html</p>
+<p>网络问题是最主要的问题，可以多尝试几次。</p>
+<p>启动<code>pod</code>时拉取镜像中，<code>kube-state-metrics</code>这个pod的镜像拉取最容易失败，即使手动拉取也非常容易失败。</p>
+<p>可以参考<a class="link" target="_blank" rel="noopener" href="https://artifacthub.io/packages/helm/bitnami/kube-state-metrics">链接<i class="fas fa-external-link-alt"></i></a>采用其他的<code>kube-state-metrics</code>安装，然后将拉取的镜像重新改名为上述需要的镜像。</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="">
+或者不使用helm可以参考该链接：https://blog.csdn.net/slc09/article/details/132571091</li>
+</ul>
+<p>访问相关页面：</p>
+<p>alertmanager-main: <code>59.65.191.100:31675</code></p>
+<p>grafana: <code>59.65.191.100:32657</code></p>
+<p>prometheus-k8s: <code>59.65.191.100:32678</code></p>
+<h1 id="一直terminating的解决办法">一直Terminating的解决办法</h1>
+<p>https://juejin.cn/post/7210020384044335165</p>
+<h1 id="registry.k8s.io拉取不下来">registry.k8s.io拉取不下来</h1>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/chengyinwu/article/details/134843205">k8s官方镜像代理加速_registry.k8s.io-CSDN博客<i class="fas fa-external-link-alt"></i></a></p>
 
                 </div>
 
@@ -417,11 +423,11 @@ mjx-container[display="true"] + br {
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                docker配置学习
+                k8s部署安装
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2023/10/23/技术/docker配置学习/
+                2024/02/16/k8s/k8s安装/
             </div>
         </div>
 
@@ -437,7 +443,7 @@ mjx-container[display="true"] + br {
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-10-23 21:39</div>
+                <div class="content">2024-02-16 20:48</div>
             </div>
 
 
@@ -468,6 +474,18 @@ mjx-container[display="true"] + br {
                 <div class="post-bottom-tags-and-share border-box">
                     <div>
                         
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/k8s/">k8s</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%B9%E5%99%A8/">容器</a>
+                                    </li>
+                                
+                            </ul>
+                        
                     </div>
                     <div>
                         
@@ -482,14 +500,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/01/12/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E5%B7%A6%E7%A5%9E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"
-                                   title="左神算法笔记"
+                                   href="/2024/02/27/%E5%A4%A7%E6%95%B0%E6%8D%AE/Hive%E5%AD%A6%E4%B9%A0/"
+                                   title="Hive学习"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">左神算法笔记</span>
+                                        <span class="post-nav-title-item text-ellipsis">Hive学习</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -499,11 +517,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/10/23/%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
-                                   title="设计模式课程"
+                                   href="/2024/01/22/hexo/hexo%E9%85%8D%E7%BD%AE/"
+                                   title="Hexo配置"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">设计模式课程</span>
+                                        <span class="post-nav-title-item text-ellipsis">Hexo配置</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -531,7 +549,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker"><span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96redis%E9%95%9C%E5%83%8F%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="nav-text">拉取Redis镜像并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96mysql%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="nav-text">拉取mysql并运行</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">5.1.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="nav-text">9.1 方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">11.1.1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95scheduler"><span class="nav-text">本地调试scheduler</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85kube-prometheus"><span class="nav-text">安装kube-prometheus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%9B%B4terminating%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">一直Terminating的解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#registry.k8s.io%E6%8B%89%E5%8F%96%E4%B8%8D%E4%B8%8B%E6%9D%A5"><span class="nav-text">registry.k8s.io拉取不下来</span></a>
     </div>
 </div>
 
@@ -700,7 +718,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker"><span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96redis%E9%95%9C%E5%83%8F%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="nav-text">拉取Redis镜像并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96mysql%E5%B9%B6%E8%BF%90%E8%A1%8C"><span class="nav-text">拉取mysql并运行</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">5.1.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="nav-text">9.1 方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-text">11.1.1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95scheduler"><span class="nav-text">本地调试scheduler</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85kube-prometheus"><span class="nav-text">安装kube-prometheus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%9B%B4terminating%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">一直Terminating的解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#registry.k8s.io%E6%8B%89%E5%8F%96%E4%B8%8D%E4%B8%8B%E6%9D%A5"><span class="nav-text">registry.k8s.io拉取不下来</span></a>
     </div>
 </div>
 

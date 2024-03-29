@@ -1,5 +1,5 @@
 https://yatbfm.github.io/2024/02/27/%E5%A4%A7%E6%95%B0%E6%8D%AE/Hive%E5%AD%A6%E4%B9%A0/
-https://yatbfm.github.io/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
+https://yatbfm.github.io/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
 https://yatbfm.github.io/2024/02/16/k8s/k8s%E5%AE%89%E8%A3%85/
 https://yatbfm.github.io/2024/01/18/%E7%89%9B%E5%AE%A2/Sql%E9%A2%98/
 https://yatbfm.github.io/2024/01/22/LeetCode/Sql%E9%A2%98/

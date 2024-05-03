@@ -9,41 +9,42 @@
     place-items: center;
 }*/
 
-body {
-    counter-reset: h1counter;
+.post-content-bottom {
+    counter-reset: section;
 }
 
-h1 {
-    counter-reset: h2counter;
-    counter-increment: h1counter;
+.post-content-bottom h1 {
+    counter-reset: subsection;
 }
 
-h2 {
-    counter-reset: h3counter;
-    counter-increment: h2counter;
+.post-content-bottom h2 {
+    counter-reset: subsubsection;
 }
 
-h3 {
-    counter-reset: h4counter;
-    counter-increment: h3counter;
+.post-content-bottom h3 {
+    counter-reset: subsubsubsection;
 }
 
-h4 {
-    counter-increment: h4counter;
+.post-content-bottom h4 {
+    counter-reset: subsubsubsubsection;
 }
 
-h1::before {
-    content: counter(h1counter) ". ";
+.post-content-bottom h1::before {
+    counter-increment: section;
+    content: counter(section) ". ";
 }
 
-h2::before {
-    content: counter(h1counter) "." counter(h2counter) ". ";
+.post-content-bottom h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
 }
 
-h3::before {
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ". ";
+.post-content-bottom h3::before {
+    counter-increment: subsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
 }
 
-h4::before {
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) ". ";
+.post-content-bottom h4::before {
+    counter-increment: subsubsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) ". ";
 }

@@ -9,7 +9,7 @@
     place-items: center;
 }*/
 
-.post-content-bottom {
+/* .post-content-bottom {
     counter-reset: section;
 }
 
@@ -47,4 +47,4 @@
 .post-content-bottom h4::before {
     counter-increment: subsubsubsection;
     content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) ". ";
-}
+} */

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yatbfm.github.io/2024/01/22/hexo/hexo%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2024-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yatbfm.github.io/2024/05/13/%E6%8A%80%E6%9C%AF/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2024-05-17</lastmod>
@@ -102,15 +111,6 @@
   
   <url>
     <loc>https://yatbfm.github.io/categories/index.html</loc>
-    
-    <lastmod>2024-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yatbfm.github.io/2024/01/22/hexo/hexo%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2024-01-22</lastmod>
     

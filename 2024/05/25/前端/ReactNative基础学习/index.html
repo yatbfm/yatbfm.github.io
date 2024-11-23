@@ -9,7 +9,7 @@
     
     <title>
         
-            React Native环境搭建 |
+            ReactNative基础学习 |
         
         yatbfm&#39;s blog
     </title>
@@ -309,7 +309,7 @@ mjx-container[display="true"] + br {
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        React Native环境搭建
+                        ReactNative基础学习
                     </div>
                 
 
@@ -331,31 +331,22 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-07-11 17:03</span>
+                <span class="datetime">2024-05-25 12:27</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sun Jul 14 2024 21:13:39 GMT+0800">2024-07-14 21:13</span>
+                <span class="datetime" data-updated="Sun May 26 2024 20:30:20 GMT+0800">2024-05-26 20:30</span>
             </span>
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/rn/">rn</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/React-Native/">React Native</a></li>
                         
                     
                 </ul>
@@ -365,12 +356,12 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>584 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>360 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
             </span>
         
         
@@ -391,11 +382,10 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body">
                     
 
-                    <meta name="referrer" content="no-referrer">
-<h1 id="环境搭建">环境搭建</h1>
-<h2 id="node和jdk">Node和JDK</h2>
+                    <h1 id="环境搭建">1 环境搭建</h1>
+<h2 id="node和jdk">1.1 Node和JDK</h2>
 <ol type="1">
-<li><code>Node</code>版本<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.312ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.751ex" role="img" focusable="false" viewBox="0 -636 778 774"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g></g></g></svg></mjx-container></span>
+<li><code>Node</code>版本 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.312ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.751ex" role="img" focusable="false" viewBox="0 -636 778 774"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g></g></g></svg></mjx-container></span>
 18</li>
 <li><code>JDK</code>版本</li>
 </ol>
@@ -421,57 +411,55 @@ mjx-container[display="true"] + br {
 </tr>
 </tbody>
 </table>
+<span id="more"></span>
 <ol start="3" type="1">
-<li><p><code>yarn</code>安装<br><code>npm install -g yarn</code>，<a class="link" target="_blank" rel="noopener" href="http://yarnpkg.com/">Yarn<i class="fas fa-external-link-alt"></i></a>是 Facebook 提供的替代
-<code>npm</code>的工具 ## Android开发环境</p></li>
-<li><p>下载安装<code>Android Studio</code></p></li>
-<li><p>安装<code>Android SDK</code><br><code>SDK Platforms</code>:
-<code>Android API 33</code><br><code>SDK Tools</code>:
-<code>Android SDK Build-Tools 33.0.0</code>、<code>**Android SDK Command-line Tools 12.0**</code></p></li>
-<li><p>设置环境变量<br>默认情况下<code>Android SDK</code>安装在<code>C:\Users\&lt;username&gt;\AppData\Local\Android\Sdk</code>中，可以自行修改。<br>添加环境变量：设置<code>ANDROID_HOME</code>为<code>C:\Users\&lt;username&gt;\AppData\Local\Android\Sdk</code><br>在<code>Path</code>环境变量中添加：<code>%ANDROID_HOME%\platform-tools</code>和<code>**%ANDROID_HOME%\cmdline-tools\12.0\bin**</code>
-## 准备Android设备</p></li>
-<li><p>使用<code>Android</code>真机</p></li>
-<li><p>使用<code>Android</code>模拟器<br>使用<code>Android Studio</code>创建虚拟设备</p></li>
-<li><p>检查设备是否存在<br>使用<code>adb devices</code>检查</p></li>
+<li><p><code>yarn</code>安装</p>
+<p><code>npm install -g yarn</code>，<a class="link" target="_blank" rel="noopener" href="http://yarnpkg.com/">Yarn<i class="fas fa-external-link-alt"></i></a>是 Facebook 提供的替代
+<code>npm</code>的工具</p></li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1716612341206-edc91d46-3881-45e4-b166-8547f3087e3d.png#averageHue=%231b1714&amp;clientId=ud130a6c8-1487-4&amp;from=paste&amp;height=76&amp;id=ue9f5f9e9&amp;originHeight=95&amp;originWidth=259&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=6142&amp;status=done&amp;style=none&amp;taskId=u17b0c95b-f388-4981-b3b5-b3c211ac779&amp;title=&amp;width=207.2" alt="image.png"> ## 创建模板项目</p>
+<h2 id="android开发环境">1.2 Android开发环境</h2>
 <ol type="1">
-<li><p>新建项目<br><code>npx react-native init TemplateProject</code></p></li>
-<li><p>编译运行 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> TemplateProject</span><br><span class="line">yarn android</span><br></pre></td></tr></table></figure> <img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1716612361882-91434bb6-d7b8-46d9-be85-2654ce16aad2.png#averageHue=%23cecece&amp;clientId=ud130a6c8-1487-4&amp;from=paste&amp;height=446&amp;id=SlcyD&amp;originHeight=889&amp;originWidth=431&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=157635&amp;status=done&amp;style=none&amp;taskId=u6cf95720-9679-4f45-bdac-a33e2f0d05e&amp;title=&amp;width=216" alt="image.png"> ## 遇到的问题</p></li>
-<li><p>环境检查<br><code>npx react-native doctor</code>命令检查当前项目中的环境是否完备。</p></li>
+<li><p>下载安装<code>Android Studio</code></p></li>
+<li><p>安装<code>Android SDK</code></p>
+<p><code>SDK Platforms</code>: <code>Android API 33</code></p>
+<p><code>SDK Tools</code>:
+<code>Android SDK Build-Tools 33.0.0</code>、<strong><code>Android SDK Command-line Tools 12.0</code></strong></p></li>
+<li><p>设置环境变量</p>
+<p>默认情况下<code>Android SDK</code>安装在<code>C:\Users\&lt;username&gt;\AppData\Local\Android\Sdk</code>中，可以自行修改。</p>
+<p>添加环境变量：设置<code>ANDROID_HOME</code>为<code>C:\Users\&lt;username&gt;\AppData\Local\Android\Sdk</code></p>
+<p>在<code>Path</code>环境变量中添加：<code>%ANDROID_HOME%\platform-tools</code>和<strong><code>%ANDROID_HOME%\cmdline-tools\12.0\bin</code></strong></p></li>
 </ol>
-<figure>
-<img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1716612377275-f5bf5cb0-b357-4683-acf3-3098909c950c.png#averageHue=%2312100f&amp;clientId=ud130a6c8-1487-4&amp;from=paste&amp;height=358&amp;id=ub7ddb864&amp;originHeight=448&amp;originWidth=843&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=47400&amp;status=done&amp;style=none&amp;taskId=u4aeadff3-6a99-492d-804d-9c86974d2e1&amp;title=&amp;width=674.4" alt="image.png">
-<figcaption aria-hidden="true">image.png</figcaption>
-</figure>
-<ol start="2" type="1">
-<li>识别不到<code>Android SDK</code><br>安装了<code>SDK</code>并且配置了环境变量，但是无法识别。<br>需要安装<code>Android SDK Command-line Tools 12.0</code>，并配置环境变量。</li>
-<li><code>Android SDK</code>打包失败<br><a class="link" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/68387270/android-studio-error-installed-build-tools-revision-31-0-0-is-corrupted">https://stackoverflow.com/questions/68387270/android-studio-error-installed-build-tools-revision-31-0-0-is-corrupted<i class="fas fa-external-link-alt"></i></a>
+<h2 id="准备android设备">1.3 准备Android设备</h2>
+<ol type="1">
+<li><p>使用<code>Android</code>真机</p></li>
+<li><p>使用<code>Android</code>模拟器</p>
+<p>使用<code>Android Studio</code>创建虚拟设备</p></li>
+<li><p>检查设备是否存在</p>
+<p>使用<code>adb devices</code>检查</p>
+<p><img src="/2024/05/25/%E5%89%8D%E7%AB%AF/ReactNative%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/image-20240525112819306.png" class="" title="image-20240525112819306"></p></li>
+</ol>
+<h2 id="创建模板项目">1.4 创建模板项目</h2>
+<ol type="1">
+<li><p>新建项目</p>
+<p><code>npx react-native init TemplateProject</code></p></li>
+<li><p>编译运行</p>
+<p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> TemplateProject</span><br><span class="line">yarn android</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<style>.hpfmxexrvgcp{zoom:33%;}</style>
+<img src="/2024/05/25/%E5%89%8D%E7%AB%AF/ReactNative%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/image-20240525121135599.png" class="hpfmxexrvgcp" alt="image-20240525121135599">
+<h2 id="遇到的问题">1.5 遇到的问题</h2>
+<ol type="1">
+<li><p>环境检查</p>
+<p><code>npx react-native doctor</code>命令检查当前项目中的环境是否完备。</p>
+<p><img src="/2024/05/25/%E5%89%8D%E7%AB%AF/ReactNative%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/image-20240525121433654.png" class="" title="image-20240525121433654"></p></li>
+<li><p>识别不到<code>Android SDK</code></p>
+<p>安装了<code>SDK</code>并且配置了环境变量，但是无法识别。</p>
+<p>需要安装<code>Android SDK Command-line Tools 12.0</code>，并配置环境变量。</p></li>
+<li><p><code>Android SDK</code>打包失败</p>
+<p>https://stackoverflow.com/questions/68387270/android-studio-error-installed-build-tools-revision-31-0-0-is-corrupted</p>
 <ol type="1">
 <li>修改<code>%ANDROID_HOME%/build-tools/33.0.0</code>目录中的<code>d8.bat</code>，修改为<code>dx.bat</code></li>
-<li>修改<code>%ANDROID_HOME%/build-tools/33.0.0/lib</code>目录中的<code>d8.jar</code>，修改为<code>dx.jar</code>
-# 组件库 经过调研，可以选取<code>React Native Elements</code>组件库(<a class="link" target="_blank" rel="noopener" href="https://reactnativeelements.com/docs">链接<i class="fas fa-external-link-alt"></i></a>)，该组件库在<code>github</code>有24k
-stars，属于很流行的组件库。 ## 安装
-这里选取<code>React Native CLI</code>方式安装。</li>
-</ol></li>
-<li>安装组件库
-<ol type="1">
-<li><code>yarn add @rneui/themed @rneui/base</code></li>
-</ol></li>
-<li>安装依赖
-<ol type="1">
-<li><code>yarn add react-native-safe-area-context</code></li>
-<li><code>yarn add react-native-vector-icons</code></li>
-</ol></li>
-<li>设置<code>react-native-vector-icons</code>
-<ol type="1">
-<li>推荐使用<code>Gradle</code>设置，在<code>android/app/build.gradle</code>文件中添加语句<code>apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")</code>
-# React Navigation 安装依赖 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add @react<span class="literal">-navigation</span>/native</span><br><span class="line">// 如果是纯react native项目安装该依赖</span><br><span class="line">yarn add react<span class="literal">-native-screens</span> react<span class="literal">-native-safe-area-context</span></span><br></pre></td></tr></table></figure>
-在<code>android/app/src/main/java/&lt;your package name&gt;</code>包下的<code>MainActivity</code>类中添加如下代码：
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MainActivity</span>: <span class="type">ReactActivity</span>() {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> {</span><br><span class="line">    <span class="keyword">super</span>.onCreate(<span class="literal">null</span>)</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-同时在这个文件最开头导入：<code>import android.os.Bundle;</code><br>在<code>App</code>组件最外侧使用<code>NavigationContainer</code>标签包裹
-## Stack
-安装<br><code>yarn add @react-navigation/stack</code><br>安装依赖<br><code>yarn add react-native-gesture-handler</code><br>使用<br>在<code>App.js</code>或者<code>index.js</code>文件最开头引用：<code>import 'react-native-gesture-handler';</code></li>
+<li>修改<code>%ANDROID_HOME%/build-tools/33.0.0/lib</code>目录中的<code>d8.jar</code>，修改为<code>dx.jar</code></li>
 </ol></li>
 </ol>
 
@@ -482,11 +470,11 @@ stars，属于很流行的组件库。 ## 安装
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                React Native环境搭建
+                ReactNative基础学习
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2024/07/11/前端/ReactNative基础学习/React Native环境搭建/
+                2024/05/25/前端/ReactNative基础学习/
             </div>
         </div>
 
@@ -502,7 +490,7 @@ stars，属于很流行的组件库。 ## 安装
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-07-11 17:03</div>
+                <div class="content">2024-05-25 12:27</div>
             </div>
 
 
@@ -538,7 +526,7 @@ stars，属于很流行的组件库。 ## 安装
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/rn/">rn</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/React-Native/">React Native</a>
                                     </li>
                                 
                             </ul>
@@ -557,14 +545,14 @@ stars，属于很流行的组件库。 ## 安装
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/07/18/%E5%85%AB%E8%82%A1/Java%E5%9F%BA%E7%A1%80/"
-                                   title="Java基础"
+                                   href="/2024/07/11/%E5%89%8D%E7%AB%AF/React%20Native%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"
+                                   title="React Native环境搭建"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Java基础</span>
+                                        <span class="post-nav-title-item text-ellipsis">React Native环境搭建</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -574,11 +562,11 @@ stars，属于很流行的组件库。 ## 安装
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/05/25/%E5%89%8D%E7%AB%AF/ReactNative%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/ReactNative%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"
-                                   title="ReactNative基础学习"
+                                   href="/2024/05/18/%E5%89%8D%E7%AB%AF/TypeScript%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"
+                                   title="TypeScript基础学习"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">ReactNative基础学习</span>
+                                        <span class="post-nav-title-item text-ellipsis">TypeScript基础学习</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -606,7 +594,7 @@ stars，属于很流行的组件库。 ## 安装
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node%E5%92%8Cjdk"><span class="nav-text">Node和JDK</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-text">1 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node%E5%92%8Cjdk"><span class="nav-text">1.1 Node和JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-text">1.2 Android开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87android%E8%AE%BE%E5%A4%87"><span class="nav-text">1.3 准备Android设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E9%A1%B9%E7%9B%AE"><span class="nav-text">1.4 创建模板项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.5 遇到的问题</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -779,7 +767,7 @@ stars，属于很流行的组件库。 ## 安装
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node%E5%92%8Cjdk"><span class="nav-text">Node和JDK</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-text">1 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node%E5%92%8Cjdk"><span class="nav-text">1.1 Node和JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-text">1.2 Android开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87android%E8%AE%BE%E5%A4%87"><span class="nav-text">1.3 准备Android设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E9%A1%B9%E7%9B%AE"><span class="nav-text">1.4 创建模板项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-text">1.5 遇到的问题</span></a></li></ol></li></ol>
     </div>
 </div>
 

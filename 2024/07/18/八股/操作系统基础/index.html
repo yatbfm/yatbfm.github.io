@@ -481,8 +481,8 @@ MAIN、子程序段 X、数据段 D 及栈段 S 等。</p>
 <p>不一定！可能会存在<strong>页缺失</strong>。也就是说，物理内存中没有对应的物理页或者物理内存中有对应的物理页但虚拟页还未和物理页建立映射（对应的页表项不存在）。</p>
 <h3 id="单级页表有什么问题为什么需要多级页表">单级页表有什么问题？为什么需要多级页表</h3>
 <p>只用一级页表的话，如果系统运行的程序多起来，页表的开销很大，占用空间，而且绝大多数程序可能只用到页表中的几项，其他的浪费了。采用二级页表的话，分为一级页表和二级页表，一级页表对应的二级页表是一对多的关系，二级页表是按需加载的，进而节省空间。</p>
-<style>.vqethhztfbro{zoom:67%;}</style>
-<img src="/2024/07/18/%E5%85%AB%E8%82%A1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/multilevel-page-table.png" class="vqethhztfbro" alt="多级页表">
+<style>.ckqracnvltqs{zoom:67%;}</style>
+<img src="/2024/07/18/%E5%85%AB%E8%82%A1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/multilevel-page-table.png" class="ckqracnvltqs" alt="多级页表">
 <p>多级页表属于时间换空间，利用增加页表的查询次数减少页表占用的空间。</p>
 <h3 id="tlb作用有tlb时候的地址翻译过程是什么">TLB作用？有TLB时候的地址翻译过程是什么</h3>
 <p>为了提高虚拟地址到物理地址的转换速度，操作系统在<strong>页表方案</strong>基础之上引入了<strong>转址旁路缓存(Translation

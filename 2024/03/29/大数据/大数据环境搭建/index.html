@@ -417,8 +417,8 @@ mjx-container[display="true"] + br {
 <p>在<code>/etc/prodile.d/my_env.sh</code>中添加一下内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/opt/module/hadoop3.1.3</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_HOME</span>/sbin</span><br></pre></td></tr></table></figure>
 <p>刷新环境变量。然后执行<code>hadoop version</code>命令，显示版本表示安装成功。</p>
-<style>.mitczqixjqpr{zoom: 67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240328232348889.png" class="mitczqixjqpr" alt="image-20240328232348889">
+<style>.ribqrpdyjecc{zoom: 67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240328232348889.png" class="ribqrpdyjecc" alt="image-20240328232348889">
 <h2 id="hadoop分布式运行模式">1.4 Hadoop分布式运行模式</h2>
 <p>首先将上边安装的Java环境、Hadoop环境和环境变量文件同步到另外两台服务器中。可以使用<code>scp</code>命令发送文件和目录。</p>
 <h3 id="集群规划">1.4.1 集群规划</h3>
@@ -494,11 +494,11 @@ reduce配置</strong>。</p>
 <p>可以看到<code>ResourceManager</code>启动了。</p></li>
 <li><p>查看信息</p>
 <p>进入<code>192.168.10.100:9870</code>查看HDFS的相关信息。</p>
-<style>.wmhgilkuhytg{zoom: 33%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329103104664.png" class="wmhgilkuhytg" alt="image-20240329103104664">
+<style>.layegnkpqnlf{zoom: 33%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329103104664.png" class="layegnkpqnlf" alt="image-20240329103104664">
 <p>进入<code>192.168.10.101:8088</code>查看Yarn相关信息。</p>
-<style>.kutypiewucjw{zoom: 33%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329103141506.png" class="kutypiewucjw" alt="image-20240329103141506">
+<style>.wytnlmzdunpy{zoom: 33%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329103141506.png" class="wytnlmzdunpy" alt="image-20240329103141506">
 <p>展示以上页面表明安装成功，hdfs和yarn已经成功启动。</p></li>
 </ol>
 <h3 id="配置历史服务器">1.4.4 配置历史服务器</h3>
@@ -507,8 +507,8 @@ reduce配置</strong>。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 历史服务器端地址 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.jobhistory.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>cluster100:10020<span class="tag">&lt;/<span class="name">value</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span> </span><br><span class="line"><span class="comment">&lt;!-- 历史服务器web端地址 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.jobhistory.webapp.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>cluster100:19888<span class="tag">&lt;/<span class="name">value</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span> </span><br></pre></td></tr></table></figure>
 <p>配置好后将该配置文件分发到其他节点。然后使用命令<code>mapred --daemon start historyserver</code>启动历史服务器。</p>
 <p>通过配置的端口访问Web页面，正常显示页面，证明历史服务器已经启动。</p>
-<style>.ihedjhvvjbdi{zoom: 33%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329104903290.png" class="ihedjhvvjbdi" alt="image-20240329104903290">
+<style>.ctwkgpzefqsx{zoom: 33%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329104903290.png" class="ctwkgpzefqsx" alt="image-20240329104903290">
 <h3 id="配置日志聚集功能">1.4.5 配置日志聚集功能</h3>
 <p>配置日志聚集可以将所有服务器的运行日志聚集到HDFS中，方便统一查看。</p>
 <p>配置<code>yarn-site.xml</code>，添加以下内容：</p>
@@ -541,11 +541,11 @@ reduce配置</strong>。</p>
 <li><p>集群启动</p>
 <p>分别在三台节点执行<code>bin/zkServer.sh start</code>。</p>
 <p>显示如下信息表示启动成功。</p>
-<style>.hmbowtdelfju{}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329123004716.png" class="hmbowtdelfju" alt="image-20240329123004716"></li>
+<style>.wtsmhyvqladm{}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329123004716.png" class="wtsmhyvqladm" alt="image-20240329123004716"></li>
 </ol>
-<style>.hlzuhjnyufbh{}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329123020680.png" class="hlzuhjnyufbh" alt="image-20240329123020680">
+<style>.xlmibvbjslwq{}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329123020680.png" class="xlmibvbjslwq" alt="image-20240329123020680">
 <img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329123052274.png" class="" title="image-20240329123052274">
 <h1 id="hbase安装">3. Hbase安装</h1>
 <h2 id="下载-1">3.1 下载</h2>
@@ -572,8 +572,8 @@ reduce配置</strong>。</p>
 <p>执行命令<code>start-hbase.sh</code>。显示一下信息启动成功。</p>
 <p>访问<code>192.168.10.100:16010</code>出现hbase的页面，启动成功。</p>
 <img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329125724884.png" class="" title="image-20240329125724884">
-<style>.teocghvzkmbn{zoom:50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329130146971.png" class="teocghvzkmbn" alt="image-20240329130146971">
+<style>.pqbjruufqdtc{zoom:50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329130146971.png" class="pqbjruufqdtc" alt="image-20240329130146971">
 <h1 id="mysql安装">4. MySQL安装</h1>
 <p>下载<code>mysql-xxx.tar</code>安装包和<code>mysql</code>驱动jar包。</p>
 <h2 id="安装-2">4.1 安装</h2>
@@ -624,15 +624,15 @@ reduce配置</strong>。</p>
 <p>初始化hive源数据库。</p>
 <p><code>schematool -dbType mysql -initSchema -verbose</code></p>
 <p>如果出现报错：</p>
-<style>.gwupyfpfgjyk{zoom: 50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329140900505.png" class="gwupyfpfgjyk" alt="image-20240329140900505">
+<style>.qusxfjrannbn{zoom: 50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329140900505.png" class="qusxfjrannbn" alt="image-20240329140900505">
 <p>是包版本的问题，将<code>hadoop</code>中相关的<code>guava</code>复制到<code>hive</code>中即可。</p>
 <p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm hive3.1.3/lib/guava-19.0.jar </span><br><span class="line">cp hadoop3.1.3/share/hadoop/common/lib/guava-27.0-jre.jar hive3.1.3/lib/</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329141035049.png" class="" title="image-20240329141035049"></p>
 <p>打印以上信息表示初始化成功。</p>
 <p>登录MySQL数据库，查看<code>metastore</code>数据库中的所有表。</p>
-<style>.ebezwmmymhhw{zoom: 50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329141212222.png" class="ebezwmmymhhw" alt="image-20240329141212222">
+<style>.ktglsjjlxgkb{zoom: 50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329141212222.png" class="ktglsjjlxgkb" alt="image-20240329141212222">
 <p>可以看到有了元数据信息。</p></li>
 </ol>
 <h2 id="hive服务部署">5.3 Hive服务部署</h2>
@@ -642,8 +642,8 @@ reduce配置</strong>。</p>
 <p>修改hive下的<code>hive-site.xml</code>，增加如下信息：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定hiveserver2连接的host --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.server2.thrift.bind.host<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>cluster100<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 指定hiveserver2连接的端口号 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.server2.thrift.port<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>10000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>使用命令<code>hive --service hiveserver2</code>启动<code>hiveserver2</code>，然后在另一个终端执行<code>beeline -u jdbc:hive2://cluster100:10000 -n lishan</code>后看到如下信息：</p>
-<style>.njshkefldodz{zoom: 67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329142130328.png" class="njshkefldodz" alt="image-20240329142130328">
+<style>.ezldcbdrtfpx{zoom: 67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329142130328.png" class="ezldcbdrtfpx" alt="image-20240329142130328">
 <p>启动成功。</p>
 <h3 id="metastore服务">5.3.2 metastore服务</h3>
 <p>修改hive下的<code>hive-site.xml</code>，添加内容：</p>
@@ -682,8 +682,8 @@ reduce配置</strong>。</p>
 <p>在每个节点上分别启动kafka。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br></pre></td></tr></table></figure>
 <p>使用jps查看进程</p>
-<style>.squhbtdcezld{zoom:67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329153812585.png" class="squhbtdcezld" alt="image-20240329153812585">
+<style>.xljacslajmem{zoom:67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329153812585.png" class="xljacslajmem" alt="image-20240329153812585">
 <p>可以看到kafka已经启动了。</p>
 <h1 id="storm安装">8. Storm安装</h1>
 <p>下载<code>storm 1.2.4</code>版本。并解压到<code>/opt/module</code>中修改名为<code>storm1.2.4</code>。</p>
@@ -697,11 +697,11 @@ reduce配置</strong>。</p>
 <p>另外两个节点启动：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup /opt/module/storm1.2.4/bin/storm supervisor &gt; /opt/module/storm1.2.4/output.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 <p><code>cluster100</code>查看进程，出现<code>core nimbus logviewer</code>即成功。</p>
-<style>.xzrudhhwuqnu{zoom:67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329155911737.png" class="xzrudhhwuqnu" alt="image-20240329155911737">
+<style>.trtlpkuhqrmx{zoom:67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329155911737.png" class="trtlpkuhqrmx" alt="image-20240329155911737">
 <p>另外两个节点出现<code>supervisor</code></p>
-<style>.pyefqdyacglm{zoom:67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329155943569.png" class="pyefqdyacglm" alt="image-20240329155943569">
+<style>.cimzbsatrbrj{zoom:67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329155943569.png" class="cimzbsatrbrj" alt="image-20240329155943569">
 <h1 id="cassandra安装">9. Cassandra安装</h1>
 <p>下载版本为<code>cassandra 3.11.10</code>的版本。完成后解压到<code>/opt/module</code>并修改名为：<code>cassandra3.11.10</code></p>
 <h2 id="配置-4">9.1 配置</h2>
@@ -710,8 +710,8 @@ reduce配置</strong>。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">data_file_directories:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/opt/module/cassandra3.11.10/data</span></span><br><span class="line"><span class="attr">commitlog_directory:</span> <span class="string">/opt/module/cassandra3.11.10/commitlog</span></span><br><span class="line"><span class="attr">saved_caches_directory:</span> <span class="string">/opt/module/cassandra3.11.10/saved_caches</span></span><br></pre></td></tr></table></figure>
 <h2 id="启动-3">9.2 启动</h2>
 <p>执行命令<code>bin/cassandra</code>启动。然后再开一个终端，执行命令<code>bin/cqlsh</code>。显示以下内容：</p>
-<style>.fzkvsdzbnvfh{zoom:67%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329164052052.png" class="fzkvsdzbnvfh" alt="image-20240329164052052">
+<style>.oveyxydswitn{zoom:67%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329164052052.png" class="oveyxydswitn" alt="image-20240329164052052">
 <p>启动成功。</p>
 <h2 id="添加开机自启">9.3 添加开机自启</h2>
 <p><code>vim /usr/lib/systemd/system/cassandra.service</code>创建服务文件。</p>
@@ -724,8 +724,8 @@ reduce配置</strong>。</p>
 <ol type="1">
 <li><p>通过UI页面查看</p>
 <p>访问<code>192.168.10.100:9870/explorer.html</code></p>
-<style>.vxokxdquueep{zoom:50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329170718073.png" class="vxokxdquueep" alt="image-20240329170718073">
+<style>.gupvgytuffqa{zoom:50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329170718073.png" class="gupvgytuffqa" alt="image-20240329170718073">
 <p>可以查看到目前hdfs中存储的文件。</p></li>
 <li><p>通过命令查看。</p>
 <p>使用<code>hadoop fs -ls</code>查看目录。</p>
@@ -737,8 +737,8 @@ reduce配置</strong>。</p>
 <img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329171645516.png" class="" title="image-20240329171645516">
 <h2 id="hbase使用">10.3 HBase使用</h2>
 <p>通过访问Web页面，查看信息。</p>
-<style>.dgimlxwgsmvk{zoom: 50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329171932084.png" class="dgimlxwgsmvk" alt="image-20240329171932084">
+<style>.bsmvhexjtsuh{zoom: 50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329171932084.png" class="bsmvhexjtsuh" alt="image-20240329171932084">
 <h2 id="hive使用">10.4 Hive使用</h2>
 <p>执行命令<code>hive</code>进入<code>hive cli</code>。</p>
 <p>创建数据库后查询。</p>
@@ -750,15 +750,15 @@ reduce配置</strong>。</p>
 <p>进入spark目录，执行如下命令，可以使用spark默认的应用测试spark环境。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit \</span><br><span class="line">--class org.apache.spark.examples.SparkPi \</span><br><span class="line">--master yarn \</span><br><span class="line">--deploy-mode client \</span><br><span class="line">./examples/jars/spark-examples_2.12-3.0.0.jar \</span><br><span class="line">10 </span><br></pre></td></tr></table></figure>
 <p>运行后，可以进入yarn的页面<code>192.168.10.101:8088</code>，查看到当前正在运行的任务。</p>
-<style>.etwpidmjekkr{zoom:50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329172908745.png" class="etwpidmjekkr" alt="image-20240329172908745">
+<style>.mqhqwdphupcc{zoom:50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329172908745.png" class="mqhqwdphupcc" alt="image-20240329172908745">
 <p>点击任务后的<code>history</code>可以进入到历史页面，查看到任务的历史运行日志。</p>
-<style>.cvqwyqulcnhb{zoom:50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329173010911.png" class="cvqwyqulcnhb" alt="image-20240329173010911">
+<style>.gvphdxaouion{zoom:50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329173010911.png" class="gvphdxaouion" alt="image-20240329173010911">
 <h2 id="storm使用">10.6 Storm使用</h2>
 <p>可以访问ui页面<code>192.168.10.100:8888</code>查看信息。</p>
-<style>.dcuzqojlvyti{zoom:50%;}</style>
-<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329173220108.png" class="dcuzqojlvyti" alt="image-20240329173220108">
+<style>.xcijeqwwcyto{zoom:50%;}</style>
+<img src="/2024/03/29/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240329173220108.png" class="xcijeqwwcyto" alt="image-20240329173220108">
 <p>可以看到三个节点都正常运行。</p>
 <h1 id="总结">11. 总结</h1>
 <p>本次实验学习了大数据集群环境的搭建，了解到了很多大数据相关的组件。和同组的同学一起学习了相关的知识，我们每个人都搭建了一遍大数据的环境，提高了动手能力。</p>

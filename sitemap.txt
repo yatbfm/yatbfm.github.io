@@ -2,6 +2,7 @@ https://yatbfm.github.io/2024/11/13/%E5%89%8D%E7%AB%AF/CSS%E5%9F%BA%E7%A1%80/
 https://yatbfm.github.io/2024/11/22/LeetCode/LeetCodeHot100/
 https://yatbfm.github.io/2024/01/22/SQL%E9%A2%98/LeetCode/Sql%E9%A2%98/
 https://yatbfm.github.io/2024/05/18/%E5%89%8D%E7%AB%AF/TypeScript%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/
+https://yatbfm.github.io/2024/07/11/%E5%B7%A6%E7%A5%9E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E5%B7%A6%E7%A5%9E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/
 https://yatbfm.github.io/2024/07/18/%E5%85%AB%E8%82%A1/MySQL%E5%9F%BA%E7%A1%80/
 https://yatbfm.github.io/2024/07/18/%E5%85%AB%E8%82%A1/Java%E5%9F%BA%E7%A1%80/
 https://yatbfm.github.io/2024/07/18/%E5%85%AB%E8%82%A1/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/
@@ -47,6 +48,7 @@ https://yatbfm.github.io/tags/SQL/
 https://yatbfm.github.io/tags/%E7%89%9B%E5%AE%A2/
 https://yatbfm.github.io/tags/sql/
 https://yatbfm.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/
+https://yatbfm.github.io/tags/%E7%AE%97%E6%B3%95/
 https://yatbfm.github.io/categories/%E6%8A%80%E6%9C%AF/
 https://yatbfm.github.io/categories/Hexo/
 https://yatbfm.github.io/categories/%E7%AE%97%E6%B3%95/

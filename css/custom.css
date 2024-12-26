@@ -1,0 +1,50 @@
+/* your-hexo/source/css/custom.css */
+
+:root {
+    --post-img-align: 0 auto;
+}
+
+/*pre {
+    display: grid;
+    place-items: center;
+}*/
+
+/* .post-content-bottom {
+    counter-reset: section;
+}
+
+.post-content-bottom h1 {
+    counter-reset: subsection;
+}
+
+.post-content-bottom h2 {
+    counter-reset: subsubsection;
+}
+
+.post-content-bottom h3 {
+    counter-reset: subsubsubsection;
+}
+
+.post-content-bottom h4 {
+    counter-reset: subsubsubsubsection;
+}
+
+.post-content-bottom h1::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+
+.post-content-bottom h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+
+.post-content-bottom h3::before {
+    counter-increment: subsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+}
+
+.post-content-bottom h4::before {
+    counter-increment: subsubsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) ". ";
+} */

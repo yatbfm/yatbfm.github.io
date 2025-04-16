@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            Java基础 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Java基础
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-12-01 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%85%AB%E8%82%A1/">八股</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Java/">Java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.8k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>13 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <meta name="referrer" content="no-referrer">
+<p>注：大多数内容参考了<a class="link" target="_blank" rel="noopener" href="https://javaguide.cn">JavaGuide<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="java">Java</h1>
+<h2 id="线程池可以设置的参数">线程池可以设置的参数</h2>
+<span id="more"></span>
+<p><a class="link" target="_blank" rel="noopener" href="https://javabetter.cn/interview/java-34.html#_28-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0">https://javabetter.cn/interview/java-34.html#_28-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0<i class="fas fa-external-link-alt"></i></a><br>七个参数：<br><strong>1.corePoolSize</strong>：<strong>核心线程数</strong>，线程池中始终存活的线程数。<br><strong>2.maximumPoolSize</strong>:
+<strong>最大线程数</strong>，线程池中允许的最大线程数。<br><strong>3.keepAliveTime</strong>:
+<strong>存活时间</strong>，线程没有任务执行时最多保持多久时间会终止。<br><strong>4.unit</strong>:
+<strong>单位</strong>，参数keepAliveTime的时间单位，7种可选。<br><strong>5.workQueue</strong>:
+一个<strong>阻塞队列</strong>，用来存储等待执行的任务，均为线程安全，7种可选。<br><strong>6.threadFactory</strong>:
+<strong>线程工厂</strong>，主要用来创建线程，默认正常优先级、非守护线程。<br><strong>7.handler</strong>：<strong>拒绝策略</strong>，拒绝处理任务时的策略，4种可选，默认为AbortPolicy。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720254544845-1613a73f-915e-4e7c-9fb8-7c2850287558.png#averageHue=%23faf8f6&amp;clientId=ua9db5aea-3bb4-4&amp;from=paste&amp;id=ud6d649b7&amp;originHeight=1054&amp;originWidth=1154&amp;originalType=url&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=uf17700d3-7a62-415f-9388-1db2d9206dc&amp;title="></p>
+<h2 id="synchronized和可重入锁的区别">synchronized和可重入锁的区别</h2>
+<ul>
+<li><strong>用法不同</strong>：synchronized
+可以用来修饰普通方法、静态方法和代码块，而 ReentrantLock
+只能用于代码块。</li>
+<li><strong>获取锁和释放锁的机制不同</strong>：synchronized
+是自动加锁和释放锁的，而 ReentrantLock 需要手动加锁和释放锁。</li>
+<li><strong>锁类型不同</strong>：synchronized 是非公平锁，而
+ReentrantLock 默认为非公平锁，也可以手动指定为公平锁。</li>
+<li><strong>响应中断不同</strong>：ReentrantLock
+可以响应中断，解决死锁的问题，而 synchronized 不能响应中断。</li>
+<li><strong>底层实现不同</strong>：synchronized 是 JVM
+层面通过监视器实现的，而 ReentrantLock 是基于 AQS 实现的。</li>
+</ul>
+<h2 id="可重入锁怎么实现">可重入锁怎么实现</h2>
+<h2 id="线程安全的集合有哪些">线程安全的集合有哪些</h2>
+<ol type="1">
+<li>Vector、HashTable</li>
+</ol>
+<p>使用synchronized修饰方法保证线程安全<br>效率低</p>
+<ol start="2" type="1">
+<li>ConcurrentHashMap、CopyOnWriteArrayList、CopyOnWriteArraySet</li>
+</ol>
+<p>除了1.8的ConcurrentHashMap大多都是用Lock锁</p>
+<h2 id="concurrenthashmap怎么保证线程安全">ConcurrentHashMap怎么保证线程安全</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/java/collection/java-collection-questions-02.html#concurrenthashmap-%E5%92%8C-hashtable-%E7%9A%84%E5%8C%BA%E5%88%AB">https://javaguide.cn/java/collection/java-collection-questions-02.html#concurrenthashmap-%E5%92%8C-hashtable-%E7%9A%84%E5%8C%BA%E5%88%AB<i class="fas fa-external-link-alt"></i></a><br>JDK1.7
+的 ConcurrentHashMap 底层采用 <strong>分段的数组+链表</strong>
+实现，JDK1.8 采用的数据结构跟 HashMap1.8
+的结构一样，数组+链表/红黑二叉树。<br>在 JDK1.7
+的时候，ConcurrentHashMap
+对整个桶数组进行了分割分段(Segment，分段锁)，每一把锁只锁容器其中一部分数据（下面有示意图），多线程访问容器里不同数据段的数据，就不会存在锁竞争，提高并发访问率。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720277791658-2caf2e81-5511-43c3-9ed2-738007c8b612.png#averageHue=%23faf7f3&amp;clientId=u22ade356-8f9e-4&amp;from=paste&amp;height=351&amp;id=ude699fcf&amp;originHeight=439&amp;originWidth=912&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=47916&amp;status=done&amp;style=none&amp;taskId=ua2c8acd0-85ea-41cb-a90b-1fa81a2e3b4&amp;title=&amp;width=729.6" alt="image.png"></p>
+<p>到了 JDK1.8 的时候，ConcurrentHashMap 已经摒弃了 Segment
+的概念，而是直接用 Node 数组+链表+红黑树的数据结构来实现，并发控制使用
+synchronized 和 CAS 来操作。（JDK1.6 以后 synchronized 锁做了很多优化）
+整个看起来就像是优化过且线程安全的 HashMap，虽然在 JDK1.8 中还能看到
+Segment 的数据结构，但是已经简化了属性，只是为了兼容旧版本。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720277809093-b6b12074-f217-46df-9406-7c5262b60fc5.png#averageHue=%23f1efee&amp;clientId=u22ade356-8f9e-4&amp;from=paste&amp;height=370&amp;id=u863ec86b&amp;originHeight=463&amp;originWidth=820&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=42692&amp;status=done&amp;style=none&amp;taskId=u9e78123f-c726-4519-8950-23e51d5ac84&amp;title=&amp;width=656" alt="image.png"></p>
+<h2 id="cas是什么">CAS是什么</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/java/basis/unsafe.html#cas-%E6%93%8D%E4%BD%9C">https://javaguide.cn/java/basis/unsafe.html#cas-%E6%93%8D%E4%BD%9C<i class="fas fa-external-link-alt"></i></a><br>
+CAS 即比较并替换（Compare And
+Swap)，是实现并发算法时常用到的一种技术。CAS
+操作包含三个操作数——内存位置、预期原值及新值。执行 CAS
+操作的时候，将内存位置的值与预期原值比较，如果相匹配，那么处理器会自动将该位置值更新为新值，否则，处理器不做任何操作。我们都知道，CAS
+是一条 CPU 的原子指令（cmpxchg
+指令），不会造成所谓的数据不一致问题，Unsafe 提供的 CAS 方法（如
+compareAndSwapObject、compareAndSwapInt、compareAndSwapLong）底层实现即为
+CPU 指令 cmpxchg 。</p>
+<p>存在问题：如果在更新过程中，另一个线程也修改了这个变量，但是修改后的值和原值一样，这样就不会发现修改过，可以采用添加版本号或者时间戳的方式避免。</p>
+<h2 id="volatile">volatile</h2>
+<ul>
+<li>1.<strong>保证内存可见性</strong>
+<ul>
+<li>当一个被volatile关键字修饰的变量被一个线程修改的时候，其他线程可以立刻得到修改之后的结果。当一个线程向被volatile关键字修饰的变量<strong>写入数据</strong>的时候，虚拟机会<strong>强制它被值刷新到主内存中</strong>。当一个线程<strong>读取</strong>被volatile关键字修饰的值的时候，虚拟机会<strong>强制要求它从主内存中读取</strong>。</li>
+</ul></li>
+<li>2.<strong>禁止指令重排序</strong>
+<ul>
+<li>指令重排序是编译器和处理器为了高效对程序进行优化的手段，cpu
+是与内存交互的，而 cpu 的效率想比内存高很多，所以 cpu
+会在不影响最终结果的情况下，不等待返回结果直接进行后续的指令操作，而
+volatile
+就是给相应代码加了<strong>内存屏障</strong>，在屏障内的代码禁止指令重排序。</li>
+</ul></li>
+</ul>
+<h2 id="java的内存区域">Java的内存区域</h2>
+<h2 id="java的gc逻辑">Java的gc逻辑</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7123853933801373733">https://juejin.cn/post/7123853933801373733<i class="fas fa-external-link-alt"></i></a><br><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/java/jvm/jvm-garbage-collection.html">https://javaguide.cn/java/jvm/jvm-garbage-collection.html<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="内存分配和回收原则">内存分配和回收原则</h3>
+<p>首先分配对象到新生代的<strong>Eden</strong>区，再次分配对象时仍旧是优先分配到<strong>Eden</strong>区，如果发现无法满足，则进行一次<strong>Minor
+gc（也叫Young
+gc）</strong>，将<strong>Eden</strong>区的对象复制到<strong>S</strong>区，如果<strong>S</strong>区无法满足条件则根据<strong>空间分配担保</strong>将对象复制到老年代，一般老年代可以满足条件，如果不满足条件则进行<strong>Full
+gc</strong>，对新生代和老年代进行一次<strong>gc</strong>。<br>较大的对象（大对象就是需要大量连续内存空间的对象（比如：字符串、数组））也会直接进入老年代，避免将大对象放入新生代产生频繁的gc操作。具体什么是大对象，不同垃圾回收器会有不同的设置：</p>
+<ul>
+<li>G1垃圾回收器可以通过设置参数来确定大对象的大小。</li>
+<li>Parallel Scavenge
+垃圾回收器，默认情况没有阈值，是根据当前堆内存的情况和历史数据动态决定的。</li>
+</ul>
+<p>jvm会给每个对象设置一个<strong>年龄</strong>，新生代的对象经历一次<strong>Minor
+gc</strong>存活下来时，会将年龄<strong>增加1</strong>，当年龄达到一定<strong>阈值</strong>时（默认为15，但也和具体的垃圾收集器或者参数设置有关），也会加入到老年代中。</p>
+<h3 id="死亡对象判断方法">死亡对象判断方法</h3>
+<ol type="1">
+<li>引用计数法</li>
+</ol>
+<p>给对象中添加一个引用计数器：</p>
+<ul>
+<li>有一个地方引用了这个对象时，计数器加1</li>
+<li>引用失效则减1</li>
+<li>计数器为0则表示对象不再被使用</li>
+</ul>
+<p>该方法实现简单效率高，但是很难解决对象之间循环引用的问题（循环引用的情况下两个对象的计数器都不为0）。</p>
+<ol start="2" type="1">
+<li>可达性分析算法</li>
+</ol>
+<p>通过一系列被称为<strong>GC
+Roots</strong>的对象作为起点，从这些节点开始向下搜索，节点所走过的路被称为引用链，当一个对象到GC
+Roots没有任何引用链的话，则证明此对象是不可用的，需要被回收。<br>哪些对象可以作为<strong>GC
+Roots</strong>呢：</p>
+<ul>
+<li>虚拟机栈（栈帧中的局部变量表）中引用的对象</li>
+<li>本地方法栈（native方法）中引用的对象</li>
+<li>方法区中类静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+<li>所有被同步锁持有的对象</li>
+<li>JNI（Java Native Interface）引用的对象</li>
+</ul>
+<ol start="3" type="1">
+<li>引用类型总结
+<ol type="1">
+<li>强引用：大部分引用都是强引用，垃圾回收器绝不会回收，当内存空间不足时会抛出OOM异常也不会回收强引用的对象。</li>
+<li>软引用：如果内存足够，则不会回收，如果内存不足则会回收软引用对象的内存。软引用可以用来实现内存敏感的高速缓存。</li>
+<li>弱引用：只有短暂的生命周期，无论内存是否充足，只要发现了弱引用的对象就会进行回收。</li>
+<li>虚引用：虚引用并不会决定任何对象的生命周期，对象如果只有虚引用，就和没有引用一样，任何时候都会被回收。</li>
+</ol></li>
+</ol>
+<p>虚引用必须和引用队列联合使用，而软引用和弱引用不必须和引用队列联合使用。</p>
+<ol start="4" type="1">
+<li>如何判断废弃常量</li>
+</ol>
+<p>假如在字符串常量池中存在字符串 "abc"，如果当前没有任何 String
+对象引用该字符串常量的话，就说明常量"abc"
+就是废弃常量，如果这时发生内存回收的话而且有必要的话，"abc"
+就会被系统清理出常量池了。</p>
+<ol start="5" type="1">
+<li>如何判断无用类</li>
+</ol>
+<p>类需要同时满足下面 3 个条件才能算是 <strong>“无用的类”</strong>：</p>
+<ul>
+<li>该类所有的实例都已经被回收，也就是 Java
+堆中不存在该类的任何实例。</li>
+<li>加载该类的 ClassLoader 已经被回收。</li>
+<li>该类对应的 java.lang.Class
+对象没有在任何地方被引用，无法在任何地方通过反射访问该类的方法。</li>
+</ul>
+<p>虚拟机可以对满足上述 3
+个条件的无用类进行回收，这里说的仅仅是“可以”，而并不是和对象一样不使用了就会必然被回收。</p>
+<h3 id="垃圾收集算法">垃圾收集算法</h3>
+<ol type="1">
+<li><strong>标记清除算法</strong></li>
+</ol>
+<p>分为标记和清除两个阶段：首先<strong>标记出所有不回收</strong>的对象，标记完成后统一<strong>回收掉所有没有被标记</strong>的对象。<br>是最基础的算法，后续算法都是对他的改进，这种算法会有两个明显的问题：</p>
+<ul>
+<li>效率问题：标记和清除两个过程效率都不高</li>
+<li>空间问题：标记清楚后会产生大量不连续的内存碎片</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>标记整理算法</strong></li>
+</ol>
+<p>标记过程和标记清除算法一样，后续步骤不是直接对可回收对象回收，而是让所有存活的对象向前一端移动，然后直接清理掉端边界以外的内存。由于多了整理的步，效率不高，适合老年代这种垃圾回收频率不是很高的场景。</p>
+<ol start="3" type="1">
+<li><strong>复制算法</strong></li>
+</ol>
+<p>解决效率和内存碎片问题。将内存分为大小相同的两块，每次使用其中一块，当一块使用完后，将存活的对象复制到另一块，然后清理使用的空间。<br>存在两个问题：</p>
+<ul>
+<li>可用内存变小</li>
+<li>不适合老年代，如果存活对象数量较多，复制性能会变差。</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>分代收集算法</strong></li>
+</ol>
+<p>根据对象存活周期将内存分为几块。一般将Java堆分为新生代和老年代。新生代中每次收集都会有大量对象死去，所以可以选择<strong>标记复制</strong>算法，只需要少量对象的复制成本就可以完成垃圾收集；而老年代的对象存活几率比较高，而且没有额外的<strong>空间担保</strong>，所以可以使用<strong>标记清除或者标记整理</strong>算法。</p>
+<h3 id="垃圾收集器">垃圾收集器</h3>
+<p><strong>垃圾收集器</strong>是<strong>垃圾收集算法</strong>的具体实现。到目前为止还没有最好的垃圾收集器出现，<strong>只能根据具体的应用场景选择合适的垃圾收集器</strong>。<br>JDK默认的垃圾收集器：</p>
+<ul>
+<li>1.8：Parallel Scavenge（新生代） + Parallel Old（老年代）</li>
+<li>9 - 20: G1</li>
+</ul>
+<ol type="1">
+<li><strong>Parallel Scavenge收集器</strong></li>
+</ol>
+<p>Parallel
+Scavenge收集器是使用<strong>标记复制</strong>算法的<strong>多线程</strong>收集器，该收集器的关注点在于吞吐量（高效率使用CPU），吞吐量指CPU中用于运行用户代码时间与CPU总消耗时间的比值。该收集器提供了很多参数供用户找到合适的停顿时间或最大吞吐量，也可以使用收集器的自适应调节策略。</p>
+<ol start="2" type="1">
+<li><strong>Parallel Old收集器</strong></li>
+</ol>
+<p>Parallel
+Scavenge的老年代版本，使用<strong>多线程</strong>的<strong>标记整理</strong>算法，同样注重吞吐量。</p>
+<ol start="3" type="1">
+<li><strong>G1收集器</strong></li>
+</ol>
+<p>G1 (Garbage-First)
+是一款<strong>面向服务器</strong>的垃圾收集器,主要针对配备<strong>多颗处理器</strong>及<strong>大容量内存</strong>的机器.
+以极高概率满足<strong>GC 停顿时间</strong>
+要求的同时,还具备<strong>高吞吐量</strong>性能特征。<br>有以下特征：</p>
+<ul>
+<li><strong>并行与并发</strong>：G1 能充分利用
+CPU、多核环境下的硬件优势，使用多个 CPU（CPU 或者 CPU 核心）来缩短
+Stop-The-World 停顿时间。部分其他收集器原本需要停顿 Java 线程执行的 GC
+动作，G1 收集器仍然可以通过并发的方式让 java 程序继续执行。</li>
+<li><strong>分代收集</strong>：虽然 G1
+可以不需要其他收集器配合就能独立管理整个 GC
+堆，但是还是保留了分代的概念。</li>
+<li><strong>空间整合</strong>：与 CMS 的“标记-清除”算法不同，G1
+从整体来看是基于“标记-整理”算法实现的收集器；从局部上来看是基于“标记-复制”算法实现的。</li>
+<li><strong>可预测的停顿</strong>：这是 G1 相对于 CMS
+的另一个大优势，降低停顿时间是 G1 和 CMS 共同的关注点，但 G1
+除了追求低停顿外，还能建立可预测的停顿时间模型，能让使用者明确指定在一个长度为
+M 毫秒的时间片段内，消耗在垃圾收集上的时间不得超过 N 毫秒。</li>
+</ul>
+<p>G1收集器大致分为几个步骤：</p>
+<ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>最终标记</li>
+<li>筛选回收</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720352636391-257e336d-41d6-4e5d-b81f-abb5c625cb7d.png#averageHue=%23f9f9f9&amp;clientId=u1470b256-2352-4&amp;from=paste&amp;id=u4ef84eb8&amp;originHeight=262&amp;originWidth=999&amp;originalType=url&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u0c90a8d8-5cb0-41f4-9d3f-4c702f78f3c&amp;title="><br><strong>G1
+收集器在后台维护了一个优先列表，每次根据允许的收集时间，优先选择回收价值最大的
+Region(这也就是它的名字 Garbage-First 的由来)</strong> 。这种使用 Region
+划分内存空间以及有优先级的区域回收方式，保证了 G1
+收集器在有限时间内可以尽可能高的收集效率（把内存化整为零）。</p>
+<h2 id="hashmap的原理">HashMap的原理</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/java/collection/hashmap-source-code.html">https://javaguide.cn/java/collection/hashmap-source-code.html<i class="fas fa-external-link-alt"></i></a><br>jdk1.8之前由
+数组+链表
+组成，链表主要为了解决哈希冲突（拉链法）。在jdk1.8之后解决哈希冲突首先使用链表，当链表长度大于等于阈值（默认为8）时，首先判断数组长度，如果数组长度小于64，会选择扩容，如果数组长度大于64，会将链表转成红黑树，减少搜索的时间。<br>刚刚创建<code>HashMap</code>对象时数组长度为0，当第一次插入数据时数组长度设置为16。<br>首先将对象的<code>hashCode</code>和<code>hashCode</code>无符号右移16位的结果做异或（添加一些扰动）获得实际的哈希值（设为<code>hash</code>），然后将<code>hash</code>和数组长度-1做与运算（等同于取模，因为数组长度为2的n次幂）得到存放的数组索引位置。<br>当键值对的数量<code>size</code>超过阈值（数组长度*负载因子（默认是0.75））就会对数组进行扩容。</p>
+<h2 id="悲观锁和乐观锁的区别场景">悲观锁和乐观锁的区别、场景</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/java/concurrent/optimistic-lock-and-pessimistic-lock.html">https://javaguide.cn/java/concurrent/optimistic-lock-and-pessimistic-lock.html<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="双亲委派机制">双亲委派机制</h2>
+<h2 id="类加载过程">类加载过程</h2>
+<h2 id="类加载器详解">类加载器详解</h2>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                Java基础
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                b87a20734105/java基础/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-12-01 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Java/">Java</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/12bf0bd1f4f1/k8s%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85/"
+                                   title="k8s部署安装"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">k8s部署安装</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2da9eab1690e/mysql%E5%9F%BA%E7%A1%80/"
+                                   title="MySQL基础"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">MySQL基础</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text">线程池可以设置的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized%E5%92%8C%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">synchronized和可重入锁的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0"><span class="nav-text">可重入锁怎么实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">线程安全的集合有哪些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concurrenthashmap%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="nav-text">ConcurrentHashMap怎么保证线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cas%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">CAS是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%9A%84%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F"><span class="nav-text">Java的内存区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%9A%84gc%E9%80%BB%E8%BE%91"><span class="nav-text">Java的gc逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%92%8C%E5%9B%9E%E6%94%B6%E5%8E%9F%E5%88%99"><span class="nav-text">内存分配和回收原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%BB%E4%BA%A1%E5%AF%B9%E8%B1%A1%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="nav-text">死亡对象判断方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">垃圾收集算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">垃圾收集器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashmap%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-text">HashMap的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%82%B2%E8%A7%82%E9%94%81%E5%92%8C%E4%B9%90%E8%A7%82%E9%94%81%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%BA%E6%99%AF"><span class="nav-text">悲观锁和乐观锁的区别、场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6"><span class="nav-text">双亲委派机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B"><span class="nav-text">类加载过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-text">类加载器详解</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text">线程池可以设置的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized%E5%92%8C%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">synchronized和可重入锁的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0"><span class="nav-text">可重入锁怎么实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">线程安全的集合有哪些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concurrenthashmap%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="nav-text">ConcurrentHashMap怎么保证线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cas%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">CAS是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%9A%84%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F"><span class="nav-text">Java的内存区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%9A%84gc%E9%80%BB%E8%BE%91"><span class="nav-text">Java的gc逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%92%8C%E5%9B%9E%E6%94%B6%E5%8E%9F%E5%88%99"><span class="nav-text">内存分配和回收原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%BB%E4%BA%A1%E5%AF%B9%E8%B1%A1%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="nav-text">死亡对象判断方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">垃圾收集算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">垃圾收集器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashmap%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-text">HashMap的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%82%B2%E8%A7%82%E9%94%81%E5%92%8C%E4%B9%90%E8%A7%82%E9%94%81%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%BA%E6%99%AF"><span class="nav-text">悲观锁和乐观锁的区别、场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6"><span class="nav-text">双亲委派机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B"><span class="nav-text">类加载过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-text">类加载器详解</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>

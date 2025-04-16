@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            前端基础 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        前端基础
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-12-01 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%85%AB%E8%82%A1/">八股</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>6.8k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>25 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <meta name="referrer" content="no-referrer">
+<h1 id="浏览器">浏览器</h1>
+<span id="more"></span>
+<h2 id="url-的组成部分">url 的组成部分</h2>
+<ol type="1">
+<li>协议（Protocol）：表示访问网页时使用的通信协议，常见的有
+HTTP、HTTPS、FTP 等。</li>
+<li>域名（Domain
+Name）：表示网站的名称，是网站在互联网上的唯一标识。域名由多个部分组成，包括主域名和子域名，例如www.example.com中的"www"是子域名，"example"是主域名，".com"是顶级域名。顶级域名：也就是后缀，例如.com、.cn等。（备注：域名可以说是一个IP地址的代称，目的是为了便于记忆后者。</li>
+<li>端口号（Port）：表示用于访问网站的端口号，默认为
+80。例如，http://www.example.com:8080中的"8080"就是端口号。端口号的范围是：0~65535</li>
+<li>路径（Path）：表示网站上具体的文件或目录路径。例如，http://www.example.com/path/to/file中的"/path/to/file"就是路径（网址可以没有端口号）。</li>
+<li>查询参数（Query
+Parameters）：表示向服务器传递的参数，用于定制请求的内容。查询参数以"?"开头，多个参数之间使用"&amp;"分隔。例如，http://www.example.com/path/to/file?param1=value1&amp;param2=value2中的<code>param1=value1&amp;param2=value2</code>就是查询参数，这种常见于项目中路由跳转的传参、<code>get</code>请求等。</li>
+<li>锚点（Anchor）：表示网页内部的定位点。锚点以"#"开头，用于跳转到网页的特定位置。例如，http://www.example.com/path/to/file#section1中的"#section1"就是锚点，常见于a标签的超链接。</li>
+</ol>
+<h2 id="输入-url-敲回车后发生了什么">输入 url 敲回车后发生了什么</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/Newbie___/article/details/107212575">大厂常问：输入
+URL 到显示页面的全过程<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li><p>在浏览器地址栏输⼊<code>URL</code></p></li>
+<li><p>浏览器<strong>查看缓存</strong>，如果请求资源在缓存中并且新鲜，跳转到解码步骤</p>
+<ul>
+<li><p>如果资源未缓存，发起新请求</p></li>
+<li><p>如果已缓存，检验是否⾜够新鲜，⾜够新鲜直接提供给客户端，否则与服务器进⾏验证。</p></li>
+<li><p>检验新鲜通常有两个 HTTP 头进⾏控制 Expires 和 Cache-Control：</p>
+<p>HTTP1.0 提供 Expires，值为⼀个绝对时间表示缓存新鲜⽇期 HTTP1.1 增加了
+Cache-Control: max-age=time，值为以秒为单位的最⼤新鲜时间</p></li>
+</ul></li>
+<li><p>浏览器<strong>解析
+URL</strong>获取协议，主机，端⼝，路径等信息</p></li>
+<li><p>浏览器<strong>组装⼀个 HTTP（GET）请求报⽂</strong></p></li>
+<li><p>浏览器<strong>获取主机 <code>ip</code>
+地址</strong>，过程如下：</p>
+<ul>
+<li>浏览器缓存</li>
+<li>本机缓存</li>
+<li><code>hosts</code>⽂件</li>
+<li>路由器缓存</li>
+<li><code>ISP</code> <code>DNS</code>缓存</li>
+<li><code>DNS</code>递归查询（可能存在负载均衡导致每次<code>IP</code>不⼀样）</li>
+</ul></li>
+<li><p>开启一个<code>socket</code>与目标 IP 地址端口建立 TCP 连接</p>
+<ul>
+<li>三次握手</li>
+</ul></li>
+<li><p>建立 TCP 后<strong>发送 HTTP</strong>请求</p></li>
+<li><p>服务器接受请求并解析，将请求转发到服务程序</p></li>
+<li><p>服务器检查<code>HTTP</code>请求头是否包含缓存验证信息，如果验证缓存新鲜，返回
+304 等对应状态码</p></li>
+<li><p>处理程序读取完整请求并准备<code>HTTP</code>响应</p></li>
+<li><p>服务器将<strong>响应报⽂通过<code>TCP</code>连接发送回浏览器</strong></p></li>
+<li><p>浏览器接收<code>HTTP</code>响应，然后根据情况<strong>选择关闭<code>TCP</code>连接或者保留重⽤</strong></p>
+<ul>
+<li>四次挥手</li>
+</ul></li>
+<li><p>浏览器检查响应状态码</p></li>
+<li><p>如果资源可缓存，<strong>缓存资源</strong></p></li>
+<li><p>对响应进行解码</p></li>
+<li><p>根据资源类型确定如何处理</p></li>
+<li><p>解析 HTML<strong>构建 DOM 树</strong>，下载 CSS、JS 资源等，构造
+CSS 规则树，执行 JS 脚本</p></li>
+</ol>
+<h2 id="浏览器渲染时有哪些线程">浏览器渲染时有哪些线程</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/6994750650118570014">chrome
+浏览器渲染进程里有哪些线程<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li>GUI 渲染线程</li>
+<li>JS 引擎线程</li>
+<li>事件触发线程</li>
+<li>定时触发器线程</li>
+<li>异步 http 请求线程</li>
+<li>合成线程</li>
+<li>IO 线程</li>
+</ol>
+<h2 id="defer-和-async-的区别">defer 和 async 的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7111693402579664932">defer 和 async
+的区别<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li><p>defer 脚本在后台加载，等待 dom 准备好时才加载脚本<br>
+而且脚本的运行有严格的顺序</p></li>
+<li><p>async 脚本后台加载，加载完立即执行，没有严格顺序</p></li>
+</ul>
+<h2 id="cookie-和-localstorage-的区别">cookie 和 localStorage
+的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/cache.html#一、方式">面试官：Javascript
+本地存储的方式有哪些？区别及应用场景？ | web 前端面试 -
+面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7248623545219825723">面试官: 既然有了
+cookie 为什么还要 localStorage?😕😕😕Cookie 适合用于在客户端和服务器 -
+掘金<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/Cat0926/article/details/135658617">Cookie、LocalStorage
+和 SessionStorage：一次非常详细的对比!_cookie localstorage
+sessionstorage-CSDN 博客<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="简单请求复杂请求预检请求">简单请求、复杂请求、预检请求</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82">官方文档<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/6982501294518829093">预检请求<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="什么是跨域">什么是跨域</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38128179/article/details/84956552">什么是跨域？跨域解决方法-CSDN
+博客<i class="fas fa-external-link-alt"></i></a></p>
+<p>跨域（Cross-Origin Resource Sharing，简称
+CORS）是一种安全策略，用于限制一个域的网页如何与另一个域的资源进行交互。这是浏览器实现的同源策略（Same-Origin
+Policy）的一部分，旨在防止恶意网站通过一个域的网页访问另一个域的敏感数据。</p>
+<p>所谓同源，指的是两个页面<strong>必须</strong>具有<strong>相同的协议（protocol）、域名（host）和端口号（port）</strong>。</p>
+<ol type="1">
+<li><p><strong>设置 document.domain 解决无法读取非同源网页的 Cookie
+问题</strong></p>
+<p>要求<strong>主域名</strong>相同</p></li>
+<li><p><strong>跨文档通信 API：window.postMessage()</strong></p></li>
+<li><p><strong>JSONP</strong></p>
+<ul>
+<li>JSONP 是服务器与客户端跨源通信的常用方法</li>
+<li>核心思想：网页通过添加一个<code>&lt;script&gt;</code>元素，向服务器请求
+JSON
+数据，服务器收到请求后，将数据放在一个指定名字的回调函数的参数位置传回来。</li>
+</ul></li>
+<li><p>CORS</p>
+<ul>
+<li><strong>普通跨域请求：只需服务器端设置
+Access-Control-Allow-Origin</strong></li>
+<li><strong>带 cookie 跨域请求：前后端都需要进行设置</strong>
+<ul>
+<li><code>Access-Control-Allow-Credentials</code>
+设置为<code>true</code></li>
+</ul></li>
+</ul></li>
+<li><p>Webpack 本地代理（本地调试）</p></li>
+</ol>
+<h2 id="线上环境跨域如何解决">线上环境跨域如何解决</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7211687237020155961">面试官：聊聊你知道的跨域解决方案跨域是开发中经常会遇到的一个场景，也是面试中经常会讨论的一个问题。掌握常见的跨域解决方案
+- 掘金<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li>通过设置 CORS</li>
+<li>JSONP</li>
+<li>nginx 反向代理</li>
+</ol>
+<h2 id="重排回流重绘如何避免">重排（回流）、重绘、如何避免</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/css/layout_painting.html#一、是什么">面试官：怎么理解回流跟重绘？什么场景下会触发？
+| web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="事件循环宏微任务都有哪些">事件循环、宏微任务都有哪些</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/event_loop.html#一、是什么">面试官：说说你对事件循环的理解
+| web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p>JS
+是单线程的，如果需要处理异步任务，不能在异步任务那里阻塞住，因此有了事件循环。</p>
+<p>首先将任务分为<strong>同步任务</strong>和<strong>异步任务</strong>，如果是同步任务则直接推入主线程去执行，异步任务则会加入到异步任务队列。当主线程执行结束后，会从任务队列中读取对应的任务，推入到主线程执行。这个过程重复执行就构成了事件循环。</p>
+<p>而任务队列又分为<strong>宏任务队列</strong>和<strong>微任务队列</strong>，执行时会优先执行微任务队列的任务直至清空，然后取一个宏任务执行，宏任务结束后再次清空微任务队列的任务，循环往复。</p>
+<h2 id="浏览器的事件循环和-nodejs-的事件循环的区别">浏览器的事件循环和
+NodeJS 的事件循环的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/NodeJS/event_loop.html#二、流程">面试官：说说对
+Nodejs 中的事件循环机制理解? | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p>在浏览器事件循环中，是根据<code>HTML5</code>定义的规范来实现。而<code>NodeJS</code>的事件循环是基于<code>libuv</code>实现的，<code>libuv</code>是一个多平台的异步
+IO 库。</p>
+<p>Nodejs 事件循环分为六个阶段</p>
+<p><img src="https://static.vue-js.com/f2e34d80-c90e-11eb-ab90-d9ae814b240d.png" alt="img" style="zoom: 67%;"></p>
+<ul>
+<li>定时器检测阶段(timers)：本阶段执行 timer 的回调，即
+setTimeout、setInterval 里面的回调函数</li>
+<li>I/O 事件回调阶段(I/O callbacks)：执行延迟到下一个循环迭代的 I/O
+回调，即上一轮循环中未被执行的一些 I/O 回调</li>
+<li>闲置阶段(idle, prepare)：仅系统内部使用</li>
+<li>轮询阶段(poll)：检索新的 I/O 事件;执行与 I/O
+相关的回调（几乎所有情况下，除了关闭的回调函数，那些由计时器和
+setImmediate() 调度的之外），其余情况 node 将在适当的时候在此阻塞</li>
+<li>检查阶段(check)：setImmediate() 回调函数在这里执行</li>
+<li>关闭事件回调阶段(close
+callback)：一些关闭的回调函数，如：socket.on('close', ...)</li>
+</ul>
+<p>每个阶段对应一个队列，当事件循环进入某个阶段时,
+将会在该阶段内执行回调，<strong>直到队列耗尽</strong>或者回调的最大数量已执行,
+那么将进入下一个处理阶段，直观表现是，宏任务队列全部执行完才会执行微任务队列，而浏览器是宏任务执行一个就去执行微任务队列。</p>
+<p>除了上述 6
+个阶段，还存在<code>process.nextTick</code>，其不属于事件循环的任何一个阶段，它属于该阶段与下阶段之间的过渡,
+即本阶段执行结束, 进入下一个阶段前, 所要执行的回调，类似插队</p>
+<h2 id="浏览器缓存">浏览器缓存</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.yuque.com/xiumubai/doc/vgd0abdixdqooxt7#Bc3I4">浏览器缓存机制<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="http-和-https-的区别">HTTP 和 HTTPS 的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/http/HTTP_HTTPS.html#二、https">面试官：什么是
+HTTP? HTTP 和 HTTPS 的区别? | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="http2.0-和-http3.0-有什么区别">http2.0 和 http3.0
+有什么区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7224793504106577976">http2.0 和
+http3.0 的区别<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="react">React</h1>
+<h2 id="react-fiber-是什么">React Fiber 是什么</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7225957841319379005">一问读懂 React
+Fiber<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="react-网络请求放在哪里合适">React 网络请求放在哪里合适</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/6878577551158673422">网络请求放在哪里最合适<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>放在<code>componentDidMount</code>和<code>componentWillMount</code>有什么区别</p>
+</blockquote>
+<p>推荐放在<code>componentDidMount</code>中</p>
+<p>原因：</p>
+<ol type="1">
+<li><code>componentWillMount</code>生命周期在新版中已经过时或者被废弃</li>
+<li>React 官方推荐在<code>componentDidMount</code>中发送网络请求</li>
+<li>如果使用<strong>服务端渲染</strong>，<code>componentWillMount</code>这个生命周期的网络请求会发送两次，一次在服务端，一次在客户端，而<code>componentDidMount</code>没有这个问题，只会在客户端请求</li>
+<li>如果组件 render
+时发生了异常导致不能正常挂载，<code>componentDidMount</code>则不会发送请求，而<code>componentWillMount</code>会发送请求，请求到的数据无法被使用，浪费资源</li>
+</ol>
+<h2 id="使用-hooks-相比于类组件的优势">使用 Hooks
+相比于类组件的优势</h2>
+<ol type="1">
+<li>简化代码
+<ul>
+<li>类组件需要定义构造函数、生命周期方法等，而函数式组件只需要函数本身，<strong>减少了很多样板代码</strong></li>
+</ul></li>
+<li>易于组合和重用逻辑
+<ul>
+<li>使用 Hooks 可以容易地<strong>提取和复用</strong>组件中的逻辑</li>
+</ul></li>
+<li>避免了 this
+<ul>
+<li>减少了 this 的复杂性，代码更清晰</li>
+</ul></li>
+</ol>
+<h2 id="jsx-如何编译渲染到页面中">JSX 如何编译渲染到页面中</h2>
+<ol type="1">
+<li><p>浏览器不能识别 jsx 代码，需要转成 js 代码。</p></li>
+<li><p>首先通过 Babel 转换工具将 jsx 转换为 js 代码</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 转换后，分别是 标签的类型、标签的属性值对象、标签的内容（子元素）</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">'h1'</span>, <span class="literal">null</span>, <span class="string">'Hello, world!'</span>);</span><br></pre></td></tr></table></figure>
+<p><code>React.createElement</code>创建的对象也叫做虚拟 DOM</p></li>
+<li><p>将虚拟 DOM 转为真实 DOM</p>
+<p>使用<code>React.createRoot</code>创建根对象，然后将虚拟 DOM 渲染到 id
+为 root 的 DOM 节点中。</p></li>
+</ol>
+<h2 id="babel-是什么转换原理">Babel 是什么？转换原理？</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34574204/article/details/144233651">Babel
+的原理-CSDN 博客<i class="fas fa-external-link-alt"></i></a></p>
+<p><code>Babel</code> 是 <code>JavaScript</code> 编译器，可以将
+TS、JSX、TSX 等转成需要的代码。</p>
+<p><code>Babel</code> 内部原理是将 JS 代码转换为 AST，对 AST
+应用各种插件进行处理，最终输出编译后的 JS 代码。</p>
+<h2 id="react-hooks-为什么不能放在-if-else-中">React Hooks
+为什么不能放在 if else 中</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7116730718356504613">讲清楚为什么
+React Hooks 不能放在条件语句中<i class="fas fa-external-link-alt"></i></a></p>
+<p>多个 Hooks 在 React
+中是以链表的形式存在的，第一次渲染时会形成一个链表，存储着所有的 Hook
+的信息，后边渲染时都会按照这个链表的信息更新
+Hook，如果有判断条件，会导致重新渲染前后的链表不一致，导致状态混乱。</p>
+<h2 id="useeffect-和-uselayouteffect-的区别">useEffect 和
+useLayoutEffect 的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/Constantiny/article/details/139013503">「React」useEffect
+与 useLayoutEffect 使用与区别_useeffect 和 uselayouteffect 使用场景-CSDN
+博客<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li><p>useEffect</p>
+<ul>
+<li>组件渲染到屏幕后异步执行</li>
+<li>全部 dom 更新完成、浏览器绘制之后<strong>异步执行</strong></li>
+<li>不会阻塞页面渲染</li>
+</ul></li>
+<li><p>useLayoutEffect 和 useEffect 类似，但也有区别</p>
+<ul>
+<li>全部 dom
+更新完成后<strong>同步执行</strong>，在浏览器绘制前执行</li>
+<li>会阻塞浏览器渲染</li>
+</ul></li>
+<li><p>一般推荐默认使用
+<code>useEffect</code>，只有在涉及到需要在布局渲染阶段同步执行的 DOM
+操作或有严格的顺序要求时，才使用 <code>useLayoutEffect</code>。</p></li>
+</ul>
+<h2 id="组件中的-key-属性有什么作用">组件中的 key 属性有什么作用</h2>
+<p><code>React</code> 存在
+<code>Diff</code>算法，而元素<code>key</code>属性的作用是用于判断元素是新创建的还是被移动的元素，从而减少不必要的元素渲染。</p>
+<p>因此<code>key</code>的值需要为每一个元素赋予一个确定的标识</p>
+<h3 id="父子组件的子组件有个-key每次渲染后-key-值1-后会发生什么">父子组件的子组件有个
+key，每次渲染后 key 值+1 后会发生什么</h3>
+<h4 id="组件被卸载并重新挂载">组件被卸载并重新挂载</h4>
+<ul>
+<li>React 使用 <code>key</code> 来唯一标识列表中的每个子组件。</li>
+<li>当 <code>key</code> 改变时，React 会认为这是一个全新的组件。</li>
+<li>结果是，原来的组件实例会被卸载，新的组件实例会被挂载。</li>
+</ul>
+<h4 id="组件的状态丢失">组件的状态丢失</h4>
+<ul>
+<li>如果子组件内部有本地状态（<code>useState</code> 或类组件的
+<code>state</code>），状态会在每次 <code>key</code> 改变时被重置。</li>
+<li>这是因为 React 认为这是一个新组件实例，旧的状态无法保留。</li>
+</ul>
+<h4 id="性能影响">性能影响</h4>
+<ul>
+<li>每次 <code>key</code> 改变，React
+会卸载和重新挂载子组件，而不是重用现有的 DOM 和组件实例。</li>
+<li>这会增加不必要的渲染和计算负担，从而影响性能，特别是当子组件包含复杂逻辑或有较多
+DOM 元素时。</li>
+</ul>
+<h2 id="react-性能优化">React 性能优化</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/React/improve_render.html#一、是什么">面试官：说说你是如何提高组件的渲染效率的？在
+React 中如何避免不必要的 render？ | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p><code>shouldComponentUpdate</code>，更新前手动比较更新前后的值，如果相同则返回<code>false</code>不进行更新，否则返回<code>true</code>更新</p>
+<p><code>PureComponent</code></p>
+<p><code>React.memo</code>，缓存组件，给组件的<code>props</code>参数更新时，才会更新组件，只适用于函数式组件</p>
+<ol type="1">
+<li><p>避免使用内联函数</p>
+<ul>
+<li>比如事件回调时，避免在回调时设置类似于箭头函数，而是在外层定义好，直接用函数名代替，避免重复生成函数。</li>
+</ul></li>
+<li><p>使用 React.Fragments 避免额外标记</p>
+<ul>
+<li>空标签或者 fragment
+标签可以作为顶级标签使用，不会像组件引入任何额外标记</li>
+</ul></li>
+<li><p>使用 Immutable</p>
+<ul>
+<li><p>使用 <code>Immutable</code>可以给 <code>React</code>
+应用带来性能的优化，主要体现在减少渲染的次数</p>
+<p>在做<code>react</code>性能优化的时候，为了避免重复渲染，我们会在<code>shouldComponentUpdate()</code>中做对比，当返回<code>true</code>执行<code>render</code>方法</p>
+<p><code>Immutable</code>通过<code>is</code>方法则可以完成对比，而无需像一样通过深度比较的方式比较</p></li>
+</ul></li>
+<li><p>使用 lazy 组件懒加载</p></li>
+</ol>
+<h2 id="context-和-redux-的区别">Context 和 Redux 的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/6973977847547297800">【react】context
+VS redux 前言 自从新的 context API 和 hook 特性相继出来后，江湖上类似于
+- 掘金<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li><p><code>Context</code></p>
+<p>主要用于解决跨组件数据传递和共享问题，祖先组件通过<code>Context.Provider</code>组件发布数据，后代组件可以通过<code>Context.Consumer</code>或者<code>useContext</code>钩子订阅数据进行消费</p></li>
+<li><p><code>Context + useReducer</code></p>
+<p>通过<code>Context</code>管理状态，<code>useReducer</code>改变状态，可以简单实现状态管理的功能。</p>
+<p>但是订阅了 context
+实例的组件，当数据更新时，即使这个组件没有消费更新的数据，该组件仍然会重新渲染。</p></li>
+<li><p><code>Redux</code></p>
+<p>完整的状态管理框架。通过<code>React-Redux</code>管理状态，当组件消费数据时，其他数据更新不会影响到该组件，只有消费的数据更新了，才会重新渲染。</p></li>
+<li><p>调试工具</p>
+<p><code>Redux</code>调试工具可以清楚的看到状态什么时候发生了什么变化，而<code>Context</code>不能看到，只能看到当前的状态</p></li>
+</ul>
+<h2 id="reactcontext">ReactContext</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.yuque.com/xiumubai/doc/np5wxik1lp5vsbvq">React
+组件通信方式<i class="fas fa-external-link-alt"></i></a></p>
+<p>父组件向后代组件传递数据，</p>
+<p>父组件通过<code>React.createContext</code>创建一个<code>context</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> testContext = <span class="title class_">React</span>.<span class="title function_">createContext</span>(<span class="string">'test'</span>);</span><br></pre></td></tr></table></figure>
+<p>通过<code>testContext.Provider</code>组件包裹后代组件，将要传递的数据放在<code>Provider</code>组件中。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;testContext.<span class="property">Provider</span> value={<span class="number">100</span>}&gt;&lt;/testContext.<span class="property">Provider</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>后代组件获取这个数据可以使用<code>testContext.Consumer</code>组件</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;testContext.<span class="property">Consumer</span>&gt;</span><br><span class="line">  {<span class="comment">/* 必须写一个函数，获取的数据放在了函数入参里 */</span>}</span><br><span class="line">  {<span class="function">(<span class="params">value</span>) =&gt;</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>{value}<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>}</span><br><span class="line">&lt;/testContext.<span class="property">Consumer</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>或者在类组件中设置<code>contextType</code>属性接收</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> extend <span class="title class_">React</span>.<span class="property">Component</span> {</span><br><span class="line">    <span class="keyword">static</span> contextType = testContext;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="comment">// 获取数据了</span></span><br><span class="line">        <span class="keyword">let</span> value = <span class="variable language_">this</span>.<span class="property">context</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="react-的发布订阅模式">React 的发布订阅模式</h2>
+<h2 id="react-虚拟-dom-diff-操作">React 虚拟 dom diff 操作</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/React/diff.html#一、是什么">面试官：说说
+React diff 的原理是什么？ | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>tree diff，层级比较，树中同一个层级的比较，只有添加、删除操作</li>
+<li>component
+diff，组件比较，组件比较类型，类型不同则直接删除旧的，添加新的（连同子组件一并删除、添加）</li>
+<li>element diff，元素比较，有删除、添加、移动操作。
+<ul>
+<li>有<code>key</code>的情况下可以比较快的移动完成</li>
+<li>主要是<code>index, oldIndex, maxIndex</code>，通过这三个值比较，然后进行移动操作</li>
+<li>按照新集合的顺序进行排列，即<code>index</code>的值为<code>0, 1, 2, ..., n</code>，然后对比旧集合中<code>key</code>，依次将旧集合的位置索引赋值给<code>oldIndex</code>，所以<code>oldIndex</code>可能为<code>2, 0, 1, 3, ..., n</code>，初始值<code>maxIndex</code>设置为
+0</li>
+<li>按照如下规则对<code>index</code>进行遍历
+<ul>
+<li><code>oldIndex &gt; maxIndex</code>时，令<code>maxIndex = oldIndex</code></li>
+<li><code>oldIndex === maxIndex</code>时，不操作</li>
+<li><code>oldIndex &lt; maxIndex</code>时，将<code>oldIndex</code>位置的元素移动到<code>index</code>的位置。</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="react-render-函数理解">React render 函数理解</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/React/render.html#一、原理">面试官：说说
+React render 方法的原理？在什么时候会被触发？ | web 前端面试 -
+面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p><code>render</code>函数里面可以编写<code>JSX</code>，转化成<code>createElement</code>这种形式，用于生成虚拟<code>DOM</code>，最终转化成真实
+DOM</p>
+<p><strong>在<code>React</code> 中，类组件只要执行了
+<code>setState</code> 方法，就一定会触发 <code>render</code>
+函数执行，函数组件使用<code>useState</code>更改状态不一定导致重新<code>render</code></strong></p>
+<p>组件的<code>props</code> 改变了，不一定触发 <code>render</code>
+函数的执行（父组件使用<code>useRef</code>传参，父组件更新 ref
+对象，但是子组件不会重新渲染），但是如果 <code>props</code>
+的值来自于父组件或者祖先组件的
+<code>state</code>，在这种情况下，父组件或者祖先组件的
+<code>state</code> 发生了改变，就会导致子组件的重新渲染</p>
+<p>所以，类组件一旦执行了<code>setState</code>就会执行<code>render</code>方法，函数式组件<code>useState</code>
+会判断当前值有无发生改变确定是否执行<code>render</code>方法，一旦父组件发生渲染，子组件也会渲染</p>
+<ul>
+<li>在组件生命周期或 React 合成事件中，setState 是异步</li>
+<li>在 setTimeout 或者原生 dom 事件中，setState 是同步</li>
+</ul>
+<h2 id="react-生命周期">React 生命周期</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2204517">react
+生命周期总结（旧、新生命周期及 Hook）-腾讯云开发者社区-腾讯云<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="shouldcomponentupdate-周期有什么作用">shouldComponentUpdate
+周期有什么作用？</h3>
+<h1 id="css">CSS</h1>
+<h2 id="对于-css-预编译语言的理解">对于 CSS 预编译语言的理解</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/css/sass_less_stylus.html#一、是什么">面试官：说说对
+Css 预编语言的理解？有哪些区别? | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p>扩充了 CSS，增加了变量、函数等功能。可以认为是 CSS
+的超集。不同的预编译语言有不同的解析器，最终这些都会被编译成对应的 CSS
+文件。</p>
+<p>主要有 sass, less, stylus，三种。</p>
+<p>扩充了一些功能，如</p>
+<ol type="1">
+<li><p>变量</p>
+<ul>
+<li>sass：<code>$red: #abc</code>使用<code>$</code>开头，冒号分隔</li>
+<li>less: <code>@red: #abc</code>使用<code>@</code>开头，冒号分隔</li>
+<li>stylus: <code>red = #abc</code>直接定义，等号分隔</li>
+</ul></li>
+<li><p>作用域</p></li>
+<li><p>混入</p>
+<ul>
+<li>将一部分样式抽离出来，然后被重复使用</li>
+</ul></li>
+<li><p>代码模块化</p></li>
+</ol>
+<h2 id="实现三栏布局">实现三栏布局</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7107498710094839815">7
+种方式实现三栏布局<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="position-每个属性和作用">position 每个属性和作用</h2>
+<h1 id="javascript">JavaScript</h1>
+<h2 id="竞态问题">竞态问题</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7128205011019890695">怎么解决竞态问题<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li>通常做法是取消网络请求</li>
+</ol>
+<h2 id="对于-promise-的理解">对于 Promise 的理解</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/es6/promise.html#%E4%B8%80%E3%80%81%E4%BB%8B%E7%BB%8D">Promise
+的理解<i class="fas fa-external-link-alt"></i></a></p>
+<p><strong>Promise</strong>是异步编程的一种解决方案，比传统的解决方案（回调函数）更加合理和更加强大</p>
+<ul>
+<li>链式操作减低了编码难度</li>
+<li>代码可读性明显增强</li>
+</ul>
+<p>有三种状态：</p>
+<ul>
+<li>pending(等待中)</li>
+<li>fulfilled(成功)</li>
+<li>rejected(失败)</li>
+</ul>
+<p>从<code>pending</code>变为<code>fulfilled</code>或者<code>rejected</code>后，就不会再改变</p>
+<h2 id="async-异步函数如何捕获异常">async 异步函数如何捕获异常</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">}</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>当执行<code>fn</code>函数时<code>fetchData</code>可能会抛出异常，如何捕获异常？</p>
+<h3 id="try-catch">1. <code>try-catch</code></h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">try</span> {</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">  } <span class="keyword">catch</span> (error) {</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<h3 id="内部catch">2. 内部<code>catch</code></h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="title function_">fetchData</span>().<span class="title function_">catch</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(e));</span><br><span class="line">  <span class="comment">// 如果有异常，则data无数据</span></span><br><span class="line">  <span class="keyword">if</span> (!data) <span class="keyword">return</span>;</span><br><span class="line">}</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<h3 id="外部catch">3. 外部<code>catch</code></h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">}</span><br><span class="line"><span class="title function_">fn</span>().<span class="title function_">catch</span>(<span class="function">(<span class="params">err</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(err));</span><br></pre></td></tr></table></figure>
+<h2 id="闭包是什么">闭包是什么</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/closure.html#%E4%B8%89%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">闭包的理解<i class="fas fa-external-link-alt"></i></a></p>
+<p>一个函数和对其周围状态的引用捆绑在一起，这个组合就形成了闭包，换句话说，闭包可以在函数内部访问到函数外部的作用域。</p>
+<p>闭包可以：</p>
+<ul>
+<li>创建私有变量</li>
+<li>延长变量的生命周期</li>
+</ul>
+<p>通常的使用场景：</p>
+<ul>
+<li>计数器</li>
+<li>函数柯里化</li>
+<li>防抖</li>
+</ul>
+<h2 id="有哪些模块规范">有哪些模块规范</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7188173347199385656">深入对比
+esModule 和 commonjs 模块化的区别前言 commonjs 2009 年，Ryan Dahl
+基于开源的 V - 掘金<i class="fas fa-external-link-alt"></i></a></p>
+<p>主要有<code>commonJS, AMD, CMD, ESModule</code>，现在主要使用的是<code>commonJS, ESModule</code>。</p>
+<p>两者的区别：</p>
+<ul>
+<li>引入方式
+<ul>
+<li><code>commonJS</code>是动态导入，可以在任何地方引入</li>
+<li><code>ESModule</code>模块是静态导入（在编译阶段进行导入），不能动态加载语句，所以
+import 不能写在块级作用域和判断条件内</li>
+</ul></li>
+<li>使用语法
+<ul>
+<li><code>commonJS</code>是通过<code>module.exports</code>,
+<code>require</code>导出和导入</li>
+<li><code>esModule</code>通过<code>import, export</code>导入导出</li>
+</ul></li>
+<li>模块导入方式
+<ul>
+<li><code>commonJS</code>是运行一遍代码，将<code>module.exports</code>的值赋值给变量</li>
+<li><code>esModule</code>模块输出的是一个<code>值的引用</code>,
+使用的是动态绑定，esModule
+导入导出的值都指向同一个内存地址，所以导入值会跟着导出值发生变化</li>
+</ul></li>
+<li>加载模式
+<ul>
+<li><code>commonJS</code>是同步加载</li>
+<li><code>esModule</code>是异步加载</li>
+</ul></li>
+</ul>
+<p>区别原因：</p>
+<ul>
+<li>同步加载会导致浏览器出现卡顿的情况。而 node
+大多运行在服务端，同步加载本地文件速度很快。浏览器加载模块通常是网络请求，同步的话会出现卡顿的情况。</li>
+</ul>
+<h2 id="js-的有哪些数据类型">JS 的有哪些数据类型</h2>
+<ol type="1">
+<li><p>基本类型</p>
+<p><code>Number</code>, <code>String</code>, <code>Boolean</code>,
+<code>Undefined</code>, <code>null</code>, <code>Symbol</code></p></li>
+<li><p>复杂类型</p>
+<p>统称为 object 类型，常见的有<code>Object</code>, <code>Array</code>,
+<code>Function</code></p></li>
+</ol>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/data_type.html#一、基本类型">面试官：说说
+JavaScript 中的数据类型？存储上的差别？ | web 前端面试 -
+面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="实现一个-request失败后间隔-interval-重试设置最大重试次数">实现一个
+request，失败后间隔 interval 重试，设置最大重试次数</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">request</span>(<span class="params">url, options, interval, maxCount</span>) {</span><br><span class="line">  <span class="comment">// 重试次数</span></span><br><span class="line">  <span class="keyword">let</span> retries = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (retries &lt; maxCount) {</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">      <span class="comment">// await会阻塞，直到返回</span></span><br><span class="line">      <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(url, options);</span><br><span class="line">      <span class="keyword">return</span> response;</span><br><span class="line">    } <span class="keyword">catch</span> (error) {</span><br><span class="line">      <span class="comment">// 如果有错误，说明请求失败，重试</span></span><br><span class="line">      retries++;</span><br><span class="line">      <span class="comment">// 这里使用await阻塞，表示间隔时间</span></span><br><span class="line">      <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">setTimeout</span>(resolve, interval));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="字符串-slice-substring-substr-的区别">字符串 slice, substring,
+substr 的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.jianshu.com/p/4d06661cf2b8">slice, substring,
+substr 的区别<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="new-关键字的执行过程">new 关键字的执行过程</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/new.html#二、流程">面试官：说说
+new 操作符具体干了什么？ | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li>创建一个空对象</li>
+<li>新对象原型指向构造函数的原型对象</li>
+<li>将新对象设置为构造函数的<code>this</code>，执行构造函数</li>
+<li>函数返回值不为对象或者是<code>null</code>，则返回新对象，否则返回函数的返回值</li>
+</ol>
+<h2 id="js-的垃圾回收">JS 的垃圾回收</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/gaotlantis/article/details/139504782">深入了解
+JavaScript 垃圾回收机制_javascript 的垃圾回收机制讲一下-CSDN
+博客<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="es6-常用-api">ES6 常用 api</h2>
+<h2 id="async-await-实现原理">async, await 实现原理</h2>
+<p>async 表示声明一个异步函数，这个函数返回值是一个 Promise
+对象，如果返回值不是 Promise 类型，则会将返回值包装成 Promise
+类型。等同于 Promise.resolve(x)。</p>
+<p>await 表示等待的意思，可以等待异步函数也就是 Promise
+对象，也可以等待普通的变量值。并且只能在 async 函数中使用。</p>
+<p>使用 yield 实现 async，核心原理是递归迭代执行 next</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myAsync</span>(<span class="params">gen</span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) {</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</span><br><span class="line">      <span class="keyword">const</span> iter = <span class="title function_">gen</span>(...args);</span><br><span class="line">      <span class="keyword">const</span> <span class="title function_">step</span> = (<span class="params">arg</span>) =&gt; {</span><br><span class="line">        <span class="keyword">const</span> { value, done } = iter.<span class="title function_">next</span>(arg);</span><br><span class="line">        <span class="keyword">if</span> (done) {</span><br><span class="line">          <span class="keyword">return</span> <span class="title function_">resolve</span>(value);</span><br><span class="line">        }</span><br><span class="line">        <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(value).<span class="title function_">then</span>(<span class="function">(<span class="params">val</span>) =&gt;</span> <span class="title function_">step</span>(val));</span><br><span class="line">      };</span><br><span class="line">      <span class="title function_">step</span>();</span><br><span class="line">    });</span><br><span class="line">  };</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>async/await 可以看作是生成器的语法糖。</p>
+<p>将生成函数的 * 替换成 async，将 yield 替换成 await</p>
+<h2 id="var-let-const-之间的区别">var, let, const 之间的区别</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/es6/var_let_const.html#四、区别">面试官：说说
+var、let、const 之间的区别 | web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li><p>变量提升</p>
+<p><code>var</code>有变量提升，<code>let, const</code>没有</p></li>
+<li><p>暂时性死区</p>
+<p><code>var</code>没有暂时性死区，<code>let, const</code>有，只有执行到<code>let, const</code>那行以后才可以使用变量。</p></li>
+<li><p>块级作用域</p>
+<p><code>var</code>没有块级作用域，在作用域内声明的，作用域外也可以使用。<code>let, const</code>在作用域内声明的不能在作用域外使用。</p></li>
+<li><p>重复声明</p>
+<p><code>var</code>可以重复声明，<code>let, const</code>在同一个作用域内不可重复声明</p></li>
+<li><p>修改声明的变量</p>
+<p><code>var, let</code>可以修改声明的变量，<code>const</code>声明时必须初始化，且后边不可修改。</p></li>
+</ul>
+<h2 id="事件流">事件流</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/event_Model.html#%E4%BA%8C%E3%80%81%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B">事件与事件流<i class="fas fa-external-link-alt"></i></a></p>
+<p>事件：通常是使用 js 与浏览器 HTML
+文档进行交互的操作，如点击事件等。</p>
+<p>事件流三个阶段：</p>
+<ol type="1">
+<li>事件捕获阶段</li>
+<li>事件处理阶段</li>
+<li>事件冒泡阶段</li>
+</ol>
+<blockquote>
+<p>原始事件模型</p>
+</blockquote>
+<p>绑定方式简单，可以在 HTML 代码中直接绑定，也可以通过 js 代码绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"func()"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> rootEl = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'root'</span>);</span><br><span class="line">rootEl.<span class="property">onclick</span> = func;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>只支持事件冒泡，不支持捕获</li>
+<li>同一个类型事件只能绑定一次，后边的会覆盖前边的</li>
+<li>绑定速度快</li>
+</ul>
+<blockquote>
+<p>标准事件模型</p>
+</blockquote>
+<p>通过<code>addEventListener</code>和<code>removeEventListener</code>添加和删除事件监听，参数分别为<code>eventType, handler, useCapture</code>，表示事件类型、回调函数、是否捕获（<code>true</code>表示在捕获阶段执行，<code>false</code>表示在冒泡阶段执行）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> rootEl = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'root'</span>);</span><br><span class="line"><span class="comment">// 冒泡阶段执行</span></span><br><span class="line">rootEl.<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, handleClick, <span class="literal">false</span>);</span><br><span class="line"><span class="comment">// 捕获阶段执行</span></span><br><span class="line">rootEl.<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, handleClick, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>支持事件捕获、事件处理、事件冒泡三个阶段</li>
+<li>支持绑定多个事件，不冲突</li>
+</ul>
+<blockquote>
+<p>IE 事件模型（基本不用）</p>
+</blockquote>
+<p>分为<strong>事件处理阶段</strong>和<strong>事件冒泡阶段</strong></p>
+<h2 id="事件冒泡">事件冒泡</h2>
+<p>父子元素，子元素的事件会将该事件层层上报，使得父元素也发生该事件</p>
+<h2 id="事件委托">事件委托</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://vue3js.cn/interview/JavaScript/event_agent.html#一、是什么">面试官：解释下什么是事件代理？应用场景？
+| web 前端面试 - 面试官系列<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://juejin.cn/post/7192584563799883832#heading-2">JS
+中的事件冒泡、事件捕获、事件委托 DOM 事件流（event flow
+）存在三个阶段：事件捕获阶段、处于目标阶段、事件 - 掘金<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="js-如何实现异步操作">JS 如何实现异步操作</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/lunahaijiao/article/details/124185543">详解
+JS
+的四种异步解决方案：回调函数、Promise、Generator、async/await（干货满满）...-CSDN
+博客<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>最开始通过设置回调函数的形式</li>
+<li>Promise</li>
+<li>async、await</li>
+</ul>
+<h2 id="判断对象是不是数组">判断对象是不是数组</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39025670/article/details/110233270">JS
+判断是否为对象或数组的几种方法_js 判断是否是对象-CSDN 博客<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li><p>Arrays.isArray()</p></li>
+<li><p>val instanceof Array</p></li>
+<li><p>val?.constructor === Array</p></li>
+<li><p>isPrototypeOf，判断一个对象是不是在另一个对象的原型链上</p>
+<p>Array.prototype.isPrototypeof(val)</p></li>
+</ol>
+<h2 id="sourcemap">sourcemap</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40599109/article/details/107845431">blog.csdn.net/weixin_40599109/article/details/107845431<i class="fas fa-external-link-alt"></i></a></p>
+<p>主要是映射转换后的代码和源码的关系，方便做调试。</p>
+<h1 id="操作系统">操作系统</h1>
+<h2 id="进程和线程和协程的区别">进程和线程和协程的区别</h2>
+<h2 id="进程之间的通信方式">进程之间的通信方式</h2>
+<h1 id="算法和数据结构">算法和数据结构</h1>
+<h2 id="dfs-和-bfs-区别时间空间复杂度应用场景">DFS 和 BFS
+区别、时间空间复杂度、应用场景</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.cnblogs.com/hacnix/p/12713564.html">DFS、BFS
+空间时间复杂度分析 - wkfxm - 博客园<i class="fas fa-external-link-alt"></i></a></p>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                前端基础
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                dca56ee05d72/前端基础/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2024-12-01 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%85%AB%E8%82%A1/">八股</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/e17cf402573b/nestjs/"
+                                   title="Nestjs"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Nestjs</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/0311e040ed6b/css%E5%9F%BA%E7%A1%80/"
+                                   title="CSS基础"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">CSS基础</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-text">浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#url-%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-text">url 的组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5-url-%E6%95%B2%E5%9B%9E%E8%BD%A6%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-text">输入 url 敲回车后发生了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%97%B6%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BA%BF%E7%A8%8B"><span class="nav-text">浏览器渲染时有哪些线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#defer-%E5%92%8C-async-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">defer 和 async 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-%E5%92%8C-localstorage-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">cookie 和 localStorage
+的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82"><span class="nav-text">简单请求、复杂请求、预检请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F"><span class="nav-text">什么是跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E8%B7%A8%E5%9F%9F%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3"><span class="nav-text">线上环境跨域如何解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E6%8E%92%E5%9B%9E%E6%B5%81%E9%87%8D%E7%BB%98%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D"><span class="nav-text">重排（回流）、重绘、如何避免</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%AE%8F%E5%BE%AE%E4%BB%BB%E5%8A%A1%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">事件循环、宏微任务都有哪些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%92%8C-nodejs-%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">浏览器的事件循环和
+NodeJS 的事件循环的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98"><span class="nav-text">浏览器缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">HTTP 和 HTTPS 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http2.0-%E5%92%8C-http3.0-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-text">http2.0 和 http3.0
+有什么区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#react"><span class="nav-text">React</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#react-fiber-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">React Fiber 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%94%BE%E5%9C%A8%E5%93%AA%E9%87%8C%E5%90%88%E9%80%82"><span class="nav-text">React 网络请求放在哪里合适</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-hooks-%E7%9B%B8%E6%AF%94%E4%BA%8E%E7%B1%BB%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-text">使用 Hooks
+相比于类组件的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsx-%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91%E6%B8%B2%E6%9F%93%E5%88%B0%E9%A1%B5%E9%9D%A2%E4%B8%AD"><span class="nav-text">JSX 如何编译渲染到页面中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#babel-%E6%98%AF%E4%BB%80%E4%B9%88%E8%BD%AC%E6%8D%A2%E5%8E%9F%E7%90%86"><span class="nav-text">Babel 是什么？转换原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-hooks-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%94%BE%E5%9C%A8-if-else-%E4%B8%AD"><span class="nav-text">React Hooks
+为什么不能放在 if else 中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useeffect-%E5%92%8C-uselayouteffect-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">useEffect 和
+useLayoutEffect 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84-key-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-text">组件中的 key 属性有什么作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AD%90%E7%BB%84%E4%BB%B6%E6%9C%89%E4%B8%AA-key%E6%AF%8F%E6%AC%A1%E6%B8%B2%E6%9F%93%E5%90%8E-key-%E5%80%BC1-%E5%90%8E%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88"><span class="nav-text">父子组件的子组件有个
+key，每次渲染后 key 值+1 后会发生什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E8%A2%AB%E5%8D%B8%E8%BD%BD%E5%B9%B6%E9%87%8D%E6%96%B0%E6%8C%82%E8%BD%BD"><span class="nav-text">组件被卸载并重新挂载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%A2%E5%A4%B1"><span class="nav-text">组件的状态丢失</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D"><span class="nav-text">性能影响</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-text">React 性能优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#context-%E5%92%8C-redux-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">Context 和 Redux 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reactcontext"><span class="nav-text">ReactContext</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">React 的发布订阅模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E8%99%9A%E6%8B%9F-dom-diff-%E6%93%8D%E4%BD%9C"><span class="nav-text">React 虚拟 dom diff 操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-render-%E5%87%BD%E6%95%B0%E7%90%86%E8%A7%A3"><span class="nav-text">React render 函数理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">React 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shouldcomponentupdate-%E5%91%A8%E6%9C%9F%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-text">shouldComponentUpdate
+周期有什么作用？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-css-%E9%A2%84%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">对于 CSS 预编译语言的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80"><span class="nav-text">实现三栏布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position-%E6%AF%8F%E4%B8%AA%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-text">position 每个属性和作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript"><span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%9E%E6%80%81%E9%97%AE%E9%A2%98"><span class="nav-text">竞态问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-promise-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">对于 Promise 的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#async-%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%A6%82%E4%BD%95%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="nav-text">async 异步函数如何捕获异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch"><span class="nav-text">1. try-catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E9%83%A8catch"><span class="nav-text">2. 内部catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%83%A8catch"><span class="nav-text">3. 外部catch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">闭包是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83"><span class="nav-text">有哪些模块规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E7%9A%84%E6%9C%89%E5%93%AA%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">JS 的有哪些数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-request%E5%A4%B1%E8%B4%A5%E5%90%8E%E9%97%B4%E9%9A%94-interval-%E9%87%8D%E8%AF%95%E8%AE%BE%E7%BD%AE%E6%9C%80%E5%A4%A7%E9%87%8D%E8%AF%95%E6%AC%A1%E6%95%B0"><span class="nav-text">实现一个
+request，失败后间隔 interval 重试，设置最大重试次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-slice-substring-substr-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">字符串 slice, substring,
+substr 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-text">new 关键字的执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="nav-text">JS 的垃圾回收</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6-%E5%B8%B8%E7%94%A8-api"><span class="nav-text">ES6 常用 api</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#async-await-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-text">async, await 实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#var-let-const-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">var, let, const 之间的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="nav-text">事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"><span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C"><span class="nav-text">JS 如何实现异步操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E4%B8%8D%E6%98%AF%E6%95%B0%E7%BB%84"><span class="nav-text">判断对象是不是数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sourcemap"><span class="nav-text">sourcemap</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">进程和线程和协程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-text">进程之间的通信方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">算法和数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs-%E5%92%8C-bfs-%E5%8C%BA%E5%88%AB%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">DFS 和 BFS
+区别、时间空间复杂度、应用场景</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-text">浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#url-%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-text">url 的组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5-url-%E6%95%B2%E5%9B%9E%E8%BD%A6%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-text">输入 url 敲回车后发生了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%97%B6%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BA%BF%E7%A8%8B"><span class="nav-text">浏览器渲染时有哪些线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#defer-%E5%92%8C-async-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">defer 和 async 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-%E5%92%8C-localstorage-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">cookie 和 localStorage
+的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82"><span class="nav-text">简单请求、复杂请求、预检请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F"><span class="nav-text">什么是跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E8%B7%A8%E5%9F%9F%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3"><span class="nav-text">线上环境跨域如何解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E6%8E%92%E5%9B%9E%E6%B5%81%E9%87%8D%E7%BB%98%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D"><span class="nav-text">重排（回流）、重绘、如何避免</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%AE%8F%E5%BE%AE%E4%BB%BB%E5%8A%A1%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">事件循环、宏微任务都有哪些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%92%8C-nodejs-%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">浏览器的事件循环和
+NodeJS 的事件循环的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98"><span class="nav-text">浏览器缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">HTTP 和 HTTPS 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http2.0-%E5%92%8C-http3.0-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-text">http2.0 和 http3.0
+有什么区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#react"><span class="nav-text">React</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#react-fiber-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">React Fiber 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%94%BE%E5%9C%A8%E5%93%AA%E9%87%8C%E5%90%88%E9%80%82"><span class="nav-text">React 网络请求放在哪里合适</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-hooks-%E7%9B%B8%E6%AF%94%E4%BA%8E%E7%B1%BB%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-text">使用 Hooks
+相比于类组件的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsx-%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91%E6%B8%B2%E6%9F%93%E5%88%B0%E9%A1%B5%E9%9D%A2%E4%B8%AD"><span class="nav-text">JSX 如何编译渲染到页面中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#babel-%E6%98%AF%E4%BB%80%E4%B9%88%E8%BD%AC%E6%8D%A2%E5%8E%9F%E7%90%86"><span class="nav-text">Babel 是什么？转换原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-hooks-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%94%BE%E5%9C%A8-if-else-%E4%B8%AD"><span class="nav-text">React Hooks
+为什么不能放在 if else 中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useeffect-%E5%92%8C-uselayouteffect-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">useEffect 和
+useLayoutEffect 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84-key-%E5%B1%9E%E6%80%A7%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-text">组件中的 key 属性有什么作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AD%90%E7%BB%84%E4%BB%B6%E6%9C%89%E4%B8%AA-key%E6%AF%8F%E6%AC%A1%E6%B8%B2%E6%9F%93%E5%90%8E-key-%E5%80%BC1-%E5%90%8E%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88"><span class="nav-text">父子组件的子组件有个
+key，每次渲染后 key 值+1 后会发生什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E8%A2%AB%E5%8D%B8%E8%BD%BD%E5%B9%B6%E9%87%8D%E6%96%B0%E6%8C%82%E8%BD%BD"><span class="nav-text">组件被卸载并重新挂载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%A2%E5%A4%B1"><span class="nav-text">组件的状态丢失</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D"><span class="nav-text">性能影响</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-text">React 性能优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#context-%E5%92%8C-redux-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">Context 和 Redux 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reactcontext"><span class="nav-text">ReactContext</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">React 的发布订阅模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E8%99%9A%E6%8B%9F-dom-diff-%E6%93%8D%E4%BD%9C"><span class="nav-text">React 虚拟 dom diff 操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-render-%E5%87%BD%E6%95%B0%E7%90%86%E8%A7%A3"><span class="nav-text">React render 函数理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">React 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shouldcomponentupdate-%E5%91%A8%E6%9C%9F%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-text">shouldComponentUpdate
+周期有什么作用？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-css-%E9%A2%84%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">对于 CSS 预编译语言的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80"><span class="nav-text">实现三栏布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position-%E6%AF%8F%E4%B8%AA%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-text">position 每个属性和作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript"><span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%9E%E6%80%81%E9%97%AE%E9%A2%98"><span class="nav-text">竞态问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-promise-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">对于 Promise 的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#async-%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%A6%82%E4%BD%95%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="nav-text">async 异步函数如何捕获异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch"><span class="nav-text">1. try-catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E9%83%A8catch"><span class="nav-text">2. 内部catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%83%A8catch"><span class="nav-text">3. 外部catch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">闭包是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83"><span class="nav-text">有哪些模块规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E7%9A%84%E6%9C%89%E5%93%AA%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">JS 的有哪些数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-request%E5%A4%B1%E8%B4%A5%E5%90%8E%E9%97%B4%E9%9A%94-interval-%E9%87%8D%E8%AF%95%E8%AE%BE%E7%BD%AE%E6%9C%80%E5%A4%A7%E9%87%8D%E8%AF%95%E6%AC%A1%E6%95%B0"><span class="nav-text">实现一个
+request，失败后间隔 interval 重试，设置最大重试次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-slice-substring-substr-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">字符串 slice, substring,
+substr 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-text">new 关键字的执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="nav-text">JS 的垃圾回收</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6-%E5%B8%B8%E7%94%A8-api"><span class="nav-text">ES6 常用 api</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#async-await-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-text">async, await 实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#var-let-const-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">var, let, const 之间的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="nav-text">事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"><span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C"><span class="nav-text">JS 如何实现异步操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E4%B8%8D%E6%98%AF%E6%95%B0%E7%BB%84"><span class="nav-text">判断对象是不是数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sourcemap"><span class="nav-text">sourcemap</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">进程和线程和协程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-text">进程之间的通信方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">算法和数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs-%E5%92%8C-bfs-%E5%8C%BA%E5%88%AB%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">DFS 和 BFS
+区别、时间空间复杂度、应用场景</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>

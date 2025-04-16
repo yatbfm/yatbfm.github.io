@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            Hive学习 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Hive学习
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-12-01 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Hive/">Hive</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.9k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="查询">查询</h1>
+<h2 id="每个reduce内部排序sort-by">每个Reduce内部排序(sort by)</h2>
+<p>Sort By：对于大规模的数据集order
+by的效率非常低。在很多情况下，并不需要全局 排序，此时可以使用Sort
+by。</p>
+<span id="more"></span>
+<p>Sort
+by为每个reduce产生一个排序文件。每个Reduce内部进行排序，对全局结果集
+来说不是排序。</p>
+<p>1）设置reduce个数
+<code>hive (default)&gt; set mapreduce.job.reduces=3;</code></p>
+<p>2）查看设置reduce个数
+<code>hive (default)&gt; set mapreduce.job.reduces;</code></p>
+<p>3）根据部门编号降序查看员工信息
+<code>hive (default)&gt;   select   *   from emp   sort by deptno desc;</code></p>
+<p>4）将查询结果导入到文件中（按照部门编号降序排序）</p>
+<p><code>hive (default)&gt; insert overwrite local directory  '/opt/module/hive/datas/sortby-result'  select * from emp sort by deptno desc;</code></p>
+<h2 id="分区">分区</h2>
+<p>Distribute By：在有些情况下，我们需要控制某个特定行应该到哪个
+Reducer，通常是 为了进行后续的聚集操作。distribute
+by子句可以做这件事。distribute by类似MapReduce
+中partition（自定义分区），进行分区，结合sort by使用。</p>
+<p>对于distribute by 进行测试，一定要分配多reduce
+进行处理，否则无法看到distribute by 的效果。</p>
+<p>（1）先按照部门编号分区，再按照员工编号薪资排序</p>
+<p><code>hive (default)&gt; set mapreduce.job.reduces=3;</code></p>
+<p><code>hive (default)&gt;   insert overwrite local directory   '/opt/module/hive/datas/distribute-result'  select      *   from emp   distribute by deptno   sort by sal desc;</code></p>
+<p>注意：</p>
+<p>➢ distribute
+by的分区规则是根据分区字段的hash码与reduce的个数进行相除后，
+余数相同的分到一个区。</p>
+<p>➢ Hive要求distribute by语句要写在sort by语句之前。</p>
+<p>➢
+演示完以后mapreduce.job.reduces的值要设置回-1，否则下面分区or分桶表load
+跑MapReduce的时候会报错。</p>
+<h2 id="grouping-sets">grouping sets</h2>
+<h2 id="cube">cube</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/chenzhiqiang1018/article/details/107889792">数据立方体-Hive
+Cube-CSDN博客<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/suiyingli39/article/details/53540861">Hive中with
+cube、with rollup、grouping sets用法_hive sum with
+rollup-CSDN博客<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="函数">函数</h2>
+<h3 id="单行函数">单行函数</h3>
+<h4 id="nvl替换null值">nvl：替换null值</h4>
+<p>nvl(A, B)若A为null则返回B，否则返回A</p>
+<h4 id="concat_ws以指定分隔符拼接字符串或者字符串数组">concat_ws：以指定分隔符拼接字符串或者字符串数组</h4>
+<p>语法：concat_ws(string A, string…| array(string))</p>
+<p>返回值：string</p>
+<p>说明：使用分隔符A拼接多个字符串，或者一个数组的所有元素。</p>
+<h4 id="get_json_object解析-json-字符串">get_json_object：解析 json
+字符串</h4>
+<p>语法：get_json_object(string json_string, string path)</p>
+<p>返回值：string</p>
+<p>说明：解析json的字符串json_string，返回path指定的内容。如果输入的json字符串
+无效，那么返回NULL。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> get_json_object(<span class="string">'[{"name":"大海海","sex":"男","age":"25"},{"name":"小宋宋","sex":"男","age":"47"}]'</span>,<span class="string">'$.[0].name'</span>); </span><br><span class="line"></span><br><span class="line">hive&gt; 大海海</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> get_json_object(<span class="string">'[{"name":"大海海","sex":"男","age":"25"},{"name":"小宋宋","sex":"男","age":"47"}]'</span>,<span class="string">'$.[0]'</span>);</span><br><span class="line"></span><br><span class="line">hive&gt; {<span class="string">"name"</span>:<span class="string">"大海海"</span>,<span class="string">"sex"</span>:<span class="string">"男"</span>,<span class="string">"age"</span>:<span class="string">"25"</span>}</span><br></pre></td></tr></table></figure>
+<h4 id="unix_timestamp返回当前或指定时间的时间戳">unix_timestamp：返回当前或指定时间的时间戳</h4>
+<p>语法：unix_timestamp()</p>
+<p>返回值：bigint</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> unix_timestamp(<span class="string">'2022/08/08 08-08-08'</span>,<span class="string">'yyyy/MM/dd HH-mm-ss'</span>); </span><br><span class="line"></span><br><span class="line">hive&gt; 1659946088</span><br></pre></td></tr></table></figure>
+<h4 id="from_unixtime转化-unix-时间戳">from_unixtime：转化 UNIX
+时间戳</h4>
+<p>（从 1970-01-01 00:00:00 UTC
+到指定时间的秒数）到当前时区的时间格式</p>
+<p>语法：from_unixtime(bigint unixtime[, string format])</p>
+<p>返回值：string</p>
+<h4 id="current_date当前日期">current_date：当前日期</h4>
+<h4 id="current_timestamp当前的日期加时间并且精确的毫秒">current_timestamp：当前的日期加时间，并且精确的毫秒</h4>
+<h4 id="date_add日期加天数">date_add：日期加天数</h4>
+<p>语法：date_add(string startdate, int days)</p>
+<p>返回值：string</p>
+<p>说明：返回开始日期 startdate 增加 days 天后的日期</p>
+<h4 id="date_sub日期减天数">date_sub：日期减天数</h4>
+<p>语法：date_sub (string startdate, int days)</p>
+<p>返回值：string</p>
+<p>说明：返回开始日期startdate减少days天后的日期。</p>
+<h4 id="size集合中元素的个数">size：集合中元素的个数</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; select size(friends) from test;  --2/2  每一行数据中的friends集合里的个数 </span><br></pre></td></tr></table></figure>
+<h4 id="map创建map集合">map：创建map集合</h4>
+<p>语法：map (key1, value1, key2, value2, …)</p>
+<p>说明：根据输入的key和value对构建map类型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> map(<span class="string">'xiaohai'</span>,1,<span class="string">'dahai'</span>,2);   </span><br><span class="line"></span><br><span class="line">hive&gt; {<span class="string">"xiaohai"</span>:1,<span class="string">"dahai"</span>:2}</span><br></pre></td></tr></table></figure>
+<h4 id="map_keys-返回map中的key">map_keys： 返回map中的key</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> map_keys(map(<span class="string">'xiaohai'</span>,1,<span class="string">'dahai'</span>,2));</span><br><span class="line"></span><br><span class="line">hive&gt;[<span class="string">"xiaohai"</span>,<span class="string">"dahai"</span>] </span><br></pre></td></tr></table></figure>
+<h4 id="map_values-返回-map-中的value">map_values: 返回 map
+中的value</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> map_values(map(<span class="string">'xiaohai'</span>,1,<span class="string">'dahai'</span>,2));</span><br><span class="line"></span><br><span class="line">hive&gt;[1,2] </span><br></pre></td></tr></table></figure>
+<h4 id="array-声明-array-集合">array 声明 array 集合</h4>
+<p>语法：array(val1, val2, …)</p>
+<p>说明：根据输入的参数构建数组array类</p>
+<h4 id="array_contains-判断-array-中是否包含某个元素">array_contains:
+判断 array 中是否包含某个元素</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> array_contains(array(<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>),<span class="string">'a'</span>); </span><br><span class="line"></span><br><span class="line">hive&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h4 id="sort_array将-array-中的元素排序">sort_array：将 array
+中的元素排序</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> sort_array(array(<span class="string">'a'</span>,<span class="string">'d'</span>,<span class="string">'c'</span>));</span><br><span class="line"></span><br><span class="line">hive&gt; [<span class="string">"a"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="struct-声明-struct-中的各属性">struct 声明 struct
+中的各属性</h4>
+<p>语法：struct(val1, val2, val3, …)</p>
+<p>说明：根据输入的参数构建结构体struct类</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> struct(<span class="string">'name'</span>,<span class="string">'age'</span>,<span class="string">'weight'</span>);</span><br><span class="line"></span><br><span class="line">hive&gt; {<span class="string">"col1"</span>:<span class="string">"name"</span>,<span class="string">"col2"</span>:<span class="string">"age"</span>,<span class="string">"col3"</span>:<span class="string">"weight"</span>} </span><br></pre></td></tr></table></figure>
+<h4 id="named_struct-声明-struct-的属性和值">named_struct 声明 struct
+的属性和值</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span> named_struct(<span class="string">'name'</span>,<span class="string">'xiaosong'</span>,<span class="string">'age'</span>,18,<span class="string">'weight'</span>,80);</span><br><span class="line"></span><br><span class="line">hive&gt; {<span class="string">"name"</span>:<span class="string">"xiaosong"</span>,<span class="string">"age"</span>:18,<span class="string">"weight"</span>:80} </span><br></pre></td></tr></table></figure>
+<h3 id="高级聚合函数">高级聚合函数</h3>
+<h4 id="collect_list-收集并形成list集合结果不去重">collect_list
+收集并形成list集合，结果不去重</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span>  sex, collect_list(job) from employee group by sex </span><br><span class="line"></span><br><span class="line">女 [<span class="string">"行政"</span>,<span class="string">"研发"</span>,<span class="string">"行政"</span>,<span class="string">"前台"</span>] </span><br><span class="line">男 [<span class="string">"销售"</span>,<span class="string">"研发"</span>,<span class="string">"销售"</span>,<span class="string">"前台"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="collect_set-收集并形成set集合结果去重">collect_set
+收集并形成set集合，结果去重</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hive&gt; <span class="keyword">select</span>  sex, collect_set(job) from employee group by sex </span><br><span class="line"></span><br><span class="line">女 [<span class="string">"行政"</span>,<span class="string">"研发"</span>,<span class="string">"前台"</span>] </span><br><span class="line">男 [<span class="string">"销售"</span>,<span class="string">"研发"</span>,<span class="string">"前台"</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="爆炸函数">爆炸函数</h3>
+<p>explode是将hive一行中复杂的array或者map结构拆分成多行。</p>
+<p>lateral view用于和split,
+explode等UDTF一起使用，它能够将一行数据拆成多行数据，在此基础上可以对拆分后的数据进行聚合。lateral
+view首先为原始表的每行调用UDTF，UDTF会把一行拆分成一或者多行，lateral
+view再把结果组合，产生一个支持别名表的虚拟表。</p>
+<p>explode将复杂结构一行拆成多行，然后再用lateral view做各种聚合。</p>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240228143351699.png" class="" title="image-20240228143351699">
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	cate, <span class="built_in">COUNT</span>(<span class="operator">*</span>) cnt</span><br><span class="line"><span class="keyword">FROM</span> movie_info</span><br><span class="line"><span class="keyword">LATERAL</span> <span class="keyword">VIEW</span> EXPLODE(SPLIT(category, <span class="string">','</span>)) t1 <span class="keyword">AS</span> cate</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> cate;</span><br></pre></td></tr></table></figure>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240228143426749.png" class="" title="image-20240228143426749">
+<h3 id="窗口函数">窗口函数</h3>
+<h4 id="lag和lead">lag和lead</h4>
+<p>功能：获取当前行的上/下边某行的字段的值。</p>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240228144122296.png" class="" title="image-20240228144122296">
+<h4 id="first_value和last_value">first_value和last_value</h4>
+<p>功能：获取窗口内第一个值和最后一个值</p>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240228144304498.png" class="" title="image-20240228144304498">
+<h1 id="分区表">分区表</h1>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept_partition </span><br><span class="line">( </span><br><span class="line">deptno <span class="type">int</span>,    <span class="comment">--部门编号 </span></span><br><span class="line">dname  string, <span class="comment">--部门名称 </span></span><br><span class="line">loc    </span><br><span class="line">string  <span class="comment">--部门位置 </span></span><br><span class="line">) </span><br><span class="line">partitioned <span class="keyword">by</span> (<span class="keyword">day</span> string) </span><br><span class="line"><span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">'\t'</span>; </span><br></pre></td></tr></table></figure>
+<p>装载数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">load data <span class="keyword">local</span> inpath <span class="string">'/opt/module/hive/datas/dept_20220401.log'</span>  </span><br><span class="line"><span class="keyword">into</span> <span class="keyword">table</span> dept_partition  </span><br><span class="line"><span class="keyword">partition</span>(<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220401'</span>); </span><br></pre></td></tr></table></figure>
+<p>插入数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> overwrite <span class="keyword">table</span> dept_partition <span class="keyword">partition</span> (<span class="keyword">day</span> <span class="operator">=</span> <span class="string">'20220402'</span>) </span><br><span class="line"><span class="keyword">select</span> deptno, dname, loc </span><br><span class="line"><span class="keyword">from</span> dept_partition </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">day</span> <span class="operator">=</span> <span class="string">'2020-04-01'</span>; </span><br></pre></td></tr></table></figure>
+<p>查询数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> deptno, dname, loc ,<span class="keyword">day</span> </span><br><span class="line"><span class="keyword">from</span> dept_partition </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">day</span> <span class="operator">=</span> <span class="string">'2020-04-01'</span>; </span><br></pre></td></tr></table></figure>
+<p>创建单个分区</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> dept_partition  </span><br><span class="line"><span class="keyword">add</span> <span class="keyword">partition</span>(<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220403'</span>); </span><br></pre></td></tr></table></figure>
+<p>创建多个分区（不能有逗号）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> dept_partition  </span><br><span class="line"><span class="keyword">add</span> <span class="keyword">partition</span>(<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220404'</span>) <span class="keyword">partition</span>(<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220405'</span>);</span><br></pre></td></tr></table></figure>
+<p>删除一个分区</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> dept_partition  </span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">partition</span> (<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220403'</span>); </span><br></pre></td></tr></table></figure>
+<p>删除多个分区（必须有逗号）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> dept_partition  </span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">partition</span> (<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220404'</span>), <span class="keyword">partition</span>(<span class="keyword">day</span><span class="operator">=</span><span class="string">'20220405'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="二级分区">二级分区</h2>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept_partition2( </span><br><span class="line">deptno <span class="type">int</span>,    <span class="comment">-- 部门编号 </span></span><br><span class="line">dname string, <span class="comment">-- 部门名称 </span></span><br><span class="line">loc string     <span class="comment">-- 部门位置 </span></span><br><span class="line">) </span><br><span class="line">partitioned <span class="keyword">by</span> (<span class="keyword">day</span> string, <span class="keyword">hour</span> string) </span><br><span class="line"><span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">'\t'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="动态分区">动态分区</h2>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">table</span> dept_partition_dynamic  </span><br><span class="line"><span class="keyword">partition</span>(loc)  </span><br><span class="line"><span class="keyword">select</span>  </span><br><span class="line">deptno,  </span><br><span class="line">dname,  </span><br><span class="line">loc  </span><br><span class="line"><span class="keyword">from</span> dept;</span><br></pre></td></tr></table></figure>
+<p>无需指定分区的值，自动分区。</p>
+<h1 id="分桶表">分桶表</h1>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> stu_buck( </span><br><span class="line">id <span class="type">int</span>,  </span><br><span class="line">name string </span><br><span class="line">) </span><br><span class="line">clustered <span class="keyword">by</span>(id)  </span><br><span class="line"><span class="keyword">into</span> <span class="number">4</span> buckets </span><br><span class="line"><span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">'\t'</span>; </span><br></pre></td></tr></table></figure>
+<h2 id="分桶排序表">分桶排序表</h2>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> stu_buck_sort( </span><br><span class="line">    id <span class="type">int</span>,  </span><br><span class="line">    name string </span><br><span class="line">) </span><br><span class="line">clustered <span class="keyword">by</span>(id) sorted <span class="keyword">by</span>(id)</span><br><span class="line"><span class="keyword">into</span> <span class="number">4</span> buckets </span><br><span class="line"><span class="type">row</span> format delimited fields terminated <span class="keyword">by</span> <span class="string">'\t'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="hive文件格式">Hive文件格式</h1>
+<p>为Hive
+表中的数据选择一个合适的文件格式，对提高查询性能的提高是十分有益的。
+Hive 表数据的存储格式，可以选择text file、orc、parquet、sequence file
+等。</p>
+<h2 id="orc文件格式">ORC文件格式</h2>
+<p>ORC（Optimized Row Columnar）file format 是 Hive 0.11
+版里引入的一种列式存储的文
+件格式。ORC文件能够提高Hive读写数据和处理数据的性能。</p>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240229201026611.png" class="" title="image-20240229201026611">
+<p>（1）行存储的特点
+查询满足条件的一整行数据的时候，列存储则需要去每个聚集的字段找到对应的每个列的值，行存储只需要找到其中一个值，其余的值都在相邻地方，所以此时行存储查询的
+速度更快</p>
+<p>（2）列存储的特点
+因为每个字段的数据聚集存储，在查询只需要少数几个字段的时候，能大大减少读取
+的数据量；每个字段的数据类型一定是相同的，列式存储可以针对性的设计更好的设计压
+缩算法。</p>
+<p>前文提到的text file 和sequence file 都是基于行存储的，orc 和parquet
+是基于列式存 储的。</p>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240229211419322.png" class="" title="image-20240229211419322">
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> orc_table </span><br><span class="line">(column_specs) </span><br><span class="line">stored <span class="keyword">as</span> orc </span><br><span class="line">tblproperties (property_name<span class="operator">=</span>property_value, ...); </span><br></pre></td></tr></table></figure>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240229211444077.png" class="" title="image-20240229211444077">
+<h2 id="parquet文件格式">Parquet文件格式</h2>
+<img src="/279f403133fc/hive%E5%AD%A6%E4%B9%A0/image-20240229214535892.png" class="" title="image-20240229214535892">
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                Hive学习
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                279f403133fc/hive学习/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-12-01 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Hive/">Hive</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/5dd2f1d0ec2a/typescript%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"
+                                   title="TypeScript基础学习"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">TypeScript基础学习</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/73233cd329a1/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"
+                                   title="大数据环境搭建"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">大数据环境搭建</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AAreduce%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8Fsort-by"><span class="nav-text">每个Reduce内部排序(sort by)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA"><span class="nav-text">分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grouping-sets"><span class="nav-text">grouping sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cube"><span class="nav-text">cube</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="nav-text">单行函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nvl%E6%9B%BF%E6%8D%A2null%E5%80%BC"><span class="nav-text">nvl：替换null值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concat_ws%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%88%86%E9%9A%94%E7%AC%A6%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%96%E8%80%85%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84"><span class="nav-text">concat_ws：以指定分隔符拼接字符串或者字符串数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get_json_object%E8%A7%A3%E6%9E%90-json-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">get_json_object：解析 json
+字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unix_timestamp%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E6%88%96%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-text">unix_timestamp：返回当前或指定时间的时间戳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#from_unixtime%E8%BD%AC%E5%8C%96-unix-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-text">from_unixtime：转化 UNIX
+时间戳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#current_date%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F"><span class="nav-text">current_date：当前日期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#current_timestamp%E5%BD%93%E5%89%8D%E7%9A%84%E6%97%A5%E6%9C%9F%E5%8A%A0%E6%97%B6%E9%97%B4%E5%B9%B6%E4%B8%94%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%AF%AB%E7%A7%92"><span class="nav-text">current_timestamp：当前的日期加时间，并且精确的毫秒</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#date_add%E6%97%A5%E6%9C%9F%E5%8A%A0%E5%A4%A9%E6%95%B0"><span class="nav-text">date_add：日期加天数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#date_sub%E6%97%A5%E6%9C%9F%E5%87%8F%E5%A4%A9%E6%95%B0"><span class="nav-text">date_sub：日期减天数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#size%E9%9B%86%E5%90%88%E4%B8%AD%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-text">size：集合中元素的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map%E5%88%9B%E5%BB%BAmap%E9%9B%86%E5%90%88"><span class="nav-text">map：创建map集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map_keys-%E8%BF%94%E5%9B%9Emap%E4%B8%AD%E7%9A%84key"><span class="nav-text">map_keys： 返回map中的key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map_values-%E8%BF%94%E5%9B%9E-map-%E4%B8%AD%E7%9A%84value"><span class="nav-text">map_values: 返回 map
+中的value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array-%E5%A3%B0%E6%98%8E-array-%E9%9B%86%E5%90%88"><span class="nav-text">array 声明 array 集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array_contains-%E5%88%A4%E6%96%AD-array-%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%9F%90%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="nav-text">array_contains:
+判断 array 中是否包含某个元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort_array%E5%B0%86-array-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F"><span class="nav-text">sort_array：将 array
+中的元素排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#struct-%E5%A3%B0%E6%98%8E-struct-%E4%B8%AD%E7%9A%84%E5%90%84%E5%B1%9E%E6%80%A7"><span class="nav-text">struct 声明 struct
+中的各属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#named_struct-%E5%A3%B0%E6%98%8E-struct-%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC"><span class="nav-text">named_struct 声明 struct
+的属性和值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="nav-text">高级聚合函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#collect_list-%E6%94%B6%E9%9B%86%E5%B9%B6%E5%BD%A2%E6%88%90list%E9%9B%86%E5%90%88%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%8E%BB%E9%87%8D"><span class="nav-text">collect_list
+收集并形成list集合，结果不去重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#collect_set-%E6%94%B6%E9%9B%86%E5%B9%B6%E5%BD%A2%E6%88%90set%E9%9B%86%E5%90%88%E7%BB%93%E6%9E%9C%E5%8E%BB%E9%87%8D"><span class="nav-text">collect_set
+收集并形成set集合，结果去重</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%86%E7%82%B8%E5%87%BD%E6%95%B0"><span class="nav-text">爆炸函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="nav-text">窗口函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lag%E5%92%8Clead"><span class="nav-text">lag和lead</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#first_value%E5%92%8Clast_value"><span class="nav-text">first_value和last_value</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E8%A1%A8"><span class="nav-text">分区表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E5%88%86%E5%8C%BA"><span class="nav-text">二级分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA"><span class="nav-text">动态分区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%A1%B6%E8%A1%A8"><span class="nav-text">分桶表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%A1%B6%E6%8E%92%E5%BA%8F%E8%A1%A8"><span class="nav-text">分桶排序表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hive%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">Hive文件格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#orc%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">ORC文件格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parquet%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">Parquet文件格式</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AAreduce%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8Fsort-by"><span class="nav-text">每个Reduce内部排序(sort by)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA"><span class="nav-text">分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grouping-sets"><span class="nav-text">grouping sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cube"><span class="nav-text">cube</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="nav-text">单行函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nvl%E6%9B%BF%E6%8D%A2null%E5%80%BC"><span class="nav-text">nvl：替换null值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concat_ws%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%88%86%E9%9A%94%E7%AC%A6%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%96%E8%80%85%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84"><span class="nav-text">concat_ws：以指定分隔符拼接字符串或者字符串数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get_json_object%E8%A7%A3%E6%9E%90-json-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">get_json_object：解析 json
+字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unix_timestamp%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E6%88%96%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-text">unix_timestamp：返回当前或指定时间的时间戳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#from_unixtime%E8%BD%AC%E5%8C%96-unix-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-text">from_unixtime：转化 UNIX
+时间戳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#current_date%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F"><span class="nav-text">current_date：当前日期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#current_timestamp%E5%BD%93%E5%89%8D%E7%9A%84%E6%97%A5%E6%9C%9F%E5%8A%A0%E6%97%B6%E9%97%B4%E5%B9%B6%E4%B8%94%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%AF%AB%E7%A7%92"><span class="nav-text">current_timestamp：当前的日期加时间，并且精确的毫秒</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#date_add%E6%97%A5%E6%9C%9F%E5%8A%A0%E5%A4%A9%E6%95%B0"><span class="nav-text">date_add：日期加天数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#date_sub%E6%97%A5%E6%9C%9F%E5%87%8F%E5%A4%A9%E6%95%B0"><span class="nav-text">date_sub：日期减天数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#size%E9%9B%86%E5%90%88%E4%B8%AD%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-text">size：集合中元素的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map%E5%88%9B%E5%BB%BAmap%E9%9B%86%E5%90%88"><span class="nav-text">map：创建map集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map_keys-%E8%BF%94%E5%9B%9Emap%E4%B8%AD%E7%9A%84key"><span class="nav-text">map_keys： 返回map中的key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map_values-%E8%BF%94%E5%9B%9E-map-%E4%B8%AD%E7%9A%84value"><span class="nav-text">map_values: 返回 map
+中的value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array-%E5%A3%B0%E6%98%8E-array-%E9%9B%86%E5%90%88"><span class="nav-text">array 声明 array 集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#array_contains-%E5%88%A4%E6%96%AD-array-%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%9F%90%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="nav-text">array_contains:
+判断 array 中是否包含某个元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort_array%E5%B0%86-array-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F"><span class="nav-text">sort_array：将 array
+中的元素排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#struct-%E5%A3%B0%E6%98%8E-struct-%E4%B8%AD%E7%9A%84%E5%90%84%E5%B1%9E%E6%80%A7"><span class="nav-text">struct 声明 struct
+中的各属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#named_struct-%E5%A3%B0%E6%98%8E-struct-%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC"><span class="nav-text">named_struct 声明 struct
+的属性和值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="nav-text">高级聚合函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#collect_list-%E6%94%B6%E9%9B%86%E5%B9%B6%E5%BD%A2%E6%88%90list%E9%9B%86%E5%90%88%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%8E%BB%E9%87%8D"><span class="nav-text">collect_list
+收集并形成list集合，结果不去重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#collect_set-%E6%94%B6%E9%9B%86%E5%B9%B6%E5%BD%A2%E6%88%90set%E9%9B%86%E5%90%88%E7%BB%93%E6%9E%9C%E5%8E%BB%E9%87%8D"><span class="nav-text">collect_set
+收集并形成set集合，结果去重</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%86%E7%82%B8%E5%87%BD%E6%95%B0"><span class="nav-text">爆炸函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="nav-text">窗口函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lag%E5%92%8Clead"><span class="nav-text">lag和lead</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#first_value%E5%92%8Clast_value"><span class="nav-text">first_value和last_value</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E8%A1%A8"><span class="nav-text">分区表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E5%88%86%E5%8C%BA"><span class="nav-text">二级分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA"><span class="nav-text">动态分区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%A1%B6%E8%A1%A8"><span class="nav-text">分桶表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%A1%B6%E6%8E%92%E5%BA%8F%E8%A1%A8"><span class="nav-text">分桶排序表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hive%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">Hive文件格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#orc%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">ORC文件格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parquet%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-text">Parquet文件格式</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>

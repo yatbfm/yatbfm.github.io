@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            设计模式课程 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        设计模式课程
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-10-23 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.2k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <meta name="referrer" content="no-referrer">
+<h1 id="策略模式">1 策略模式</h1>
+<h2 id="定义">1.1 定义</h2>
+<p>策略模式定义：它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化不会影响到使用算法的客户。</p>
+<span id="more"></span>
+<h2 id="结构图">1.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/6157f52b87636b8433372cc9315078d6.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgQ29udGV4dCB7XG5cdC0gc3RyYXRlZ3lcblx0KyBDb250ZXh0SW50ZXJmYWNlKClcbn1cbmNsYXNzIFN0cmF0ZWd5IHtcblx0KyBBbGdvcml0aG1JbnRlcmZhY2UoKVxufVxuY2xhc3MgQ29uY3JldGVTdHJhdGVneUEge1xuXHQrIEFsZ29yaXRobUludGVyZmFjZSgpXG59XG5jbGFzcyBDb25jcmV0ZVN0cmF0ZWd5QyB7XG5cdCsgQWxnb3JpdGhtSW50ZXJmYWNlKClcbn1cbmNsYXNzIENvbmNyZXRlU3RyYXRlZ3lCIHtcblx0KyBBbGdvcml0aG1JbnRlcmZhY2UoKVxufVxuXG5Db250ZXh0IG8tIFN0cmF0ZWd5XG5TdHJhdGVneSA8fC0tIENvbmNyZXRlU3RyYXRlZ3lBXG5TdHJhdGVneSA8fC0tIENvbmNyZXRlU3RyYXRlZ3lCXG5TdHJhdGVneSA8fC0tIENvbmNyZXRlU3RyYXRlZ3lDXG5cbkBlbmR1bWwiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19wdW1sLzYxNTdmNTJiODc2MzZiODQzMzM3MmNjOTMxNTA3OGQ2LnN2ZyIsImlkIjoiejJvczgiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJoZWlnaHQiOjU1NC4xNDU4MzU4NzY0NjQ4LCJjYXJkIjoiZGlhZ3JhbSJ9"></p>
+<h2 id="代码">1.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Strategy</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">AlgorithmInterface</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyA</span> <span class="keyword">extends</span> <span class="title class_">Strategy</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">AlgorighmInterface</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 算法A实现</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyB</span> <span class="keyword">extends</span> <span class="title class_">Strategy</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">AlgorighmInterface</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 算法B实现</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyC</span> <span class="keyword">extends</span> <span class="title class_">Strategy</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">AlgorighmInterface</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 算法C实现</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Context</span> {</span><br><span class="line">    <span class="keyword">private</span> Strategy strategy;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Context</span><span class="params">(Strategy strategy)</span> {</span><br><span class="line">        <span class="built_in">this</span>.strategy = strategy;</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 根据传入的具体的策略对象调用其算法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">ContextInterface</span><span class="params">()</span> {</span><br><span class="line">        strategy.AlgorighmInterface();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结">1.4 总结</h2>
+<p>策略模式是一种定义一系列算法的方法，从概念上来看，所有这些算法完成的都是相同的工作，只是实现不同，它可以以相同的方式调用所有的算法，减少了各种算法类与使用算法类之间的耦合。
+策略模式的Strategy类层次为Context定义了一系列的可供重用的算法或行为。继承有助于析取出这些算法中的公共功能。</p>
+<h1 id="装饰模式">2 装饰模式</h1>
+<h2 id="定义-1">2.1 定义</h2>
+<p>装饰模式定义：动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。</p>
+<h2 id="结构图-1">2.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/9cfccd3d353ba1a59a2cf3da706896b9.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuaW50ZXJmYWNlIENvbXBvbmVudCB7XG5cdCsgT3BlcmF0aW9uKClcbn1cblxuY2xhc3MgQ29uY3JlYXRlQ29tcG9uZW50IHtcblx0KyBPcGVydGFpb24oKVxufVxubm90ZSB0b3A6IOWumuS5ieS4gOS4qumcgOimgeijhemlsOeahOWOn-Wni-exu1xuXG5jbGFzcyBEZWNvcmF0b3Ige1xuXHQrIE9wZXJhdGlvbigpXG59XG5jbGFzcyBDb25jcmV0ZURlY29yYXRvckEge1xuXHQrIE9wZXJ0YWlvbigpXG59XG5jbGFzcyBDb25jcmV0ZURlY29yYXRvckIge1xuXHQrIE9wZXJ0YWlvbigpXG59XG5cbkRlY29yYXRvciBvLS0gQ29tcG9uZW50XG5Db21wb25lbnQgPHwuLiBEZWNvcmF0b3JcbkNvbXBvbmVudCA8fC4uIENvbmNyZWF0ZUNvbXBvbmVudFxuRGVjb3JhdG9yIDx8LS0gQ29uY3JldGVEZWNvcmF0b3JBXG5EZWNvcmF0b3IgPHwtLSBDb25jcmV0ZURlY29yYXRvckJcblxuQGVuZHVtbCIsInVybCI6Imh0dHBzOi8vY2RuLm5sYXJrLmNvbS95dXF1ZS9fX3B1bWwvOWNmY2NkM2QzNTNiYTFhNTlhMmNmM2RhNzA2ODk2Yjkuc3ZnIiwiaWQiOiJhN1RlWiIsIm1hcmdpbiI6eyJ0b3AiOnRydWUsImJvdHRvbSI6dHJ1ZX0sImNhcmQiOiJkaWFncmFtIn0="></p>
+<h2 id="代码-1">2.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Component</span> {</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">Operation</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ConcreteComponent</span> <span class="keyword">implements</span> <span class="title class_">Component</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">Operation</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 具体的操作</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Decorator</span> <span class="keyword">implements</span> <span class="title class_">Component</span> {</span><br><span class="line">    <span class="keyword">protected</span> Component component;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setComponent</span><span class="params">(Component component)</span> {</span><br><span class="line">        <span class="built_in">this</span>.component = component;</span><br><span class="line">    }</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Operation</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">if</span> (component != <span class="literal">null</span>) {</span><br><span class="line">            component.operation();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteDecoratorA</span> <span class="keyword">extends</span> <span class="title class_">Decorator</span> {</span><br><span class="line">    <span class="keyword">private</span> String addedState;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Opertaion</span><span class="params">()</span> {</span><br><span class="line">        <span class="built_in">super</span>.opertion();</span><br><span class="line">        <span class="comment">//对象A的具体操作</span></span><br><span class="line">        addedState = <span class="string">"new state"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteDecoratorB</span> <span class="keyword">extends</span> <span class="title class_">Decorator</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Operation</span><span class="params">()</span> {</span><br><span class="line">        <span class="built_in">super</span>.opertaion();</span><br><span class="line">        <span class="comment">// 对象B的具体操作</span></span><br><span class="line">        AddedBehavior();</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">AddedBehavior</span><span class="params">()</span> {</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">ConcreteDecoratorA</span> <span class="variable">d1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ConcreteDecoratorA</span>();</span><br><span class="line">    <span class="type">ConcreteDecoratorB</span> <span class="variable">d2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ConcreteDecoratorB</span>();</span><br><span class="line">    <span class="comment">// 用d2对象来包装d1</span></span><br><span class="line">    d2.setComponent(d1);</span><br><span class="line">    <span class="comment">// 调用d2的具体操作，最终会也会把包装过的对象的具体操作也执行</span></span><br><span class="line">    d2.Operation();</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>具体实现中可能会与结构图有不同，如直接让<code>Decorator</code>抽象类继承<code>ConcreteComponent</code>类。</p>
+<h2 id="总结-1">2.4 总结</h2>
+<p>装饰模式是为已有功能动态地添加更多功能的一种方式。
+装饰模式提供了一个非常好的解决方案，它把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象，因此，当需要执行特殊行为时，客户代码就可以在运行时根据需要有选择地、按顺序地使用装饰功能包装对象了。</p>
+<h1 id="代理模式">3 代理模式</h1>
+<h2 id="定义-2">3.1 定义</h2>
+<p>代理模式定义：为其他对象提供一种代理以控制对这个对象的访问。</p>
+<h2 id="结构图-2">3.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/57d5e72bcdcca57e28adfb8a8f5b4a60.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgU3ViamVjdCB7XG5cdCsgUmVxdWVzdCgpXG59XG5ub3RlIHRvcDogU3ViamVjdOexu--8jOWumuS5ieS6huWFseeUqOaOpeWPo--8jOWPr-S7peWcqOS7u-S9leS9v-eUqFxcblJlYWxTdWJqZWN055qE5Zyw5pa56YO95Y-v5Lul5L2_55SoUHJveHlcblxuY2xhc3MgUmVhbFN1YmplY3Qge1xuXHQrIFJlcXVlc3QoKVxufVxubm90ZSBib3R0b206IOWumuS5iVByb3h55omA5Luj6KGo55qE55yf5a6e5a6e5L2TXG5cbmNsYXNzIFByb3h5IHtcblx0KyBSZXF1ZXN0KClcbn1cbm5vdGUgYm90dG9tOiDkv53lrZjkuIDkuKrlvJXnlKjkvb_lvpfku6PnkIblj6_ku6Xorr_pl67lrp7kvZPvvIxcXG7lubbmj5DkvpvkuIDkuKrkuI5TdWJqZWN05o6l5Y-j55u45ZCM55qE5o6l5Y-j77yMXFxu6L-Z5qC35Luj55CG5bCx5Y-v5Lul55So5p2l5Luj5pu_5a6e5L2TXG5cblN1YmplY3QgPHwtLSBQcm94eVxuU3ViamVjdCA8fC0tIFJlYWxTdWJqZWN0XG5SZWFsU3ViamVjdCA8LSBQcm94eSA6IC1yZWFsU3ViamVjdFxuXG5AZW5kdW1sIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC81N2Q1ZTcyYmNkY2NhNTdlMjhhZGZiOGE4ZjViNGE2MC5zdmciLCJpZCI6IkpQdUhYIiwibWFyZ2luIjp7InRvcCI6dHJ1ZSwiYm90dG9tIjp0cnVlfSwiY2FyZCI6ImRpYWdyYW0ifQ=="></p>
+<h2 id="代码-2">3.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Subject</span> {</span><br><span class="line">    <span class="keyword">public</span> abstarct <span class="keyword">void</span> <span class="title function_">Request</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RealSubject</span> <span class="keyword">extends</span> <span class="title class_">Subject</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Request</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 真实的操作请求</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Proxy</span> <span class="keyword">extends</span> <span class="title class_">Subject</span> {</span><br><span class="line">    RealSubject realSubject;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Request</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">if</span> (realSubject == <span class="literal">null</span>) {</span><br><span class="line">            realSubject = <span class="keyword">new</span> <span class="title class_">RealSubject</span>();</span><br><span class="line">        }</span><br><span class="line">        realSubject.Request();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结-2">3.4 总结</h2>
+<ol type="1">
+<li>代理模式通常有如下几钟用途：</li>
+</ol>
+<ul>
+<li>远程代理</li>
+<li>虚拟代理</li>
+<li>保护代理</li>
+<li>智能指引</li>
+</ul>
+<ol start="2" type="1">
+<li>代理模式的主要优点：</li>
+</ol>
+<ul>
+<li>代理模式在客户端与目标对象之间起到一个中介作用和保护目标对象的作用；</li>
+<li>代理对象可以扩展目标对象的功能；</li>
+<li>代理模式能将客户端与目标对象分离，在一定程度上降低了系统的耦合度，增加了程序的可扩展性;</li>
+</ul>
+<h1 id="工厂方法模式">4 工厂方法模式</h1>
+<h2 id="定义-3">4.1 定义</h2>
+<p>工厂方法模式定义：定义一个用于创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到其子类。</p>
+<h2 id="结构图-3">4.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/3676764ba70390cebafb6ba6028f63d6.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgUHJvZHVjdFxubm90ZSB0b3A6IOWumuS5ieW3peWOguaWueazleWIm-W7uueahOWvueixoeeahOaOpeWPo1xuXG5jbGFzcyBDb25jcmV0ZVByb2R1Y3Rcbm5vdGUgYm90dG9tOiDlhbfkvZPnmoTkuqflk4HnsbvvvIzlrp7njrBQcm9kdWN05o6l5Y-jXG5cbmNsYXNzIEZhY3Rvcnkge1xuXHQrIEZhY3RvcnlNZXRob2QoKTogUHJvZHVjdFxufVxubm90ZSB0b3A6IOW3peWOguaWueazle-8jOi_lOWbnuS4gOS4qlByb2R1Y3TnsbvlnovnmoTlr7nosaFcblxuY2xhc3MgQ29uY3JldGVGYWN0b3J5IHtcblx0KyBGYWN0b3J5TWV0aG9kKCk6IFByb2R1Y3Rcbn1cbm5vdGUgYm90dG9tOiDph43mlrDlrprkuYnlt6XljoLmlrnms5Xov5Tlm57kuIDkuKpDb25jcmV0ZVByb2R1Y3Tlrp7kvotcblxuRmFjdG9yeSA8fC0tIENvbmNyZXRlRmFjdG9yeVxuUHJvZHVjdCA8fC0tIENvbmNyZXRlUHJvZHVjdFxuQ29uY3JldGVQcm9kdWN0IDwuIENvbmNyZXRlRmFjdG9yeVxuUHJvZHVjdCA8LiBGYWN0b3J5XG5cbkBlbmR1bWwiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19wdW1sLzM2NzY3NjRiYTcwMzkwY2ViYWZiNmJhNjAyOGY2M2Q2LnN2ZyIsImlkIjoic3RZckUiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9"></p>
+<h2 id="代码-3">4.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Product</span> {</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteProduct</span> <span class="keyword">implements</span> <span class="title class_">Product</span> {</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Factory</span> {</span><br><span class="line">    Product <span class="title function_">FactoryMethod</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteFactory</span> <span class="keyword">implements</span> <span class="title class_">Factory</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> Product <span class="title function_">FactoryMethod</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 生成具体对象的方法</span></span><br><span class="line">        <span class="type">Product</span> <span class="variable">product</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ConcreteProduct</span>();</span><br><span class="line">        <span class="keyword">return</span> product;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结-3">4.4 总结</h2>
+<ol type="1">
+<li>优点</li>
+</ol>
+<ul>
+<li>符合开闭原则</li>
+<li>符合单一职责原则</li>
+<li>不使用静态工厂方法，可以形成基于继承的等级结构</li>
+</ul>
+<h1 id="原型模式">5 原型模式</h1>
+<h2 id="定义-4">5.1 定义</h2>
+<p>原型模式定义：用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</p>
+<h2 id="结构图-4">5.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/a56eb44d203cd146b9c1e2ec7c67939a.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgUHJvdG90eXBlIHtcblx0LSBpZDogU3RyaW5nXG5cdCsgQ29sbmUoKVxufVxubm90ZSByaWdodDog5Y6f5Z6L57G75aOw5piO5LiA5Liq5YWL6ZqG6Ieq6Lqr55qE5o6l5Y-jXG5cbmNsYXNzIENvbmNyZXRlUHJvdG90eXBlIHtcblx0KyBDbG9uZSgpXG59XG5ub3RlIHJpZ2h0OiDlhbfkvZPljp_lnovnsbvvvIzlrp7njrDkuIDkuKrlhYvpmoboh6rouqvnmoTmk43kvZxcblxuUHJvdG90eXBlIDx8LS0gQ29uY3JldGVQcm90b3R5cGVcblxuQGVuZHVtbCIsInVybCI6Imh0dHBzOi8vY2RuLm5sYXJrLmNvbS95dXF1ZS9fX3B1bWwvYTU2ZWI0NGQyMDNjZDE0NmI5YzFlMmVjN2M2NzkzOWEuc3ZnIiwiaWQiOiJRb3dqTCIsIm1hcmdpbiI6eyJ0b3AiOnRydWUsImJvdHRvbSI6dHJ1ZX0sImNhcmQiOiJkaWFncmFtIn0="></p>
+<h2 id="代码-4">5.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Prototype</span> {</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> Prototype <span class="title function_">Clone</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcretePrototype</span> <span class="keyword">extends</span> <span class="title class_">Prototype</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> Protytpe <span class="title function_">Clone</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 克隆当前对象</span></span><br><span class="line">        <span class="keyword">return</span> newObject;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结-4">5.4 总结</h2>
+<p>具体实现时无需创建<code>Prototype</code>接口，直接实现<code>Java</code>中的<code>Cloneable</code>接口即可。同时克隆时注意深拷贝和浅拷贝的问题。</p>
+<h1 id="模板方法模式">6 模板方法模式</h1>
+<h2 id="定义-5">6.1 定义</h2>
+<p>模板方法模式定义：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+<h2 id="结构图-5">6.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/5f113049bf4493a6d945eef2f2a4a981.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgVGVtcGxhdGVDbGFzcyB7XG5cdCsgVGVtcGxhdGVNZXRob2QoKVxuXHQrIFByaW1pdGl2ZU9wZXJhdGlvbjEoKVxuXHQrIFByaW1pdGl2ZU9wZXJhdGlvbjIoKVxufVxubm90ZSByaWdodDog5a6e546w5LqG5LiA5Liq5qih5p2_5pa55rOV77yM5a6a5LmJ5LqG566X5rOV55qE6IKh5Lu377yMXFxu5YW35L2T5a2Q57G75bCG6YeN5YaZ5pa55rOV5Lul5a6e546w5YW35L2T55qE566X5rOV5q2l6aqkXG5cbmNsYXNzIENvbmNyZXRlQ2xhc3Mge1xuXHQrIFByaW1pdGl2ZU9wZXJhdGlvbjEoKVxuXHQrIFByaW1pdGl2ZU9wZWFydGlvbjIoKVxufVxuXG5UZW1wbGF0ZUNsYXNzIDx8LS0gQ29uY3JldGVDbGFzc1xuXG5AZW5kdW1sIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC81ZjExMzA0OWJmNDQ5M2E2ZDk0NWVlZjJmMmE0YTk4MS5zdmciLCJpZCI6InpWeE5mIiwibWFyZ2luIjp7InRvcCI6dHJ1ZSwiYm90dG9tIjp0cnVlfSwiY2FyZCI6ImRpYWdyYW0ifQ=="></p>
+<h2 id="代码-5">6.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">TemplateClass</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">PrimitiveOpeartion1</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">PrimitiveOpeartion2</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">TemplateMethod</span><span class="params">()</span> {</span><br><span class="line">        PrimitiveOpeartion1();</span><br><span class="line">        PrimitiveOpeartion2();</span><br><span class="line">        <span class="comment">// 其他步骤</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ConcreteClass</span> <span class="keyword">extends</span> <span class="title class_">TemplateClass</span> {</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">PrimitiveOperation1</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 方法1</span></span><br><span class="line">    }</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">PrimitiveOperation2</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 方法2</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>实现类实现抽象模板中定义的抽象方法。</p>
+<h2 id="总结-5">6.4 总结</h2>
+<p>模板方法模式提供了一个很好的代码复用平台
+。因为有时候，会遇到由一系列步骤构成的过程需要执行。这个过程从高层次上看是相同的，但有些步骤的实现可能不同。这时候，通常就应该要考虑用模板方法模式了。当不变的和可变的行为在方法的子类实现中混合在一起的时候，不变的行为就会在子类中重复出现。我们通过模板方法模式把这些行为搬移到单一的地方，这样就帮助子类摆脱重复的不变行为的纠缠。</p>
+<h1 id="外观模式">7 外观模式</h1>
+<h2 id="定义-6">7.1 定义</h2>
+<p>外观模式定义：为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得子系统更加容易使用。</p>
+<h2 id="结构图-6">7.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/9408142737480c7cb1ef0933d53c836d.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxucGFja2FnZSBTdWJTeXN0ZW1DbGFzc2VzIHtcblx0Y2xhc3MgU3ViU3lzdGVtT25lIHtcblx0XHQrIE1ldGhvZE9uZSgpXG5cdH1cblx0Y2xhc3MgU3ViU3lzdGVtVHdvIHtcblx0XHQrIE1ldGhvZFR3bygpXG5cdH1cbn1cblxuY2xhc3MgRmFjYWRlIHtcblx0KyBNZXRob2RBKClcblx0KyBNZXRob2RCKClcbn1cblxuRmFjYWRlIC0tPiBTdWJTeXN0ZW1PbmVcbkZhY2FkZSAtLT4gU3ViU3lzdGVtVHdvXG5cbm5vdGUgcmlnaHQgb2YgRmFjYWRlXG7lpJbop4LnsbvvvIznn6XpgZPlk6rkupvlrZDns7vnu5_nsbvlpITnkIbor7fmsYLvvIxcbuWwhuWuouaIt-err-eahOivt-axguS7o-eQhue7memAguW9k-eahOWtkOezu-e7n-WvueixoeOAglxuZW5kIG5vdGVcblxubm90ZSBib3R0b20gb2YgU3ViU3lzdGVtQ2xhc3Nlc1xu5a2Q57O757uf57G76ZuG5ZCI77yM5a6e546w5a2Q57O757uf55qE5Yqf6IO977yM5aSE55CGRmFjYWRl5oyH5rS-55qE5Lu75Yqh44CCXG7lrZDns7vnu5_nsbvkuK3msqHmnInku7vkvZVGYWNhZGXnmoTlvJXnlKjjgIJcbmVuZCBub3RlXG5cbkBlbmR1bWwiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19wdW1sLzk0MDgxNDI3Mzc0ODBjN2NiMWVmMDkzM2Q1M2M4MzZkLnN2ZyIsImlkIjoicjVTNDIiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9"></p>
+<h2 id="代码-6">7.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SubSystemOne</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">MethodOne</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 方法1</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubSystemTwo</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">MethodTwo</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 方法2</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Facade</span> {</span><br><span class="line">    <span class="keyword">private</span> SubSystemOne subSystemOne;</span><br><span class="line">    <span class="keyword">private</span> SubSystemTwo subSystemTwo;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Facade</span><span class="params">()</span> {</span><br><span class="line">        subSystemOne = <span class="keyword">new</span> <span class="title class_">SubSystemOne</span>();</span><br><span class="line">        subSystemTwo = <span class="keyword">new</span> <span class="title class_">SubSystemTwo</span>();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">MethodA</span><span class="params">()</span> {</span><br><span class="line">        subSystemOne.MethodOne();</span><br><span class="line">        subSystemTwo.MethodTwo();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">MethodB</span><span class="params">()</span> {</span><br><span class="line">        subSystemTwo.MethodTwo();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="总结-6">7.4 总结</h2>
+<p>首先，在设计初期阶段，应该要有意识的将不同的两个层分离，比如经典的三层架构，就需要考虑在数据访问层和业务逻辑层、业务逻辑层和表示层的层与层之间建立外观Facade，这样可以为复杂的子系统提供一个简单的接口，使得耦合大大降低。其次，在开发阶段，子系统往往因为不断的重构演化而变得越来越复杂，大多数的模式使用时也都会产生很多很小的类，这本是好事，但也给外部调用它们的用户程序带来了使用上的困难，增加外观Facade可以提供一个简单的接口，减少它们之间的依赖。第三，在维护一个遗留的大型系统时，可能这个系统已经非常难以维护和扩展了，但因为它包含非常重要的功能，新的需求开发必须要依赖于它。此时用外观模式Facade也是非常合适的。你可以为新系统开发一个外观Facade类，来提供设计粗糙或高度复杂的遗留代码的比较清晰简单的接口，让新系统与Facade对象交互，Facade与遗留代码交互所有复杂的工作。</p>
+<h1 id="建造者模式">8 建造者模式</h1>
+<h2 id="定义-7">8.1 定义</h2>
+<p>建造者模式定义：也叫生成器模式，将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。</p>
+<h2 id="结构图-7">8.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/7c93cd1acbdbe0cf4493483affc3c696.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgRGlyZWN0b3Ige1xuXHQrIENvbnN0cnVjdCgpXG59XG5ub3RlIGJvdHRvbTog5oyH5oyl6ICF77yM55So5LqO5L2_55SoQnVpbGRlcuaOpeWPo-WujOaIkOW7uumAoOi_h-eoi1xuXG5jbGFzcyBCdWlsZGVyIHtcblx0KyBCdWlsZFBhcnQoKVxufVxubm90ZSB0b3A6IOS4uuWIm-W7uuS4gOS4qlByb2R1Y3Tlr7nosaHnmoTlkITkuKrpg6jku7bmjIflrprnmoTmir3osaHmjqXlj6NcblxuY2xhc3MgQ29uY3JldGVCdWlsZGVyIHtcblx0KyBCdWlsZFBhcnQoKVxuXHQrIEdldFJlc3VsdCgpXG59XG5ub3RlIGJvdHRvbTog5YW35L2T5bu66YCg6ICF77yM5a6e546wQnVpbGRlcuaOpeWPo--8jOaehOmAoOWSjOijhemFjeWQhOS4qumDqOS7tlxuXG5jbGFzcyBQcm9kdWN0XG5cbkJ1aWxkZXIgLW8gRGlyZWN0b3JcbkJ1aWxkZXIgPHwtLSBDb25jcmV0ZUJ1aWxkZXJcblByb2R1Y3QgPC0gQ29uY3JldGVCdWlsZGVyXG5cbkBlbmR1bWwiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19wdW1sLzdjOTNjZDFhY2JkYmUwY2Y0NDkzNDgzYWZmYzNjNjk2LnN2ZyIsImlkIjoibnd6VUgiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9"></p>
+<h2 id="代码-7">8.3 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Product</span> {</span><br><span class="line">    List&lt;String&gt; parts = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 添加产品部件</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Add</span><span class="params">(String part)</span> {</span><br><span class="line">        parts.add(part);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Show</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 展示所有产品部件</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Builder</span> {</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">BuildPartA</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">BuildPartB</span><span class="params">()</span>;</span><br><span class="line">    Product <span class="title function_">GetResult</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteBuilder</span> <span class="keyword">implements</span> <span class="title class_">Builder</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">Product</span> <span class="variable">product</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Product</span>();</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">BuilderPartA</span><span class="params">()</span> {</span><br><span class="line">        product.Add(<span class="string">"部件A"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">BuilderPartB</span><span class="params">()</span> {</span><br><span class="line">        product.Add(<span class="string">"部件B"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">public</span> Product <span class="title function_">GetResult</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> product;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Director</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Construct</span><span class="params">(Builder builder)</span> {</span><br><span class="line">        builder.BuildPartA();</span><br><span class="line">        builder.BuildPartB();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="总结-7">8.4 总结</h2>
+<p>主要是用于创建一些复杂的对象，这些对象内部构建间的建造顺序通常是稳定的，但对象内部的构建通常面临着复杂的变化。</p>
+<h1 id="观察者模式">9 观察者模式</h1>
+<h2 id="定义-8">9.1 定义</h2>
+<p>观察者模式：也叫做发布-订阅模式，定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象，这个主题对象在状态发生变化时，会通知所有观察者对象，使他们能够自动更新自己。</p>
+<h2 id="结构图-8">9.2 结构图</h2>
+<p><img src="https://cdn.nlark.com/yuque/__puml/d6b07f1c31104d8881155f97b976e780.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuY2xhc3MgU3ViamVjdCB7XG5cdCsgQXR0YWNoKGluOiBPYnNlcnZlcilcblx0KyBEZXRhY2goaW46IE9ic2VydmVyKVxuXHQrIE5vdGlmeSgpXG59XG5ub3RlIHRvcCBvZiBTdWJqZWN0XG5TdWJqZWN05oq96LGh5Li76aKY57G777yM5oqK5omA5pyJ5a-56KeC5a-f6ICF5a-56LGh55qE5byV55So5L-d5a2Y5Zyo5LiA5Liq6IGa6ZuG6YeM77yM5q-P5Liq5Li76aKY6YO95Y-v5LulXG7mnInku7vkvZXmlbDph4_nmoTop4Llr5_ogIXjgILmir3osaHkuLvpopjmj5DkvpvkuIDkuKrmjqXlj6PvvIzlj6_ku6Xlop7liqDlkozliKDpmaTop4Llr5_ogIXlr7nosaFcbmVuZCBub3RlXG5cbmNsYXNzIE9ic2VydmVyIHtcblx0KyBVcGRhdGUoKVxufVxubm90ZSB0b3Agb2YgT2JzZXJ2ZXJcbuaKveixoeinguWvn-iAhe-8jOS4uuaJgOacieeahOWFt-S9k-inguWvn-iAheWumuS5ieS4gOS4quaOpeWPo--8jOWcqOW-l-WIsOS4u-mimOeahOmAmuefpeaXtuabtOaWsOiHquW3sVxuZW5kIG5vdGVcblxuY2xhc3MgQ29uY3JldGVTdWJqZWN0IHtcblx0KyBTdWJqZWN0U3RhdGVcbn1cbm5vdGUgYm90dG9tIG9mIENvbmNyZXRlU3ViamVjdFxu5YW35L2T5Li76aKY57G777yM5bCG5pyJ5YWz54q25oCB5a2Y5YWl5YW35L2T6KeC5a-f6ICF5a-56LGh44CC5Zyo5YW35L2T5Li76aKY55qE5YaF6YOo54q25oCB5pS55Y-Y5pe277yMXG7nu5nmiYDmnInnmbvorrDov4fnmoTop4Llr5_ogIXlj5Hlh7rpgJrnn6VcbmVuZCBub3RlXG5cbmNsYXNzIENvbmNyZXRlT2JzZXJ2ZXIge1xuXHQtIG9ic2VydmVyU3RhdGVcblx0KyBVcGRhdGUoKVxufVxubm90ZSBib3R0b20gb2YgQ29uY3JldGVPYnNlcnZlclxu5YW35L2T6KeC5a-f6ICF77yM5a6e546w5pu05paw5o6l5Y-jXG5lbmQgbm90ZVxuXG5TdWJqZWN0IDx8LS0gQ29uY3JldGVTdWJqZWN0XG5PYnNlcnZlciA8fC0tIENvbmNyZXRlT2JzZXJ2ZXJcblN1YmplY3QgLT4gT2JzZXJ2ZXIgOiAtb2JzZXJ2ZXJcblxuXG5AZW5kdW1sIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC9kNmIwN2YxYzMxMTA0ZDg4ODExNTVmOTdiOTc2ZTc4MC5zdmciLCJpZCI6InptUElsIiwibWFyZ2luIjp7InRvcCI6dHJ1ZSwiYm90dG9tIjp0cnVlfSwiY2FyZCI6ImRpYWdyYW0ifQ=="></p>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                设计模式课程
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                b05d2f415eb4/设计模式课程/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-10-23 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/4d2ab6272405/docker%E9%85%8D%E7%BD%AE%E5%AD%A6%E4%B9%A0/"
+                                   title="docker配置学习"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">docker配置学习</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/70a03cd4baf9/j2cache%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91/"
+                                   title="J2Cache升级踩坑"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">J2Cache升级踩坑</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="nav-text">1 策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">1.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-text">1.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">1.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">1.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="nav-text">2 装饰模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-text">2.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-1"><span class="nav-text">2.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-text">2.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-text">2.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-text">3 代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-text">3.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-2"><span class="nav-text">3.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-text">3.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-text">3.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-text">4 工厂方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="nav-text">4.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-3"><span class="nav-text">4.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-text">4.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-text">4.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-text">5 原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-4"><span class="nav-text">5.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-4"><span class="nav-text">5.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-text">5.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-4"><span class="nav-text">5.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-text">6 模板方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-5"><span class="nav-text">6.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-5"><span class="nav-text">6.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-5"><span class="nav-text">6.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-5"><span class="nav-text">6.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-text">7 外观模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-6"><span class="nav-text">7.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-6"><span class="nav-text">7.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-6"><span class="nav-text">7.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-6"><span class="nav-text">7.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">8 建造者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-7"><span class="nav-text">8.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-7"><span class="nav-text">8.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-7"><span class="nav-text">8.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-7"><span class="nav-text">8.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">9 观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-8"><span class="nav-text">9.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-8"><span class="nav-text">9.2 结构图</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="nav-text">1 策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">1.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-text">1.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">1.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">1.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="nav-text">2 装饰模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-text">2.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-1"><span class="nav-text">2.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-text">2.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-text">2.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-text">3 代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-text">3.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-2"><span class="nav-text">3.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-text">3.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-text">3.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-text">4 工厂方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="nav-text">4.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-3"><span class="nav-text">4.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-text">4.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-text">4.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-text">5 原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-4"><span class="nav-text">5.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-4"><span class="nav-text">5.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-text">5.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-4"><span class="nav-text">5.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-text">6 模板方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-5"><span class="nav-text">6.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-5"><span class="nav-text">6.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-5"><span class="nav-text">6.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-5"><span class="nav-text">6.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-text">7 外观模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-6"><span class="nav-text">7.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-6"><span class="nav-text">7.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-6"><span class="nav-text">7.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-6"><span class="nav-text">7.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">8 建造者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-7"><span class="nav-text">8.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-7"><span class="nav-text">8.2 结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-7"><span class="nav-text">8.3 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-7"><span class="nav-text">8.4 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">9 观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-8"><span class="nav-text">9.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%9B%BE-8"><span class="nav-text">9.2 结构图</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>

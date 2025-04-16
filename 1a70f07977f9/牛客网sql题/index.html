@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            牛客网SQL题 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        牛客网SQL题
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-12-01 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E7%89%9B%E5%AE%A2/">牛客</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/SQL/">SQL</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%89%9B%E5%AE%A2/">牛客</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>7.4k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>32 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="sql212-获取当前薪水第二多的员工的emp_no以及其对应的薪水salary">SQL212
+获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</h1>
+<p><strong>描述</strong></p>
+<p>有一个员工表employees简况如下:</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th>emp_no</th>
+<th>birth_date</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>gender</th>
+<th>hire_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10001</td>
+<td>1953-09-02</td>
+<td>Georgi</td>
+<td>Facello</td>
+<td>M</td>
+<td>1986-06-26</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>1964-06-02</td>
+<td>Bezalel</td>
+<td>Simmel</td>
+<td>F</td>
+<td>1985-11-21</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>1959-12-03</td>
+<td>Parto</td>
+<td>Bamford</td>
+<td>M</td>
+<td>1986-08-28</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>1954-05-01</td>
+<td>Chirstian</td>
+<td>Koblick</td>
+<td>M</td>
+<td>1986-12-01</td>
+</tr>
+</tbody>
+</table>
+<p>有一个薪水表salaries简况如下:</p>
+<table>
+<thead>
+<tr>
+<th>emp_no</th>
+<th>salary</th>
+<th>from_date</th>
+<th>to_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10001</td>
+<td>88958</td>
+<td>2002-06-26</td>
+<td>9999-01-01</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>72527</td>
+<td>2001-08-02</td>
+<td>9999-01-01</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>43311</td>
+<td>2001-12-01</td>
+<td>9999-01-01</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>74057</td>
+<td>2001-11-27</td>
+<td>9999-01-01</td>
+</tr>
+</tbody>
+</table>
+<p>请你查找薪水排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，<strong>不能使用order
+by完成</strong>，以上例子输出为:</p>
+<p><strong>（温馨提示:sqlite通过的代码不一定能通过mysql，因为SQL语法规定，使用聚合函数时，select子句中一般只能存在以下三种元素：常数、聚合函数，group
+by 指定的列名。如果使用非group by的列名，sqlite的结果和mysql
+可能不一样)</strong></p>
+<table>
+<thead>
+<tr>
+<th>emp_no</th>
+<th>salary</th>
+<th>last_name</th>
+<th>first_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10004</td>
+<td>74057</td>
+<td>Koblick</td>
+<td>Chirstian</td>
+</tr>
+</tbody>
+</table>
+<h2 id="解析">解析</h2>
+<p>这道题不允许使用<code>order by</code>进行排序，因此需要采用另一种方法，可以使用自连接的方法。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    s1.salary</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    salaries s1</span><br><span class="line">    <span class="keyword">join</span> salaries s2</span><br><span class="line">    <span class="keyword">on</span> s1.salary <span class="operator">&lt;=</span> s2.salary</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span></span><br><span class="line">    s1.emp_no</span><br><span class="line"><span class="keyword">having</span></span><br><span class="line">    <span class="built_in">count</span>(<span class="keyword">distinct</span> s2.salary) <span class="operator">=</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>自连接，然后连接条件是<code>s1.salary &lt;= s2.salary</code>，思考一下连接过程，左表是驱动表，左表<code>s1</code>从表中取出一行数据，然后依次和右表<code>s2</code>进行比对，如果<code>s1.salary</code>
+小于等于
+<code>s2.salary</code>，则满足条件，遍历完右表后，可以找到所有满足条件的数据，然后和<code>s1</code>表的这行数据存到虚拟表中，这个一行的匹配过程可以看作是后续的<code>group by</code>操作，当一遍遍历完右表<code>s2</code>后，如果右表匹配的<mark>不重复</mark>数据有一个，那说明左表数据是最大的，因为有等于条件，右表必定有一个数据满足，而其他数据都不满足，所以这个是最大的。如果右表匹配的有两个，那说明右表有两个数据大于等于当前数据，而有一个是他自己本身，所以当前数据是第二大的。因此对<code>s1.salary</code>进行分组后然后判断右边的不重复数据的个数即可找到排名。</p>
+<h1 id="sql229-批量插入数据不适用replace操作">SQL229
+批量插入数据，不适用replace操作</h1>
+<p><strong>描述</strong></p>
+<p>题目已经先执行了如下语句:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table if exists actor; CREATE TABLE actor (  actor_id smallint(5) NOT NULL PRIMARY KEY,  first_name varchar(45) NOT NULL,  last_name varchar(45) NOT NULL,  last_update DATETIME NOT NULL); insert into actor values ('3', 'WD', 'GUINESS', '2006-02-15 12:34:33');</span><br></pre></td></tr></table></figure>
+<p>对于表actor插入如下数据,如果数据已经存在，请忽略(不支持使用replace操作)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">actor_id</th>
+<th style="text-align: center;">first_name</th>
+<th style="text-align: center;">last_name</th>
+<th style="text-align: center;">last_update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">'3'</td>
+<td style="text-align: center;">'ED'</td>
+<td style="text-align: center;">'CHASE'</td>
+<td style="text-align: center;">'2006-02-15 12:34:33'</td>
+</tr>
+</tbody>
+</table>
+<h2 id="解析-1">解析</h2>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># mysql中常用的三种插入数据的语句: </span><br><span class="line"># <span class="keyword">insert</span> <span class="keyword">into</span>表示插入数据，数据库会检查主键，如果出现重复会报错； </span><br><span class="line"># replace <span class="keyword">into</span>表示插入替换数据，需求表中有PrimaryKey，</span><br><span class="line">#             或者<span class="keyword">unique</span>索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和<span class="keyword">insert</span> <span class="keyword">into</span>一样； </span><br><span class="line"># <span class="keyword">insert</span> ignore表示，如果中已经存在相同的记录，则忽略当前新数据；</span><br><span class="line"><span class="keyword">insert</span> ignore <span class="keyword">into</span> actor <span class="keyword">values</span>("3","ED","CHASE","2006-02-15 12:34:33");</span><br></pre></td></tr></table></figure>
+<h1 id="sql230-创建一个actor_name表">SQL230 创建一个actor_name表</h1>
+<p><strong>描述</strong></p>
+<p>对于如下表actor，其对应的数据为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">actor_id</th>
+<th style="text-align: center;">first_name</th>
+<th style="text-align: center;">last_name</th>
+<th style="text-align: center;">last_update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">PENELOPE</td>
+<td style="text-align: center;">GUINESS</td>
+<td style="text-align: center;">2006-02-15 12:34:33</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">NICK</td>
+<td style="text-align: center;">WAHLBERG</td>
+<td style="text-align: center;">2006-02-15 12:34:33</td>
+</tr>
+</tbody>
+</table>
+<p>请你创建一个actor_name表，并且将actor表中的所有first_name以及last_name导入该表.</p>
+<p>actor_name表结构如下，题目最后会查询actor_name表里面的数据来对比结果输出：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">列表</th>
+<th style="text-align: center;">类型</th>
+<th style="text-align: center;">是否为NULL</th>
+<th style="text-align: center;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">first_name</td>
+<td style="text-align: center;">varchar(45)</td>
+<td style="text-align: center;">not null</td>
+<td style="text-align: center;">名字</td>
+</tr>
+<tr>
+<td style="text-align: center;">last_name</td>
+<td style="text-align: center;">varchar(45)</td>
+<td style="text-align: center;">not null</td>
+<td style="text-align: center;">姓氏</td>
+</tr>
+</tbody>
+</table>
+<h2 id="解析-2">解析</h2>
+<p>考察创建表的三种方式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 常规创建</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> if <span class="keyword">not</span> <span class="keyword">exists</span> 目标表</span><br><span class="line"><span class="number">2.</span> 复制表格</span><br><span class="line"><span class="keyword">create</span> 目标表 <span class="keyword">like</span> 来源表</span><br><span class="line"><span class="number">3.</span> 将table1的部分拿来创建table2</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> if <span class="keyword">not</span> <span class="keyword">exists</span> actor_name</span><br><span class="line">(</span><br><span class="line">first_name <span class="type">varchar</span>(<span class="number">45</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">last_name <span class="type">varchar</span>(<span class="number">45</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">select</span> first_name,last_name</span><br><span class="line"><span class="keyword">from</span> actor</span><br></pre></td></tr></table></figure>
+<h1 id="sql231-创建索引">SQL231 创建索引</h1>
+<p>针对如下表actor结构创建索引：</p>
+<p>(注:在 SQLite 中,除了重命名表和在已有的表中添加列,ALTER TABLE
+命令不支持其他操作，</p>
+<p>mysql支持ALTER TABLE创建索引)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">CREATE TABLE <span class="title">actor</span>  <span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">   actor_id  smallint(<span class="number">5</span>)  NOT <span class="literal">NULL</span> PRIMARY KEY,</span></span></span><br><span class="line"><span class="params"><span class="function">   first_name  varchar(<span class="number">45</span>) NOT <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">   last_name  varchar(<span class="number">45</span>) NOT <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">   last_update  datetime NOT <span class="literal">NULL</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>对first_name创建唯一索引uniq_idx_firstname，对last_name创建普通索引idx_lastname</p>
+<h2 id="解析-3">解析</h2>
+<ol type="1">
+<li>添加<strong>主键</strong></li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (col_list);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 该语句添加一个主键，这意味着索引值必须是唯一的，且不能为<span class="keyword">NULL</span>。</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>添加<strong>唯一索引</strong></li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> index_name (col_list);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 这条语句创建索引的值必须是唯一的。</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>添加<strong>普通索引</strong></li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> INDEX index_name (col_list);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 添加普通索引，索引值可出现多次。</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>添加<strong>全文索引</strong></li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> FULLTEXT index_name (col_list);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 该语句指定了索引为 FULLTEXT ，用于全文索引。</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>删除索引的语法：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> INDEX index_name <span class="keyword">ON</span> tbl_name;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 或者</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">DROP</span> INDEX index_name;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY;</span><br></pre></td></tr></table></figure>
+<p>另一种创建索引的方法，使用<code>create</code>，但是这种方式不能创建主键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">UNIQUE</span> <span class="operator">|</span> FULLTEXT <span class="operator">|</span> SPATIAL] INDEX index_name <span class="keyword">ON</span> tbl_name (col_name);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>该语句指定了索引可以是唯一索引、全文索引、空间索引（一种基于空间对象的空间关系排列的数据结构，比如我们常见的地图定位应用，有兴趣的朋友可以自行谷歌一下）以及普通索引。</span><br></pre></td></tr></table></figure>
+<h1 id="sql163-每篇文章同一时刻最大在看人数">SQL163
+每篇文章同一时刻最大在看人数</h1>
+<p>用户行为日志表tb_user_log</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 15%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>artical_id</th>
+<th>in_time</th>
+<th>out_time</th>
+<th>sign_cin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>101</td>
+<td>9001</td>
+<td>2021-11-01 10:00:00</td>
+<td>2021-11-01 10:00:11</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>102</td>
+<td>9001</td>
+<td>2021-11-01 10:00:09</td>
+<td>2021-11-01 10:00:38</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>103</td>
+<td>9001</td>
+<td>2021-11-01 10:00:28</td>
+<td>2021-11-01 10:00:58</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>104</td>
+<td>9002</td>
+<td>2021-11-01 11:00:45</td>
+<td>2021-11-01 11:01:11</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>105</td>
+<td>9001</td>
+<td>2021-11-01 10:00:51</td>
+<td>2021-11-01 10:00:59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>106</td>
+<td>9002</td>
+<td>2021-11-01 11:00:55</td>
+<td>2021-11-01 11:01:24</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>107</td>
+<td>9001</td>
+<td>2021-11-01 10:00:01</td>
+<td>2021-11-01 10:01:50</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>（uid-用户ID, artical_id-文章ID, in_time-进入时间, out_time-离开时间,
+sign_in-是否签到）</p>
+<p><strong>场景逻辑说明</strong>：<strong>artical_id-文章ID</strong>代表用户浏览的文章的ID，<strong>artical_id-文章ID</strong>为<strong>0</strong>表示用户在非文章内容页（比如App内的列表页、活动页等）。</p>
+<p><strong>问题</strong>：统计每篇文章同一时刻最大在看人数，如果同一时刻有进入也有离开时，先记录用户数增加再记录减少，结果按最大人数降序。</p>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下</p>
+<table>
+<thead>
+<tr>
+<th>artical_id</th>
+<th>max_uv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9001</td>
+<td>3</td>
+</tr>
+<tr>
+<td>9002</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>解释：10点0分10秒时，有3个用户正在浏览文章9001；11点01分0秒时，有2个用户正在浏览文章9002。</p>
+<h2 id="解析计算瞬时的最大计数">解析（计算瞬时的最大计数）</h2>
+<p>本题难点在于如何计算瞬时的最大计数（在看人数）。</p>
+<p>通常想到的方法是<strong>编码+联立</strong>。首先对原表的<code>in_time</code>和<code>out_time</code>进行编码，如果是<code>in_time</code>则说明观看人数<code>+1</code>，如果是<code>out_time</code>则说明观看人数<code>-1</code>，分别进行编码，然后合并。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> artical_id, in_time dt, <span class="number">1</span> diff</span><br><span class="line"><span class="keyword">from</span> tb_user_log</span><br><span class="line"><span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line"><span class="keyword">select</span> artical_id, out_time dt, <span class="number">-1</span> diff</span><br><span class="line"><span class="keyword">from</span> tb_user_log</span><br><span class="line"><span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span><span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>这三个字段表示<code>artical_id</code>文章在<code>dt</code>这个时刻的变化人数为<code>diff</code>。</p>
+<p>然后对这个表使用窗口函数<code>sum</code>求和即可求得每一个时刻的观看人数。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    artical_id, <span class="built_in">sum</span>(diff) <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> artical_id <span class="keyword">order</span> <span class="keyword">by</span> dt, diff <span class="keyword">desc</span>) viewer_cnt</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> artical_id, in_time dt, <span class="number">1</span> diff</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">    <span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line">    <span class="keyword">select</span> artical_id, out_time dt, <span class="number">-1</span> diff</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">    <span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span><span class="number">0</span></span><br><span class="line">) t</span><br></pre></td></tr></table></figure>
+<p>这里排序先是使用<code>dt</code>升序，按照时间戳的顺序，然后使用<code>diff</code>降序。因为题目中说如果同一时刻有进入和离开，则先增加再减少，也就是说如果排序时<code>dt</code>相同，则按照<code>diff</code>降序排列。</p>
+<p>得到每个时刻的观看人数后，需要求观看人数最多的时刻的人数。因此最后再按照<code>artical_id</code>分组，求<code>max(viewer_cnt)</code>即可。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> artical_id, <span class="built_in">max</span>(viewer_cnt) max_uv</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span></span><br><span class="line">        artical_id, <span class="built_in">sum</span>(diff) <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> artical_id <span class="keyword">order</span> <span class="keyword">by</span> dt, diff <span class="keyword">desc</span>) viewer_cnt</span><br><span class="line">    <span class="keyword">from</span> (</span><br><span class="line">        <span class="keyword">select</span> artical_id, in_time dt, <span class="number">1</span> diff</span><br><span class="line">        <span class="keyword">from</span> tb_user_log</span><br><span class="line">        <span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line">        <span class="keyword">select</span> artical_id, out_time dt, <span class="number">-1</span> diff</span><br><span class="line">        <span class="keyword">from</span> tb_user_log</span><br><span class="line">        <span class="keyword">where</span> artical_id <span class="operator">&lt;&gt;</span><span class="number">0</span></span><br><span class="line">    ) t</span><br><span class="line">) tt</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> artical_id</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> max_uv <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+<p>本题解参考了<a class="link" target="_blank" rel="noopener" href="https://blog.nowcoder.net/n/18b5596467a643e58e0acd23cf3fae5b">题解<i class="fas fa-external-link-alt"></i></a>。</p>
+<h1 id="sql164-2021年11月每天新用户的次日留存率">SQL164
+2021年11月每天新用户的次日留存率</h1>
+<p>用户行为日志表tb_user_log</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 15%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>artical_id</th>
+<th>in_time</th>
+<th>out_time</th>
+<th>sign_cin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>101</td>
+<td>0</td>
+<td>2021-11-01 10:00:00</td>
+<td>2021-11-01 10:00:42</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>102</td>
+<td>9001</td>
+<td>2021-11-01 10:00:00</td>
+<td>2021-11-01 10:00:09</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>103</td>
+<td>9001</td>
+<td>2021-11-01 10:00:01</td>
+<td>2021-11-01 10:01:50</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>101</td>
+<td>9002</td>
+<td>2021-11-02 10:00:09</td>
+<td>2021-11-02 10:00:28</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>103</td>
+<td>9002</td>
+<td>2021-11-02 10:00:51</td>
+<td>2021-11-02 10:00:59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>104</td>
+<td>9001</td>
+<td>2021-11-02 11:00:28</td>
+<td>2021-11-02 11:01:24</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>101</td>
+<td>9003</td>
+<td>2021-11-03 11:00:55</td>
+<td>2021-11-03 11:01:24</td>
+<td>0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>104</td>
+<td>9003</td>
+<td>2021-11-03 11:00:45</td>
+<td>2021-11-03 11:00:55</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>105</td>
+<td>9003</td>
+<td>2021-11-03 11:00:53</td>
+<td>2021-11-03 11:00:59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>101</td>
+<td>9002</td>
+<td>2021-11-04 11:00:55</td>
+<td>2021-11-04 11:00:59</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>（uid-用户ID, artical_id-文章ID, in_time-进入时间, out_time-离开时间,
+sign_in-是否签到）</p>
+<p><strong>问题</strong>：统计2021年11月每天新用户的次日留存率（保留2位小数）</p>
+<p><strong>注</strong>：</p>
+<ul>
+<li>次日留存率为当天新增的用户数中第二天又活跃了的用户数占比。</li>
+<li>如果<strong>in_time-进入时间</strong>和<strong>out_time-离开时间</strong>跨天了，在两天里都记为该用户活跃过，结果按日期升序。</li>
+</ul>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下</p>
+<table>
+<thead>
+<tr>
+<th>dt</th>
+<th>uv_left_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-11-01</td>
+<td>0.67</td>
+</tr>
+<tr>
+<td>2021-11-02</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>2021-11-03</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>11.01有3个用户活跃101、102、103，均为新用户，在11.02只有101、103两个又活跃了，因此11.01的次日留存率为0.67；</p>
+<p>11.02有104一位新用户，在11.03又活跃了，因此11.02的次日留存率为1.00；</p>
+<p>11.03有105一位新用户，在11.04未活跃，因此11.03的次日留存率为0.00；</p>
+<p>11.04没有新用户，不输出。</p>
+<h2 id="解析-4">解析</h2>
+<p>本题针对的是新用户的次日留存率。因此应该首先查出每个用户的最早登陆日期，也就是新用户的第一次登陆日期，这样可以找到每个日期的注册用户。</p>
+<p>然后再查询出每天都有哪些用户登录，将这两个表连接，连接条件是<code>相同用户</code>和<code>用户最早登录日期的下一天仍然登录</code>。如果下一天仍然登录，则该值不为<code>null</code>否则为<code>null</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t1.dt, round(<span class="built_in">count</span>(t2.dt) <span class="operator">/</span> <span class="built_in">count</span>(t1.dt), <span class="number">2</span>) uv_left_rate</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> uid, <span class="built_in">min</span>(<span class="type">date</span>(in_time)) dt</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> uid</span><br><span class="line">) t1  <span class="comment">-- 查询新用户和新用户的最早登录日期</span></span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> (</span><br><span class="line">    <span class="keyword">select</span> uid, <span class="type">date</span>(in_time) dt</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">    <span class="keyword">union</span></span><br><span class="line">    <span class="keyword">select</span> uid, <span class="type">date</span>(out_time) dt</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">) t2  <span class="comment">-- 查询每天登录的用户，如果跨日期，则认为两天都登录了，所以需要查询两次然后合并</span></span><br><span class="line"><span class="keyword">on</span> t1.uid <span class="operator">=</span> t2.uid</span><br><span class="line"><span class="keyword">and</span> datediff(t2.dt, t1.dt) <span class="operator">=</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">where</span> date_format(t1.dt, <span class="string">'%Y-%m'</span>) <span class="operator">=</span> <span class="string">'2021-11'</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> t1.dt</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> t1.dt</span><br></pre></td></tr></table></figure>
+<h1 id="sql167-连续签到领金币">SQL167 连续签到领金币</h1>
+<p>用户行为日志表tb_user_log</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>artical_id</th>
+<th>in_time</th>
+<th>out_time</th>
+<th>sign_in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-07 10:00:00</td>
+<td>2021-07-07 10:00:09</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-08 10:00:00</td>
+<td>2021-07-08 10:00:09</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-09 10:00:00</td>
+<td>2021-07-09 10:00:42</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-10 10:00:00</td>
+<td>2021-07-10 10:00:09</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-11 23:59:55</td>
+<td>2021-07-11 23:59:59</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-12 10:00:28</td>
+<td>2021-07-12 10:00:50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>101</td>
+<td>0</td>
+<td>2021-07-13 10:00:28</td>
+<td>2021-07-13 10:00:50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-01 10:00:28</td>
+<td>2021-10-01 10:00:50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-02 10:00:01</td>
+<td>2021-10-02 10:01:50</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-03 10:00:55</td>
+<td>2021-10-03 11:00:59</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-04 10:00:45</td>
+<td>2021-10-04 11:00:55</td>
+<td>0</td>
+</tr>
+<tr>
+<td>12</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-05 10:00:53</td>
+<td>2021-10-05 11:00:59</td>
+<td>1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>102</td>
+<td>0</td>
+<td>2021-10-06 10:00:45</td>
+<td>2021-10-06 11:00:55</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（uid-用户ID, artical_id-文章ID, in_time-进入时间, out_time-离开时间,
+sign_in-是否签到）</p>
+<p><strong>场景逻辑说明</strong>：</p>
+<ul>
+<li><strong>artical_id-文章ID</strong>代表用户浏览的文章的ID，特殊情况<strong>artical_id-文章ID</strong>为<strong>0</strong>表示用户在非文章内容页（比如App内的列表页、活动页等）。注意：只有artical_id为0时sign_in值才有效。</li>
+<li>从2021年7月7日0点开始，用户每天签到可以领1金币，并可以开始累积签到天数，连续签到的第3、7天分别可额外领2、6金币。</li>
+<li>每连续签到7天后重新累积签到天数（即重置签到天数：连续第8天签到时记为新的一轮签到的第一天，领1金币）</li>
+</ul>
+<p><strong>问题</strong>：计算每个用户2021年7月以来每月获得的金币数（该活动到10月底结束，11月1日开始的签到不再获得金币）。结果按月份、ID升序排序。</p>
+<p><strong>注</strong>：如果签到记录的in_time-进入时间和out_time-离开时间跨天了，也只记作in_time对应的日期签到了。</p>
+<p><strong>输出示例：</strong></p>
+<p>示例数据的输出结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>month</th>
+<th>coin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>202107</td>
+<td>15</td>
+</tr>
+<tr>
+<td>102</td>
+<td>202110</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>101在活动期内连续签到了7天，因此获得1*7+2+6=15金币；</p>
+<p>102在10.01~10.03连续签到3天获得5金币</p>
+<p>10.04断签了，10.05~10.06连续签到2天获得2金币，共得到7金币。</p>
+<h2 id="解析-5">解析</h2>
+<p>本题最主要的问题是如何判断签到日期是否连续，因此可以联想到连续问题。连续问题通常解决方法是新建一个连续的列，相减得到一个常数值，通过这个相同的值判断连续情况。也就是<mark>连续n问题</mark>。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> t_sign_info <span class="keyword">as</span> (</span><br><span class="line">    <span class="keyword">select</span> </span><br><span class="line">        <span class="keyword">distinct</span> uid</span><br><span class="line">        , <span class="type">date</span>(in_time) sign_dt</span><br><span class="line">        , <span class="type">date</span>(in_time) <span class="operator">-</span> <span class="built_in">row_number</span>() <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> uid <span class="keyword">order</span> <span class="keyword">by</span> <span class="type">date</span>(in_time)) row_num</span><br><span class="line">    <span class="keyword">from</span> tb_user_log</span><br><span class="line">    <span class="keyword">where</span> artical_id <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">and</span> sign_in <span class="operator">=</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">and</span> datediff(in_time, <span class="string">'2021-07-07'</span>) <span class="operator">&gt;=</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">and</span> datediff(in_time, <span class="string">'2021-10-31'</span>) <span class="operator">&lt;=</span> <span class="number">0</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">select</span> uid, date_format(sign_dt, <span class="string">'%Y%m'</span>) <span class="keyword">month</span>, <span class="built_in">sum</span>(coin) coin</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> </span><br><span class="line">        uid</span><br><span class="line">        , sign_dt</span><br><span class="line">        , <span class="keyword">case</span> row_id <span class="operator">%</span> <span class="number">7</span></span><br><span class="line">            <span class="keyword">when</span> <span class="number">3</span> <span class="keyword">then</span> <span class="number">3</span></span><br><span class="line">            <span class="keyword">when</span> <span class="number">0</span> <span class="keyword">then</span> <span class="number">7</span></span><br><span class="line">            <span class="keyword">else</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">end</span> coin</span><br><span class="line">    <span class="keyword">from</span> (</span><br><span class="line">        <span class="keyword">select</span> <span class="operator">*</span>, <span class="built_in">row_number</span>() <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> row_num, uid <span class="keyword">order</span> <span class="keyword">by</span> sign_dt) row_id</span><br><span class="line">        <span class="keyword">from</span> t_sign_info</span><br><span class="line">    ) t</span><br><span class="line">) tt</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> uid, <span class="keyword">month</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">month</span>, uid</span><br></pre></td></tr></table></figure>
+<p>首先找到每个用户的合法的签到日期，然后按照用户号分组使用窗口函数分配序号。然后使用签到日期和分配的序号相减，如果签到日期是连续的，那么和序号相减得到的结果的值是固定的，如果不同了，说明日期发生了断连。</p>
+<p>然后再次使用窗口函数分配序号，这样可以看到用户签到的天数情况。</p>
+<h1 id="sql171-零食类商品中复购率top3高的商品">SQL171
+零食类商品中复购率top3高的商品</h1>
+<p>商品信息表tb_product_info</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>product_id</th>
+<th>shop_id</th>
+<th>tag</th>
+<th>int_</th>
+<th>quantity</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8001</td>
+<td>901</td>
+<td>零食</td>
+<td>60</td>
+<td>1000</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8002</td>
+<td>901</td>
+<td>零食</td>
+<td>140</td>
+<td>500</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8003</td>
+<td>901</td>
+<td>零食</td>
+<td>160</td>
+<td>500</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>（product_id-商品ID, shop_id-店铺ID, tag-商品类别标签,
+in_price-进货价格, quantity-进货数量, release_time-上架时间）</p>
+<p>订单总表tb_order_overall</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 12%">
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>uid</th>
+<th>event_time</th>
+<th>total_amount</th>
+<th>total_cnt</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301001</td>
+<td>101</td>
+<td>2021-09-30 10:00:00</td>
+<td>140</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301002</td>
+<td>102</td>
+<td>2021-10-01 11:00:00</td>
+<td>235</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301011</td>
+<td>102</td>
+<td>2021-10-31 11:00:00</td>
+<td>250</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301003</td>
+<td>101</td>
+<td>2021-10-02 10:00:00</td>
+<td>300</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>301013</td>
+<td>105</td>
+<td>2021-10-02 10:00:00</td>
+<td>300</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>301005</td>
+<td>104</td>
+<td>2021-10-03 10:00:00</td>
+<td>170</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, uid-用户ID, event_time-下单时间,
+total_amount-订单总金额, total_cnt-订单商品总件数, status-订单状态）</p>
+<p>订单明细表tb_order_detail</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>product_id</th>
+<th>price</th>
+<th>cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301001</td>
+<td>8002</td>
+<td>150</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301011</td>
+<td>8003</td>
+<td>200</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301011</td>
+<td>8001</td>
+<td>80</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301002</td>
+<td>8001</td>
+<td>85</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>301002</td>
+<td>8003</td>
+<td>180</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>301003</td>
+<td>8002</td>
+<td>140</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>301003</td>
+<td>8003</td>
+<td>180</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>301013</td>
+<td>8002</td>
+<td>140</td>
+<td>2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>301005</td>
+<td>8003</td>
+<td>180</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, product_id-商品ID, price-商品单价,
+cnt-下单数量）</p>
+<p><strong>场景逻辑说明</strong>：</p>
+<ul>
+<li>用户将购物车中多件商品一起下单时，订单总表会生成一个订单（但此时未付款，
+<strong>status-订单状态-</strong>
+<strong>订单状态</strong>为<strong>0</strong>表示待付款），在订单明细表生成该订单中每个商品的信息；</li>
+<li>当用户支付完成时，在订单总表修改对应订单记录的<strong>status-订单状态-</strong>
+<strong>订单状态</strong>为<strong>1</strong>表示已付款；</li>
+<li>若用户退货退款，在订单总表生成一条交易总金额为负值的记录（表示退款金额，订单号为退款单号，订单状态为<strong>2表示</strong>已退款）。</li>
+</ul>
+<p><strong>问题</strong>：请统计零食类商品中复购率top3高的商品。</p>
+<p><strong>注</strong>：复购率指用户在一段时间内对某商品的重复购买比例，复购率越大，则反映出消费者对品牌的忠诚度就越高，也叫回头率</p>
+<p>此处我们定义：某商品复购率 = 近90天内购买它至少两次的人数 ÷
+购买它的总人数</p>
+<p>近90天指包含最大日期（记为当天）在内的近90天。结果中复购率保留3位小数，并按复购率倒序、商品ID升序排序</p>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>product_id</th>
+<th>repurchase_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8001</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>8002</td>
+<td>0.500</td>
+</tr>
+<tr>
+<td>8003</td>
+<td>0.333</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>商品8001、8002、8003都是零食类商品，8001只被用户102购买了两次，复购率1.000；</p>
+<p>商品8002被101购买了两次，被105购买了1次，复购率0.500；</p>
+<p>商品8003被102购买两次，被101和105各购买1次，复购率为0.333。</p>
+<h2 id="解析-6">解析</h2>
+<p>本题难点在于找到复购的商品的人数。</p>
+<p>首先看复购的定义，指的是一个用户在某段时间内对一个商品重复购买。也就是说在表中的记录里，用户复购一个商品时的<code>uid</code>和<code>product_id</code>是相同的，因为用户相同、商品相同。因此可以首先使用<code>uid, product_id</code>进行分组，找到某用户对对某商品的购买次数，可以通过<code>event_time</code>判断购买了多少次。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    product_id</span><br><span class="line">    , round(<span class="built_in">avg</span>(if_repurchase), <span class="number">3</span>) repurchase_rate</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span></span><br><span class="line">        info.product_id</span><br><span class="line">        , if(<span class="built_in">count</span>(overall.event_time) <span class="operator">&gt;</span> <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>) if_repurchase</span><br><span class="line">    <span class="keyword">from</span> tb_product_info info</span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> tb_order_detail detail</span><br><span class="line">    <span class="keyword">on</span> info.product_id <span class="operator">=</span> detail.product_id</span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> tb_order_overall overall</span><br><span class="line">    <span class="keyword">on</span> detail.order_id <span class="operator">=</span> overall.order_id</span><br><span class="line">    <span class="keyword">where</span> info.tag <span class="operator">=</span> <span class="string">'零食'</span></span><br><span class="line">    <span class="keyword">and</span> datediff((<span class="keyword">select</span> <span class="built_in">max</span>(event_time) <span class="keyword">from</span> tb_order_overall), overall.event_time) <span class="operator">&lt;</span> <span class="number">90</span></span><br><span class="line">    <span class="keyword">group</span> <span class="keyword">by</span> info.product_id, overall.uid</span><br><span class="line">) t</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> product_id</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> repurchase_rate <span class="keyword">desc</span>, product_id <span class="keyword">asc</span></span><br><span class="line">limit <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h1 id="sql173-店铺901国庆期间的7日动销率和滞销率">SQL173
+店铺901国庆期间的7日动销率和滞销率</h1>
+<p>商品信息表tb_product_info</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>product_id</th>
+<th>shop_id</th>
+<th>tag</th>
+<th>int_</th>
+<th>quantity</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8001</td>
+<td>901</td>
+<td>日用</td>
+<td>60</td>
+<td>1000</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8002</td>
+<td>901</td>
+<td>零食</td>
+<td>140</td>
+<td>500</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8003</td>
+<td>901</td>
+<td>零食</td>
+<td>160</td>
+<td>500</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>（product_id-商品ID, shop_id-店铺ID, tag-商品类别标签,
+in_price-进货价格, quantity-进货数量, release_time-上架时间）</p>
+<p>订单总表tb_order_overall</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 12%">
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>uid</th>
+<th>event_time</th>
+<th>total_amount</th>
+<th>total_cnt</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301004</td>
+<td>102</td>
+<td>2021-09-30 10:00:00</td>
+<td>170</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301005</td>
+<td>104</td>
+<td>2021-10-01 10:00:00</td>
+<td>160</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301003</td>
+<td>101</td>
+<td>2021-10-02 10:00:00</td>
+<td>300</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301002</td>
+<td>102</td>
+<td>2021-10-03 11:00:00</td>
+<td>235</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, uid-用户ID, event_time-下单时间,
+total_amount-订单总金额, total_cnt-订单商品总件数, status-订单状态）</p>
+<p>订单明细表tb_order_detail</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>product_id</th>
+<th>price</th>
+<th>cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301004</td>
+<td>8002</td>
+<td>180</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301005</td>
+<td>8002</td>
+<td>170</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301002</td>
+<td>8001</td>
+<td>85</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301002</td>
+<td>8003</td>
+<td>180</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>301003</td>
+<td>8002</td>
+<td>150</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>301003</td>
+<td>8003</td>
+<td>180</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, product_id-商品ID, price-商品单价,
+cnt-下单数量）</p>
+<p><strong>问题</strong>：请计算店铺901在2021年国庆头3天的7日动销率和滞销率，结果保留3位小数，按日期升序排序。</p>
+<p><strong>注</strong>：</p>
+<ul>
+<li>动销率定义为店铺中一段时间内有销量的商品占当前已上架总商品数的比例（有销量的商品/已上架总商品数)。</li>
+<li>滞销率定义为店铺中一段时间内没有销量的商品占当前已上架总商品数的比例。（没有销量的商品/已上架总商品数)。</li>
+<li>只要当天任一店铺有任何商品的销量就输出该天的结果，即使店铺901当天的动销率为0。</li>
+</ul>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>dt</th>
+<th>sale_rate</th>
+<th>unsale_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-10-01</td>
+<td>0.333</td>
+<td>0.667</td>
+</tr>
+<tr>
+<td>2021-10-02</td>
+<td>0.667</td>
+<td>0.333</td>
+</tr>
+<tr>
+<td>2021-10-03</td>
+<td>1.000</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>10月1日的近7日（9月25日---10月1日）店铺901有销量的商品有8002，截止当天在售商品数为3，动销率为0.333，滞销率为0.667；</p>
+<p>10月2日的近7日（9月26日---10月2日）店铺901有销量的商品有8002、8003，截止当天在售商品数为3，动销率为0.667，滞销率为0.333；</p>
+<p>10月3日的近7日（9月27日---10月3日）店铺901有销量的商品有8002、8003、8001，截止当天店铺901在售商品数为3，动销率为1.000，</p>
+<p>滞销率为0.000；</p>
+<h2 id="解析-7">解析</h2>
+<p>总体思路先求这三天每天的上架商品总数，然后再求七天内的售出商品总数。</p>
+<p>要计算过去七天的，首先想到使用窗口函数，但是因为售出日期不是连续的，使用窗口函数不能解决问题，因此可以采用连接方式，在连接条件上判断。</p>
+<p><strong>首先求出要求的三天的日期</strong>，题目要求只要当天有商品卖出就要展示当天的结果，另一个意思是如果一天没有任何商品售出就不展示该天。所以先根据订单求出需要展示哪些天。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">DATE</span>(event_time) dt</span><br><span class="line"><span class="keyword">FROM</span> tb_order_overall</span><br><span class="line"><span class="keyword">WHERE</span> <span class="type">DATE</span>(event_time) <span class="keyword">BETWEEN</span> <span class="string">'2021-10-01'</span> <span class="keyword">AND</span> <span class="string">'2021-10-03'</span></span><br></pre></td></tr></table></figure>
+<p><strong>然后求出这几天的每天的上架的商品数量</strong>，题目给的条件里没有说明下架日期，默认商品不会下架，这里根据上架日期小于题目中要求的三天即可，使用连接的方法即可求出。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- t_date为上一次求的三天日期</span></span><br><span class="line"><span class="keyword">SELECT</span> dt, <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> product_id) cnt</span><br><span class="line"><span class="keyword">FROM</span> tb_product_info</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_date</span><br><span class="line"><span class="keyword">ON</span> DATEDIFF(dt, release_time) <span class="operator">&gt;=</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">WHERE</span> shop_id <span class="operator">=</span> <span class="number">901</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> dt </span><br></pre></td></tr></table></figure>
+<p><strong>接下来求出七天内的出售的商品</strong>，对三个表进行连接，根据要求的店铺id和日期，即可求得每天出售的商品id。<mark>注：这里不能求每天出售的商品数，题目中要求的是七天内售出的不同的商品数，如果两天售出同样的商品，正确的结果为1，而如果求每天出售的商品数，结果则大于1了</mark></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">DATE</span>(oo.event_time) dt, od.product_id </span><br><span class="line"><span class="keyword">FROM</span> tb_order_detail od</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> tb_order_overall oo</span><br><span class="line"><span class="keyword">ON</span> od.order_id <span class="operator">=</span> oo.order_id</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> tb_product_info pi</span><br><span class="line"><span class="keyword">ON</span> od.product_id <span class="operator">=</span> pi.product_id</span><br><span class="line"><span class="keyword">WHERE</span> pi.shop_id <span class="operator">=</span> <span class="number">901</span></span><br><span class="line"><span class="keyword">AND</span> <span class="type">DATE</span>(oo.event_time) <span class="keyword">BETWEEN</span> <span class="string">'2021-09-25'</span> <span class="keyword">AND</span> <span class="string">'2021-10-03'</span></span><br></pre></td></tr></table></figure>
+<p>最后对上架商品表和出售商品表连接，求出结果。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    t_onsale.dt,</span><br><span class="line">    ROUND(<span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> t_sold.product_id) <span class="operator">/</span> t_onsale.cnt, <span class="number">3</span>) sale_rate,</span><br><span class="line">    ROUND(<span class="number">1</span> <span class="operator">-</span> <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> t_sold.product_id) <span class="operator">/</span> t_onsale.cnt, <span class="number">3</span>) unsale_rate</span><br><span class="line"><span class="keyword">FROM</span> t_onsale</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> t_sold</span><br><span class="line"><span class="keyword">ON</span> DATEDIFF(t_onsale.dt, t_sold.dt) <span class="keyword">BETWEEN</span> <span class="number">0</span> <span class="keyword">AND</span> <span class="number">6</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> t_onsale.dt</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> t_onsale.dt</span><br></pre></td></tr></table></figure>
+<h1 id="sql-165-统计活跃间隔对用户分级结果">SQL 165
+统计活跃间隔对用户分级结果</h1>
+<p>用户行为日志表tb_user_log</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 15%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>artical_id</th>
+<th>in_time</th>
+<th>out_time</th>
+<th>sign_cin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>109</td>
+<td>9001</td>
+<td>2021-08-31 10:00:00</td>
+<td>2021-08-31 10:00:09</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>109</td>
+<td>9002</td>
+<td>2021-11-04 11:00:55</td>
+<td>2021-11-04 11:00:59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>108</td>
+<td>9001</td>
+<td>2021-09-01 10:00:01</td>
+<td>2021-09-01 10:01:50</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>108</td>
+<td>9001</td>
+<td>2021-11-03 10:00:01</td>
+<td>2021-11-03 10:01:50</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>104</td>
+<td>9001</td>
+<td>2021-11-02 10:00:28</td>
+<td>2021-11-02 10:00:50</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>104</td>
+<td>9003</td>
+<td>2021-09-03 11:00:45</td>
+<td>2021-09-03 11:00:55</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>105</td>
+<td>9003</td>
+<td>2021-11-03 11:00:53</td>
+<td>2021-11-03 11:00:59</td>
+<td>0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>102</td>
+<td>9001</td>
+<td>2021-10-30 10:00:00</td>
+<td>2021-10-30 10:00:09</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>103</td>
+<td>9001</td>
+<td>2021-10-21 10:00:00</td>
+<td>2021-10-21 10:00:09</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>101</td>
+<td>0</td>
+<td>2021-10-01 10:00:00</td>
+<td>2021-10-01 10:00:42</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（uid-用户ID, artical_id-文章ID, in_time-进入时间, out_time-离开时间,
+sign_in-是否签到）</p>
+<p><strong>问题</strong>：统计活跃间隔对用户分级后，各活跃等级用户占比，结果保留两位小数，且按占比降序排序。</p>
+<p><strong>注</strong>：</p>
+<ul>
+<li>用户等级标准简化为：忠实用户(近7天活跃过且非新晋用户)、新晋用户(近7天新增)、沉睡用户(近7天未活跃但更早前活跃过)、流失用户(近30天未活跃但更早前活跃过)。</li>
+<li>假设<strong>今天</strong>就是数据中所有日期的最大值。</li>
+<li>近7天表示包含当天T的近7天，即闭区间[T-6, T]。</li>
+</ul>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下</p>
+<table>
+<thead>
+<tr>
+<th>user_grade</th>
+<th>ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>忠实用户</td>
+<td>0.43</td>
+</tr>
+<tr>
+<td>新晋用户</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>沉睡用户</td>
+<td>0.14</td>
+</tr>
+<tr>
+<td>流失用户</td>
+<td>0.14</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>今天日期为2021.11.04，根据用户分级标准，<strong>用户行为日志表tb_user_log</strong>中忠实用户有：109、108、104；新晋用户有105、102；沉睡用户有103；流失用户有101；共7个用户，因此他们的比例分别为0.43、0.29、0.14、0.14。</p>
+<h2 id="解析-8">解析</h2>
+<p>本题主要判断的是用户的最后一次活跃、第一次活跃和所有活跃日期的最大值的比较。</p>
+<p>所以首先应该查找出所有用户的首次活跃和最后一次活跃日期，这里可以采用分组的方法，每一组里的最大值和最小值即是结果。</p>
+<p>所有日期的最大值可以通过再次查找表取所有数据的最大值，但是这样会重复查找。可以在刚刚查找每个用户的活跃日期时顺便查找出所有用户的最后活跃日期。即在分组后使用一次窗口函数，求分组后的结果的最大值，即为全局的最大值。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    uid, <span class="built_in">MAX</span>(out_time) last_dt, <span class="built_in">MIN</span>(out_time) first_dt, <span class="built_in">MAX</span>(<span class="built_in">MAX</span>(out_time)) <span class="keyword">OVER</span> () today</span><br><span class="line"><span class="keyword">FROM</span> tb_user_log</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> uid</span><br></pre></td></tr></table></figure>
+<p>这里提供了一个思路：如果想在分组后求全局的聚合结果，可以再次使用窗口函数进行求解。</p>
+<p>所以本题解法为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">WITH</span> t_all <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        uid, <span class="built_in">MAX</span>(out_time) last_dt, <span class="built_in">MIN</span>(out_time) first_dt, <span class="built_in">MAX</span>(<span class="built_in">MAX</span>(out_time)) <span class="keyword">OVER</span> () today</span><br><span class="line">    <span class="keyword">FROM</span> tb_user_log</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> uid</span><br><span class="line">),</span><br><span class="line">t_grade <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        uid,</span><br><span class="line">        <span class="keyword">CASE</span></span><br><span class="line">            <span class="keyword">WHEN</span> DATEDIFF(today, last_dt) <span class="operator">&lt;=</span> <span class="number">6</span> <span class="keyword">AND</span> DATEDIFF(today, first_dt) <span class="operator">&gt;</span> <span class="number">6</span> <span class="keyword">THEN</span> <span class="string">'忠实用户'</span></span><br><span class="line">            <span class="keyword">WHEN</span> DATEDIFF(today, first_dt) <span class="operator">&lt;=</span> <span class="number">6</span> <span class="keyword">THEN</span> <span class="string">'新晋用户'</span></span><br><span class="line">            <span class="keyword">WHEN</span> DATEDIFF(today, last_dt) <span class="operator">&gt;</span> <span class="number">29</span> <span class="keyword">THEN</span> <span class="string">'流失用户'</span></span><br><span class="line">            <span class="keyword">ELSE</span> <span class="string">'沉睡用户'</span></span><br><span class="line">        <span class="keyword">END</span> user_grade</span><br><span class="line">    <span class="keyword">FROM</span> t_all</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    user_grade,</span><br><span class="line">    ROUND(<span class="built_in">COUNT</span>(uid) <span class="operator">/</span> <span class="built_in">SUM</span>(<span class="built_in">COUNT</span>(user_grade)) <span class="keyword">OVER</span> (), <span class="number">2</span>) ratio</span><br><span class="line"><span class="keyword">FROM</span> t_grade</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> user_grade</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ratio <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+<p>同样的思路，最后需要判断所占比率，每类用户的数量除以所有用户的数量，已经按照用户等级分组了，对分组后的结果使用窗口函数对每个组的行数进行求和，就得到了总数。</p>
+<h1 id="sql-170-某店铺的各商品毛利率及店铺整体毛利率">SQL 170
+某店铺的各商品毛利率及店铺整体毛利率</h1>
+<h2 id="描述">描述</h2>
+<p>商品信息表tb_product_info</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 16%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>product_id</th>
+<th>shop_id</th>
+<th>tag</th>
+<th>in_price</th>
+<th>quantity</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8001</td>
+<td>901</td>
+<td>家电</td>
+<td>6000</td>
+<td>100</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8002</td>
+<td>902</td>
+<td>家电</td>
+<td>12000</td>
+<td>50</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8003</td>
+<td>901</td>
+<td>3C数码</td>
+<td>12000</td>
+<td>50</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>（product_id-商品ID, shop_id-店铺ID, tag-商品类别标签,
+in_price-进货价格, quantity-进货数量, release_time-上架时间）</p>
+<p>订单总表tb_order_overall</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 12%">
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>uid</th>
+<th>event_time</th>
+<th>total_amount</th>
+<th>total_cnt</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301001</td>
+<td>101</td>
+<td>2021-10-01 10:00:00</td>
+<td>30000</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301002</td>
+<td>102</td>
+<td>2021-10-01 11:00:00</td>
+<td>23900</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301003</td>
+<td>103</td>
+<td>2021-10-02 10:00:00</td>
+<td>31000</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, uid-用户ID, event_time-下单时间,
+total_amount-订单总金额, total_cnt-订单商品总件数, status-订单状态）</p>
+<p>订单明细表tb_order_detail</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>order_id</th>
+<th>product_id</th>
+<th>price</th>
+<th>cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>301001</td>
+<td>8001</td>
+<td>8500</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>301001</td>
+<td>8002</td>
+<td>15000</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301002</td>
+<td>8001</td>
+<td>8500</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301002</td>
+<td>8002</td>
+<td>16000</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>301003</td>
+<td>8002</td>
+<td>14000</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>301003</td>
+<td>8003</td>
+<td>18000</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>（order_id-订单号, product_id-商品ID, price-商品单价,
+cnt-下单数量）</p>
+<p><strong>场景逻辑说明</strong>：</p>
+<ul>
+<li>用户将购物车中多件商品一起下单时，订单总表会生成一个订单（但此时未付款，<strong>status-订单状态</strong>为<strong>0</strong>表示待付款），在订单明细表生成该订单中每个商品的信息；</li>
+<li>当用户支付完成时，在订单总表修改对应订单记录的<strong>status-订单状态</strong>为<strong>1</strong>表示已付款；</li>
+<li>若用户退货退款，在订单总表生成一条交易总金额为负值的记录（表示退款金额，订单号为退款单号，<strong>status-订单状态</strong>为2表示已退款）。</li>
+</ul>
+<p><strong>问题</strong>：请计算2021年10月以来店铺901中商品毛利率大于24.9%的商品信息及店铺整体毛利率。</p>
+<p><strong>注</strong>：商品毛利率=(1-进价/平均单件售价)*100%；</p>
+<p>店铺毛利率=(1-总进价成本/总销售收入)*100%。</p>
+<p>结果先输出店铺毛利率，再按商品ID升序输出各商品毛利率，均保留1位小数。</p>
+<p><strong>输出示例</strong>：</p>
+<p>示例数据的输出结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>product_id</th>
+<th>profit_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店铺汇总</td>
+<td>31.0%</td>
+</tr>
+<tr>
+<td>8001</td>
+<td>29.4%</td>
+</tr>
+<tr>
+<td>8003</td>
+<td>33.3%</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<p>店铺901有两件商品8001和8003；8001售出了3件，销售总额为25500，进价总额为18000，毛利率为1-18000/25500=29.4%，8003售出了1件，售价为18000，进价为12000，毛利率为33.3%；</p>
+<p>店铺卖出的这4件商品总销售额为43500，总进价为30000，毛利率为1-30000/43500=31.0%</p>
+<h2 id="解析with-rollup">解析（WITH ROLLUP）</h2>
+<p>题目理解不难，难点在于怎么同时计算出每个商品的毛利率和店铺整体毛利率。</p>
+<p>第一种可以采用分别计算的方法，先计算出店铺的毛利率然后再计算每个商品的毛利率，最后进行合并即可。</p>
+<p>第二种是采用<code>WITH ROLLUP</code>方法，因为整体毛利率和某个商品的毛利率计算方法相似。</p>
+<p>这里需要对商品毛利率的计算方法做一个转换。<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="19.231ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 8500 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">进</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">价</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2000,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mi" transform="translate(2500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">平</text></g><g data-mml-node="mi" transform="translate(3500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">均</text></g><g data-mml-node="mi" transform="translate(4500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">单</text></g><g data-mml-node="mi" transform="translate(5500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">件</text></g><g data-mml-node="mi" transform="translate(6500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">售</text></g><g data-mml-node="mi" transform="translate(7500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">价</text></g></g></g></svg></mjx-container></span>，上下同时乘出售的总数量，就变成了<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="30.543ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 13500 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">进</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">价</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">成</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">本</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(5000,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mi" transform="translate(5500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">该</text></g><g data-mml-node="mi" transform="translate(6500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">商</text></g><g data-mml-node="mi" transform="translate(7500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">品</text></g><g data-mml-node="mi" transform="translate(8500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(9500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">销</text></g><g data-mml-node="mi" transform="translate(10500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">售</text></g><g data-mml-node="mi" transform="translate(11500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">收</text></g><g data-mml-node="mi" transform="translate(12500,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">入</text></g></g></g></svg></mjx-container></span>，所以计算方法和计算整体毛利率相同。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    product_id, CONCAT(profit_rate, <span class="string">'%'</span>) profit_rate</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        <span class="built_in">COALESCE</span>(product_id, <span class="string">'店铺汇总'</span>) product_id,</span><br><span class="line">        ROUND(<span class="number">100</span> <span class="operator">*</span> (<span class="number">1</span> <span class="operator">-</span> <span class="built_in">SUM</span>(in_price<span class="operator">*</span>cnt) <span class="operator">/</span> <span class="built_in">SUM</span>(price<span class="operator">*</span>cnt)), <span class="number">1</span>) profit_rate</span><br><span class="line">    <span class="keyword">FROM</span> (</span><br><span class="line">        <span class="keyword">SELECT</span> info.product_id, info.in_price, detail.price, detail.cnt</span><br><span class="line">        <span class="keyword">FROM</span> tb_order_detail detail</span><br><span class="line">        <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tb_product_info info</span><br><span class="line">        <span class="keyword">ON</span> detail.product_id <span class="operator">=</span> info.product_id</span><br><span class="line">        <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tb_order_overall overall</span><br><span class="line">        <span class="keyword">ON</span> detail.order_id <span class="operator">=</span> overall.order_id</span><br><span class="line">        <span class="keyword">WHERE</span> info.shop_id <span class="operator">=</span> <span class="number">901</span></span><br><span class="line">        <span class="keyword">AND</span> <span class="type">DATE</span>(overall.event_time) <span class="operator">&gt;=</span> <span class="string">'2021-10-01'</span></span><br><span class="line">    ) t1</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> product_id <span class="keyword">WITH</span> <span class="keyword">ROLLUP</span></span><br><span class="line">    <span class="keyword">HAVING</span> profit_rate <span class="operator">&gt;=</span> <span class="number">24.9</span></span><br><span class="line">    <span class="keyword">OR</span> product_id <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br><span class="line">    <span class="keyword">ORDER</span> <span class="keyword">BY</span> product_id</span><br><span class="line">) t2</span><br></pre></td></tr></table></figure>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                牛客网SQL题
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                1a70f07977f9/牛客网sql题/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-12-01 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/SQL/">SQL</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%89%9B%E5%AE%A2/">牛客</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/73233cd329a1/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"
+                                   title="大数据环境搭建"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">大数据环境搭建</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/ef9b8a95b3fe/leetcode-sql%E9%A2%98%E7%AC%94%E8%AE%B0/"
+                                   title="LeetCode SQL题笔记"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">LeetCode SQL题笔记</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sql212-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E8%96%AA%E6%B0%B4%E7%AC%AC%E4%BA%8C%E5%A4%9A%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84emp_no%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E8%96%AA%E6%B0%B4salary"><span class="nav-text">SQL212
+获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql229-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E4%B8%8D%E9%80%82%E7%94%A8replace%E6%93%8D%E4%BD%9C"><span class="nav-text">SQL229
+批量插入数据，不适用replace操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql230-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAactor_name%E8%A1%A8"><span class="nav-text">SQL230 创建一个actor_name表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql231-%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="nav-text">SQL231 创建索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql163-%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E5%90%8C%E4%B8%80%E6%97%B6%E5%88%BB%E6%9C%80%E5%A4%A7%E5%9C%A8%E7%9C%8B%E4%BA%BA%E6%95%B0"><span class="nav-text">SQL163
+每篇文章同一时刻最大在看人数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E8%AE%A1%E7%AE%97%E7%9E%AC%E6%97%B6%E7%9A%84%E6%9C%80%E5%A4%A7%E8%AE%A1%E6%95%B0"><span class="nav-text">解析（计算瞬时的最大计数）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql164-2021%E5%B9%B411%E6%9C%88%E6%AF%8F%E5%A4%A9%E6%96%B0%E7%94%A8%E6%88%B7%E7%9A%84%E6%AC%A1%E6%97%A5%E7%95%99%E5%AD%98%E7%8E%87"><span class="nav-text">SQL164
+2021年11月每天新用户的次日留存率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql167-%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E9%A2%86%E9%87%91%E5%B8%81"><span class="nav-text">SQL167 连续签到领金币</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql171-%E9%9B%B6%E9%A3%9F%E7%B1%BB%E5%95%86%E5%93%81%E4%B8%AD%E5%A4%8D%E8%B4%AD%E7%8E%87top3%E9%AB%98%E7%9A%84%E5%95%86%E5%93%81"><span class="nav-text">SQL171
+零食类商品中复购率top3高的商品</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql173-%E5%BA%97%E9%93%BA901%E5%9B%BD%E5%BA%86%E6%9C%9F%E9%97%B4%E7%9A%847%E6%97%A5%E5%8A%A8%E9%94%80%E7%8E%87%E5%92%8C%E6%BB%9E%E9%94%80%E7%8E%87"><span class="nav-text">SQL173
+店铺901国庆期间的7日动销率和滞销率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql-165-%E7%BB%9F%E8%AE%A1%E6%B4%BB%E8%B7%83%E9%97%B4%E9%9A%94%E5%AF%B9%E7%94%A8%E6%88%B7%E5%88%86%E7%BA%A7%E7%BB%93%E6%9E%9C"><span class="nav-text">SQL 165
+统计活跃间隔对用户分级结果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql-170-%E6%9F%90%E5%BA%97%E9%93%BA%E7%9A%84%E5%90%84%E5%95%86%E5%93%81%E6%AF%9B%E5%88%A9%E7%8E%87%E5%8F%8A%E5%BA%97%E9%93%BA%E6%95%B4%E4%BD%93%E6%AF%9B%E5%88%A9%E7%8E%87"><span class="nav-text">SQL 170
+某店铺的各商品毛利率及店铺整体毛利率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90with-rollup"><span class="nav-text">解析（WITH ROLLUP）</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sql212-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E8%96%AA%E6%B0%B4%E7%AC%AC%E4%BA%8C%E5%A4%9A%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84emp_no%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E8%96%AA%E6%B0%B4salary"><span class="nav-text">SQL212
+获取当前薪水第二多的员工的emp_no以及其对应的薪水salary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql229-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E4%B8%8D%E9%80%82%E7%94%A8replace%E6%93%8D%E4%BD%9C"><span class="nav-text">SQL229
+批量插入数据，不适用replace操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql230-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAactor_name%E8%A1%A8"><span class="nav-text">SQL230 创建一个actor_name表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql231-%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="nav-text">SQL231 创建索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql163-%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E5%90%8C%E4%B8%80%E6%97%B6%E5%88%BB%E6%9C%80%E5%A4%A7%E5%9C%A8%E7%9C%8B%E4%BA%BA%E6%95%B0"><span class="nav-text">SQL163
+每篇文章同一时刻最大在看人数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E8%AE%A1%E7%AE%97%E7%9E%AC%E6%97%B6%E7%9A%84%E6%9C%80%E5%A4%A7%E8%AE%A1%E6%95%B0"><span class="nav-text">解析（计算瞬时的最大计数）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql164-2021%E5%B9%B411%E6%9C%88%E6%AF%8F%E5%A4%A9%E6%96%B0%E7%94%A8%E6%88%B7%E7%9A%84%E6%AC%A1%E6%97%A5%E7%95%99%E5%AD%98%E7%8E%87"><span class="nav-text">SQL164
+2021年11月每天新用户的次日留存率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql167-%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E9%A2%86%E9%87%91%E5%B8%81"><span class="nav-text">SQL167 连续签到领金币</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql171-%E9%9B%B6%E9%A3%9F%E7%B1%BB%E5%95%86%E5%93%81%E4%B8%AD%E5%A4%8D%E8%B4%AD%E7%8E%87top3%E9%AB%98%E7%9A%84%E5%95%86%E5%93%81"><span class="nav-text">SQL171
+零食类商品中复购率top3高的商品</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql173-%E5%BA%97%E9%93%BA901%E5%9B%BD%E5%BA%86%E6%9C%9F%E9%97%B4%E7%9A%847%E6%97%A5%E5%8A%A8%E9%94%80%E7%8E%87%E5%92%8C%E6%BB%9E%E9%94%80%E7%8E%87"><span class="nav-text">SQL173
+店铺901国庆期间的7日动销率和滞销率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql-165-%E7%BB%9F%E8%AE%A1%E6%B4%BB%E8%B7%83%E9%97%B4%E9%9A%94%E5%AF%B9%E7%94%A8%E6%88%B7%E5%88%86%E7%BA%A7%E7%BB%93%E6%9E%9C"><span class="nav-text">SQL 165
+统计活跃间隔对用户分级结果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sql-170-%E6%9F%90%E5%BA%97%E9%93%BA%E7%9A%84%E5%90%84%E5%95%86%E5%93%81%E6%AF%9B%E5%88%A9%E7%8E%87%E5%8F%8A%E5%BA%97%E9%93%BA%E6%95%B4%E4%BD%93%E6%AF%9B%E5%88%A9%E7%8E%87"><span class="nav-text">SQL 170
+某店铺的各商品毛利率及店铺整体毛利率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90with-rollup"><span class="nav-text">解析（WITH ROLLUP）</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>

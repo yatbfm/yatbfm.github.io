@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Keep Studying">
+    <meta name="author" content="yatbfm">
+    
+    <title>
+        
+            Spring基础 |
+        
+        yatbfm&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/image.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yatbfm.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"yatbfm's blog","author":"yatbfm","favicon":"/images/image.png"},"menu":{"Home":"/","Archives":"/archives","Categories":"/categories","Tags":"/tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep studying.","hitokoto":true},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm","copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":["/js/custom.js"]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               yatbfm&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Spring基础
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">yatbfm</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-12-01 21:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Apr 16 2025 07:47:24 GMT+0000">2025-04-16 07:47</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%85%AB%E8%82%A1/">八股</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Spring/">Spring</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.8k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <meta name="referrer" content="no-referrer">
+<p>注：大多数内容参考了<a class="link" target="_blank" rel="noopener" href="https://javaguide.cn">JavaGuide<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="spring">Spring</h1>
+<h2 id="spring-ioc的实现原理">spring ioc的实现原理</h2>
+<span id="more"></span>
+<p><a class="link" target="_blank" rel="noopener" href="https://javabetter.cn/springboot/ioc.html#%E6%98%AF%E4%BD%95">https://javabetter.cn/springboot/ioc.html#%E6%98%AF%E4%BD%95<i class="fas fa-external-link-alt"></i></a><br><a class="link" target="_blank" rel="noopener" href="https://pdai.tech/md/spring/spring-x-framework-ioc-source-1.html#spring%E8%BF%9B%E9%98%B6--spring-ioc%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%E4%B9%8Bioc%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">https://pdai.tech/md/spring/spring-x-framework-ioc-source-1.html#spring%E8%BF%9B%E9%98%B6--spring-ioc%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%E4%B9%8Bioc%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1<i class="fas fa-external-link-alt"></i></a><br>IOC（控制反转）是一种设计思想，而不是一个具体的技术实现。将原本在应用程序中<strong>手动创建对象的控制权</strong>，<strong>交由Spring来管理</strong>。<br>将对象之间的<strong>相互依赖关系交给
+IoC 容器来管理</strong>，并<strong>由 IoC
+容器完成对象的注入</strong>。这样可以很大程度上<strong>简化应用的开发</strong>，把应用从复杂的依赖关系中解放出来。
+<strong>IoC
+容器就像是一个工厂</strong>一样，当我们需要创建一个对象的时候，只需要<strong>配置好配置文件/注解</strong>即可，完全不用考虑对象是如何被创建出来的。<br>在实际项目中一个
+Service 类可能依赖了很多其他的类，假如我们需要实例化这个
+Service，你可能要每次都要搞清这个 Service
+所有底层类的构造函数，这可能会把人逼疯。如果利用 IoC
+的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。<br>在
+Spring 中， <strong>IoC 容器是 Spring 用来实现 IoC 的载体</strong>，
+<strong>IoC 容器实际上就是个 Map（key，value）</strong>，Map
+中存放的是各种对象。<br>Spring 时代我们一般通过 XML 文件来配置
+Bean，后来开发人员觉得 XML 文件来配置不太好，于是 SpringBoot
+注解配置就慢慢开始流行起来。</p>
+<h2 id="bean的生命周期">bean的生命周期</h2>
+<p>如果该bean是代理对象，则在执行<code>InstantiationAwareBeanPostProcesor</code>生成代理对象后会发生短路，不会按照正常的生命周期进行。</p>
+<ol type="1">
+<li><strong>创建 Bean 的实例</strong>：Bean 容器首先会找到配置文件中的
+Bean 定义，然后使用 Java 反射 API 来创建 Bean 的实例。</li>
+<li><strong>Bean 属性赋值/填充</strong>：为 Bean
+设置相关属性和依赖，例如@Autowired 等注解注入的对象、<span class="citation" data-cites="Value">@Value</span>
+注入的值、setter方法或构造函数注入依赖和值、<span class="citation" data-cites="Resource注入的各种资源">@Resource注入的各种资源</span>。</li>
+<li><strong>Bean 初始化</strong>：</li>
+</ol>
+<ul>
+<li>如果 Bean 实现了 BeanNameAware 接口，调用 setBeanName()方法，传入
+Bean 的名字。</li>
+<li>如果 Bean 实现了 BeanClassLoaderAware 接口，调用
+setBeanClassLoader()方法，传入 ClassLoader对象的实例。</li>
+<li>如果 Bean 实现了 BeanFactoryAware 接口，调用
+setBeanFactory()方法，传入 BeanFactory对象的实例。</li>
+<li>与上面的类似，如果实现了其他 *.Aware接口，就调用相应的方法。</li>
+<li>如果有和加载这个 Bean 的 Spring 容器相关的 BeanPostProcessor
+对象，执行postProcessBeforeInitialization() 方法</li>
+<li>如果 Bean
+实现了InitializingBean接口，执行afterPropertiesSet()方法。</li>
+<li>如果 Bean 在配置文件中的定义包含 init-method
+属性，执行指定的方法。</li>
+<li>如果有和加载这个 Bean 的 Spring 容器相关的 BeanPostProcessor
+对象，执行postProcessAfterInitialization() 方法。</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>销毁 Bean</strong>：销毁并不是说要立马把 Bean
+给销毁掉，而是把 Bean 的销毁方法先记录下来，将来需要销毁 Bean
+或者销毁容器的时候，就调用这些方法去释放 Bean 所持有的资源。</li>
+</ol>
+<ul>
+<li>如果 Bean 实现了 DisposableBean 接口，执行 destroy() 方法。</li>
+<li>如果 Bean 在配置文件中的定义包含 destroy-method 属性，执行指定的
+Bean 销毁方法。或者，也可以直接通过@PreDestroy 注解标记 Bean
+销毁之前执行的方法。</li>
+</ul>
+<h2 id="spring-aop的">spring aop的</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/system-design/framework/spring/spring-knowledge-and-questions-summary.html#spring-aop">https://javaguide.cn/system-design/framework/spring/spring-knowledge-and-questions-summary.html#spring-aop<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="理解">理解</h3>
+<p>AOP面向切面编程能够将那些与业务无关，却为业务模块所共同使用的逻辑（事务处理、日志管理、权限控制、限流等）封装起来，便于减少重复代码，降低模块间的耦合度，利于维护。<br>Spring中的AOP基于动态代理，分为JDK的动态代理和CGLib的动态代理。这两个的区别是：</p>
+<ul>
+<li>JDK的动态代理要求被代理的对象实现了某个接口，然后会生成一个同样实现了这个接口的代理对象。</li>
+<li>如果没有实现某个接口，CGLib会生成一个被代理对象的子类作为代理对象。</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720494881552-196b062e-4d08-496a-8043-9c0534560554.png#averageHue=%23dfead0&amp;clientId=u4e4b5c38-033a-4&amp;from=paste&amp;height=334&amp;id=u8121322d&amp;originHeight=417&amp;originWidth=867&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=127915&amp;status=done&amp;style=none&amp;taskId=u9d1952f3-8c48-40a7-b4a8-6ce923e6ed4&amp;title=&amp;width=693.6" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/10356726/1720495487064-9736805f-c65b-4108-8fab-291c1c9958d9.png#averageHue=%23fbfbfb&amp;clientId=u4e4b5c38-033a-4&amp;from=paste&amp;height=377&amp;id=u34d5a687&amp;originHeight=471&amp;originWidth=945&amp;originalType=binary&amp;ratio=1.25&amp;rotation=0&amp;showTitle=false&amp;size=65450&amp;status=done&amp;style=none&amp;taskId=u1e360159-1a85-4943-8029-b19777f8cf3&amp;title=&amp;width=756" alt="image.png"><br>spring
+aop是<strong>运行时增强</strong>，aspectj属于<strong>编译时增强</strong>。spring
+aop基于<strong>代理</strong>，而aspectj基于<strong>字节码操作</strong>。</p>
+<h3 id="aspectj定义的通知类型有哪些">aspectj定义的通知类型有哪些</h3>
+<ul>
+<li><strong>Before（前置通知）</strong>：目标对象的方法调用之前触发</li>
+<li><strong>After （后置通知）</strong>：目标对象的方法调用之后触发</li>
+<li><strong>AfterReturning（返回通知）</strong>：目标对象的方法调用完成，在返回结果值之后触发</li>
+<li><strong>AfterThrowing（异常通知）</strong>：目标对象的方法运行中抛出
+/ 触发异常后触发。AfterReturning 和AfterThrowing
+两者互斥。如果方法调用成功无异常，则会有返回值；如果方法抛出了异常，则不会有返回值</li>
+<li><strong>Around
+（环绕通知）</strong>：编程式控制目标对象的方法调用。环绕通知是所有通知类型中可操作范围最大的一种，因为它可以直接拿到目标对象，以及要执行的方法，所以环绕通知可以任意的在目标对象的方法调用前后操作，甚至不调用目标对象的方法</li>
+</ul>
+<h3 id="多个切面的执行顺序如何控制">多个切面的执行顺序如何控制</h3>
+<ol type="1">
+<li>使用<code>@Order</code>注解</li>
+<li>实现<code>Ordered</code>接口重写<code>getOrder</code>方法</li>
+</ol>
+<h2 id="springboot利用了spring的什么特性进行封装的">springboot利用了spring的什么特性进行封装的</h2>
+<h2 id="spring怎么解决循环依赖的">spring怎么解决循环依赖的</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://javaguide.cn/system-design/framework/spring/spring-knowledge-and-questions-summary.html#spring-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E4%BA%86%E8%A7%A3%E5%90%97-%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3">https://javaguide.cn/system-design/framework/spring/spring-knowledge-and-questions-summary.html#spring-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E4%BA%86%E8%A7%A3%E5%90%97-%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3<i class="fas fa-external-link-alt"></i></a></p>
+<ol type="1">
+<li>三级缓存</li>
+</ol>
+<p><strong>一级缓存</strong>：存放最终形态的Bean（已经实例化、属性填充、初始化）<br><strong>二级缓存</strong>：存放过渡Bean（半成品，属性未填充），存放的是三级缓存产生的对象<br><strong>三级缓存</strong>：存放<code>ObjectFactory</code>，调用其<code>getObject</code>方法生成对象。<br>A依赖B，B依赖A。当创建A时，发现依赖B，然后会去创建B，然后发现依赖A，此时会从三级缓存中获得A的<code>ObjectFactory</code>，通过这个对象调用<code>getObject</code>方法获取A的前期暴露对象，没有初始化完成，但是在堆中存在内存地址了，然后将<code>ObjectFactory</code>从三级缓存移除放到二级缓存中。</p>
+<ol start="2" type="1">
+<li><span class="citation" data-cites="Lazy注解">@Lazy注解</span></li>
+</ol>
+<p>如果一个bean被标记为懒加载，在容器启动时不会立即实例化，而是在第一次请求时才会创建。<br>如果A和B产生了循环依赖，在A的构造器添加<code>@Lazy</code>后（延迟B的实例化），加载流程：</p>
+<ul>
+<li>首先创建A的Bean，发现需要注入B</li>
+<li>在A上标注了<code>@Lazy</code>注解，因此spring会去创建一个B的代理对象，将这个代理对象注入到A的B属性中</li>
+<li>之后实例化B，在注入B中的A属性时，A已经创建完毕，就可以将A注入进去。</li>
+</ul>
+<p>SpringBoot
+2.6之后官方不推荐编写有循环依赖的代码，建议减少不必要的循环依赖。</p>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                Spring基础
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                bce23be485d6/spring基础/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">yatbfm</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-12-01 21:39</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Spring/">Spring</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2da9eab1690e/mysql%E5%9F%BA%E7%A1%80/"
+                                   title="MySQL基础"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">MySQL基础</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/f52a9e199c38/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/"
+                                   title="操作系统基础"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">操作系统基础</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spring"><span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-ioc%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-text">spring ioc的实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">bean的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-aop%E7%9A%84"><span class="nav-text">spring aop的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-text">理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aspectj%E5%AE%9A%E4%B9%89%E7%9A%84%E9%80%9A%E7%9F%A5%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">aspectj定义的通知类型有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E5%88%87%E9%9D%A2%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6"><span class="nav-text">多个切面的执行顺序如何控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#springboot%E5%88%A9%E7%94%A8%E4%BA%86spring%E7%9A%84%E4%BB%80%E4%B9%88%E7%89%B9%E6%80%A7%E8%BF%9B%E8%A1%8C%E5%B0%81%E8%A3%85%E7%9A%84"><span class="nav-text">springboot利用了spring的什么特性进行封装的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84"><span class="nav-text">spring怎么解决循环依赖的</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">yatbfm</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spring"><span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-ioc%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-text">spring ioc的实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">bean的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-aop%E7%9A%84"><span class="nav-text">spring aop的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-text">理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aspectj%E5%AE%9A%E4%B9%89%E7%9A%84%E9%80%9A%E7%9F%A5%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-text">aspectj定义的通知类型有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E5%88%87%E9%9D%A2%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6"><span class="nav-text">多个切面的执行顺序如何控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#springboot%E5%88%A9%E7%94%A8%E4%BA%86spring%E7%9A%84%E4%BB%80%E4%B9%88%E7%89%B9%E6%80%A7%E8%BF%9B%E8%A1%8C%E5%B0%81%E8%A3%85%E7%9A%84"><span class="nav-text">springboot利用了spring的什么特性进行封装的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84"><span class="nav-text">spring怎么解决循环依赖的</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+<!-- pjax -->
+
+
+
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>
